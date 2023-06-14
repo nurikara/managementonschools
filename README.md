@@ -1,0 +1,2 @@
+﻿# SchoolProject
+This project includes UI, DB, and API testing all domains of https://managementonschools.com in a 4-week split based on the Agile software development methodology scrum model. Within the scope of the project, a team of 10 test engineer shared tasks and worked together every day. JİRA was used as the project management tool. Java - Selenium / Cucumber framework is used for test automation. 
