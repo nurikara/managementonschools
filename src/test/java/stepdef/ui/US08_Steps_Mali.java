@@ -3,12 +3,12 @@ package stepdef.ui;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import org.openqa.selenium.WebDriver;
-import pages.Locates;
+import pages.Login;
 import utilities.ConfigReader;
 import utilities.Driver;
 
 public class US08_Steps_Mali {
-    Locates locate=new Locates();
+    Login locate=new Login();
     WebDriver driver= Driver.getDriver();
 
 

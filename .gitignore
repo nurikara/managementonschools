@@ -1,6 +1,6 @@
 /target/
 /TestOutput/
-
+/Configuration.properties
 
 ### IntelliJ IDEA ###
 .idea/modules.xml
