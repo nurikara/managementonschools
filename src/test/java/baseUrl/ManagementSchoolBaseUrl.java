@@ -13,6 +13,9 @@ public class ManagementSchoolBaseUrl {
         spec = new RequestSpecBuilder().
                 setContentType(ContentType.JSON).
                 setBaseUri("https://managementonschools.com/app/").build();
+
+
+
     }
 
 
