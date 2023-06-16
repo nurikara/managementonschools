@@ -1,5 +1,6 @@
 package stepdef.ui;
 
+import com.github.javafaker.Faker;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 
@@ -19,6 +20,8 @@ public class US08_Steps_Mali {
     US08_US09_ViceDeanAddLesson locate=new US08_US09_ViceDeanAddLesson();
     WebDriver driver= Driver.getDriver();
 
+    Faker faker=new Faker();
+
 
     @And("Sayfa kapatilir")
     public void sayfaKapatilir() {driver.close();
@@ -31,7 +34,8 @@ public class US08_Steps_Mali {
     }
     @Then("LessonName alanina ders ismi girer")
     public void lessonnameAlaninaDersIsmiGirer() {
-        locate.lessonName.sendKeys("Math7");
+        String name=faker.app().name();
+        locate.lessonName.sendKeys(name);
         ReusableMethods.bekle(1);
     }
     @Then("Coppulsory checkbox kutusunu tiklar")
@@ -49,13 +53,41 @@ public class US08_Steps_Mali {
     @Then("Submit butonunu tiklar")
     public void submitButonunuTiklar() throws InterruptedException {
         locate.addLessonSubmit.click();
+        ReusableMethods.bekle(1);
 
     }
 
     @Then("Basarili kayıtlama mesaji goruntulenir")
     public void basariliKayıtlamaMesajiGoruntulenir() {
-       // System.out.println("locate.msgLessonCreated.getText() = " + locate.msgLessonCreated.getText());
-       // Assert.assertTrue(locate.msgLessonCreated.isDisplayed());
+       Assert.assertTrue(locate.msgLessonCreated2.isDisplayed());
+        System.out.println("locate.msgLessonCreated.getText() = " + locate.msgLessonCreated2.getText());
 
+    }
+
+    @Then("LessonName alanina space data girer")
+    public void lessonnameAlaninaSpaceDataGirer() {
+        locate.lessonName.sendKeys("   ");
+        ReusableMethods.bekle(1);
+    }
+
+    @And("sayfa kapatılır")
+    public void sayfaKapatılır() {
+        driver.close();
+    }
+
+    @Then("Kayıtlanan data son sayfada goruntulenir")
+    public void kayıtlananDataSonSayfadaGoruntulenir() {
+      //  ReusableMethods.scroll(locate.schollLogo);
+      //  ReusableMethods.bekle(1);
+      //  locate.goLastPage.click();
+    }
+
+    @Then("Basarisiz giris mesaji goruntulenir")
+    public void basarisizGirisMesajiGoruntulenir() {
+        Assert.assertTrue(locate.msgLessonCreated2.isDisplayed());
+        String expectedData="Lesson name must consist of the characters .";
+        String actualData=locate.msgLessonCreated2.getText();
+        Assert.assertEquals(expectedData,actualData);
+        System.out.println("locate.msgLessonCreated2.getText() = " + locate.msgLessonCreated2.getText());
     }
 }

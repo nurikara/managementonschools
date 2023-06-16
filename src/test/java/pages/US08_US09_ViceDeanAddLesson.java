@@ -20,6 +20,18 @@ public class US08_US09_ViceDeanAddLesson extends Login{
     public WebElement addLessonSubmit;
     @FindBy(xpath = "//div[text()='Lesson Created']")
     public WebElement msgLessonCreated;
+    @FindBy(xpath = "(//span[text()='»'])[2]")
+    public WebElement goLastPage;
+    @FindBy(xpath = "//img[@src='/static/media/logo_02.631e4888a6e3684fc004.png']")
+    public WebElement schollLogo;
+    @FindBy(xpath = "//div[@class='Toastify']")
+    public WebElement msgLessonCreated2;
+    @FindBy(xpath = "//div[@class='Toastify__toast-body']")
+    public WebElement msgLessonCreated3;
+
+
+
+
 
 
 }
