@@ -9,13 +9,14 @@ public class Login {
     public Login(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
+    @FindBy(xpath = "//a[@href='/login']")
+    public WebElement homePageLogin;
+    @FindBy(id = "username")
+    public WebElement username;
+    @FindBy(id = "password")
+    public WebElement password;
+    @FindBy(xpath = "//button[text()='Login']")
+    public WebElement LoginButton;
 
-    @FindBy(xpath = "//*[@class='header_link ms-2']")
-    public WebElement homePageLoginButton;
-    @FindBy(xpath = "(//input)[1]")
-    public WebElement userNameTextBox;
-    @FindBy(xpath = "(//input)[2]")
-    public WebElement pswTextBox;
-    @FindBy(xpath = "//*[@class='fw-semibold btn btn-primary']")
-    public WebElement loginButton;
+
 }
