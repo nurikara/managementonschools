@@ -1,11 +1,13 @@
 @deneme
 Feature: US08 Vice Dean Add Lesson
-  Background: Vice Dean Login
-    Given Kullanici  url adresine gider
-    Then HomePage login button tiklar
-    Then Login username alanina "ViveDean" gecerli username girilir
-    Then Login password alanina  gecerli password girilir
-    And Login sayfasi login button tiklar
+  Background: Login
+    Given Kullanici  "ViceDean" olarak giriş yapar
 
-    Scenario:Lessons Add Lesson Alanı
+
+    Scenario:TC01 Lessons Add Lesson Alanı
       Given Kullanici Lessons basligini tiklar
+      Then LessonName alanina ders ismi girer
+      Then Coppulsory checkbox kutusunu tiklar
+      Then CreditScore input alanı int deger girer
+      Then Submit butonunu tiklar
+      Then Basarili kayıtlama mesaji goruntulenir

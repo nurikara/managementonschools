@@ -12,18 +12,12 @@ import utilities.ReusableMethods;
 public class LoginStepDef {
     Login locate=new Login();
     WebDriver driver= Driver.getDriver();
-    @Given("Kullanici  url adresine gider")
-    public void kullaniciUrlAdresineGider() {driver.get(ConfigReader.getProperty("url"));
-    }
 
-    @Then("HomePage login button tiklar")
-    public void homepageLoginButtonTiklar() {
+    @Given("Kullanici  {string} olarak giriş yapar")
+    public void kullaniciOlarakGirisYapar(String arg0) {
+        driver.get(ConfigReader.getProperty("url"));
         locate.homePageLogin.click();
         ReusableMethods.bekle(1);
-    }
-
-    @Then("Login username alanina {string} gecerli username girilir")
-    public void loginUsernameAlaninaGecerliUsernameGirilir(String arg0) {
         switch (arg0.toLowerCase()){
             case "admin":
                 locate.username.sendKeys(ConfigReader.getProperty("admin"));
@@ -43,19 +37,8 @@ public class LoginStepDef {
 
         }
         ReusableMethods.bekle(1);
-
-    }
-
-    @Then("Login password alanina  gecerli password girilir")
-    public void loginPasswordAlaninaGecerliPasswordGirilir() {
         locate.password.sendKeys(ConfigReader.getProperty("psw"));
-
-    }
-
-    @And("Login sayfasi login button tiklar")
-    public void loginSayfasiLoginButtonTiklar() {
         locate.LoginButton.click();
         ReusableMethods.bekle(1);
-
     }
 }
