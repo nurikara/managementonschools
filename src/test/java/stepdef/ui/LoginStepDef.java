@@ -15,6 +15,7 @@ public class LoginStepDef {
 
     @Given("Kullanici  {string} olarak giriş yapar")
     public void kullaniciOlarakGirisYapar(String arg0) {
+
         driver.get(ConfigReader.getProperty("url"));
         locate.homePageLogin.click();
         ReusableMethods.bekle(1);
@@ -40,5 +41,6 @@ public class LoginStepDef {
         locate.password.sendKeys(ConfigReader.getProperty("psw"));
         locate.LoginButton.click();
         ReusableMethods.bekle(1);
+
     }
 }
