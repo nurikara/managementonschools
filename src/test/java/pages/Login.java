@@ -9,7 +9,6 @@ public class Login {
     public Login(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
-
     @FindBy(xpath = "//a[@href='/login']")
     public WebElement homePageLogin;
     @FindBy(id = "username")
@@ -18,5 +17,6 @@ public class Login {
     public WebElement password;
     @FindBy(xpath = "//button[text()='Login']")
     public WebElement LoginButton;
+
 
 }
