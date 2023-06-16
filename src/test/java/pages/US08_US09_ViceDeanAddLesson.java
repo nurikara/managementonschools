@@ -7,10 +7,19 @@ import utilities.Driver;
 
 public class US08_US09_ViceDeanAddLesson extends Login{
 
-    @FindBy(xpath = "")
-    public WebElement homePageLogin;
+
     @FindBy(id = "controlled-tab-example-tab-lessonsList")
     public WebElement Lessons;
+    @FindBy(id = "lessonName")
+    public WebElement lessonName;
+    @FindBy(id = "compulsory")
+    public WebElement compulsoryCheckbox;
+    @FindBy(id = "creditScore")
+    public WebElement creditScore;
+    @FindBy(xpath = "(//button[text()='Submit'])[2]")
+    public WebElement addLessonSubmit;
+    @FindBy(xpath = "//div[text()='Lesson Created']")
+    public WebElement msgLessonCreated;
 
 
 }
