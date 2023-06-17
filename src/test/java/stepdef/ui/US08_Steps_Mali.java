@@ -5,8 +5,12 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en_old.Ac;
 import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 import pages.Login;
 import pages.US08_US09_ViceDeanAddLesson;
 import utilities.ConfigReader;
@@ -14,6 +18,7 @@ import utilities.Driver;
 import utilities.ReusableMethods;
 
 import javax.xml.xpath.XPath;
+import java.util.List;
 
 
 public class US08_Steps_Mali {
@@ -21,8 +26,7 @@ public class US08_Steps_Mali {
     WebDriver driver= Driver.getDriver();
 
     Faker faker=new Faker();
-
-
+    static String name;
 
     @And("Sayfa kapatilir")
     public void sayfaKapatilir() {driver.close();
@@ -35,7 +39,7 @@ public class US08_Steps_Mali {
     }
     @Then("LessonName alanina ders ismi girer")
     public void lessonnameAlaninaDersIsmiGirer() {
-        String name=faker.app().name();
+        name=faker.app().name();
         locate.lessonName.sendKeys(name);
         ReusableMethods.bekle(1);
     }
@@ -136,5 +140,34 @@ public class US08_Steps_Mali {
       }
 
 
+    }
+
+    @And("sayfa iceriginde LessonList goruntulenir")
+    public void sayfaIcerigindeLessonListGoruntulenir() {
+        Assert.assertTrue(locate.lessonList.isDisplayed());
+    }
+
+    @And("LessonList son sayfaya gidilir")
+    public void lessonlistSonSayfayaGidilir() {
+        ReusableMethods.click(locate.goLastPage);
+        ReusableMethods.bekle(2);
+    }
+
+    @And("kayıtlanan son data isim compulsory creditscore kontrol edilir")
+    public void kayıtlananSonDataIsimCompulsoryCreditscoreKontrolEdilir() {
+        ReusableMethods.scroll(locate.lessonList);
+        List<WebElement> actualData=driver.findElements(By.xpath("//td"));
+        for (int i = 0; i <actualData.size()-1 ; i++) {
+
+            if (actualData.get(i).getText().contains(name)){
+                System.out.println("actualData lessonname = " + actualData.get(i).getText());
+                Assert.assertEquals(name,actualData.get(i).getText());
+                Assert.assertEquals("Yes",actualData.get(i+1).getText());
+                System.out.println("actualData compulsory = " + actualData.get(i + 1).getText());
+                Assert.assertEquals("5",actualData.get(i+2).getText());
+                System.out.println("actualData  creditScore = " + actualData.get(i + 2).getText());
+            }
+
+        }
     }
 }
