@@ -12,5 +12,6 @@ Feature: Vice Dean, öğrenci oluşturabilme
     Examples:
       | 1234567 |
       | 12456   |
+      | 12@45  |
 
 
