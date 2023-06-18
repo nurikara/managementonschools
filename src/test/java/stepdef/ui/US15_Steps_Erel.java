@@ -168,7 +168,7 @@ ReusableMethods.click(vice.studentmanagement);
 
     @Then("Kullanıcı You have entered an invalid value. Valid values are: MALE, FEMALE uyarısını görür")
     public void kullanıcıYouHaveEnteredAnInvalidValueValidValuesAreMALEFEMALEUyarısınıGörür() {
-       //String expected="You have entered an invalid value. Valid values are: MALE, FEMALE";
+       // String expected="You have entered an invalid value. Valid values are: MALE, FEMALE";
        //String actual=vice.genderalert.getText();
         Assert.assertTrue(vice.genderalert.isDisplayed());
     }
