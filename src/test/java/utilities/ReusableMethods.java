@@ -389,5 +389,4 @@ public class ReusableMethods {
         WebElement webElement = (WebElement) js.executeScript("return "+str+"");
         assertTrue(webElement.isEnabled());
     }
-
 }
