@@ -30,6 +30,7 @@ public class US08_Steps_Mali {
 
     @And("Sayfa kapatilir")
     public void sayfaKapatilir() {driver.close();
+
     }
 
     @Given("Kullanici Lessons basligini tiklar")
