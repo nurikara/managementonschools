@@ -12,7 +12,7 @@ import utilities.ReusableMethods;
 
 import static org.junit.Assert.assertTrue;
 
-public class US16StepDefinition_Erel {
+public class US16_Steps_Erel {
     US16_ViceDeanContact contact=new US16_ViceDeanContact();
     US15_ViceDeanStudent vice=new US15_ViceDeanStudent();
     Login homePage=new Login();
