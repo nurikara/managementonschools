@@ -63,6 +63,11 @@ public class US02_Steps_Nuri {
 
         assertEquals("Guest User List", list);
 
+
+    }
+
+    @Then("Sayfadan logout yapilarak cikilir")
+    public void sayfadan_logout_yapilarak_cikilir() throws InterruptedException {
         Thread.sleep(1000);
 
         login2.menu.click();
@@ -75,8 +80,8 @@ public class US02_Steps_Nuri {
 
         login2.yes.click();
 
-        Thread.sleep(1000);
     }
+
 
 
     @Then("Acilan sayfada Gust User listesindeki uyelerin yaninda bulunan silme buttonu tilanir")

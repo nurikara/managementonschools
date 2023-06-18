@@ -10,10 +10,11 @@ Feature: US02 Admin Guest User List
 
   Scenario:Admin Guest User List, Name, Phone Number, SSN, User Name bilgilerini görebilmeli
     Given Acilan sayfada Gust User listesi goruntulenir
+    Then Sayfadan logout yapilarak cikilir
 
   Scenario: Admin Guest User List bilgilerini silebilir
     Then Acilan sayfada Gust User listesindeki uyelerin yaninda bulunan silme buttonu tilanir
-
+    Then Sayfadan logout yapilarak cikilir
 
 
 
