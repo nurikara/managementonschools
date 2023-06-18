@@ -29,6 +29,7 @@ public class US16_Steps_Erel {
 
     @Then("Silme butonu gorur")
     public void silmeButonuGorur() {
+        ReusableMethods.tumSayfaResmi();
 
     }
     @When("Yazarin name'i gorur")

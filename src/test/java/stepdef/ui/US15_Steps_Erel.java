@@ -41,6 +41,7 @@ ReusableMethods.click(vice.studentmanagement);
         ReusableMethods.click(vice.teacherselectddm);
         Select select=new Select(vice.teacherselectddm);
         select.selectByIndex(1);
+
     }
 
 
@@ -309,6 +310,8 @@ ReusableMethods.click(vice.studentmanagement);
 
     @Then("Kullanıcı STUDENT LIST bölümünde student number ı görür.")
     public void kullanıcıSTUDENTLISTBölümündeStudentNumberIGörür() {
+        Assert.assertTrue(vice.studentnumber.isDisplayed());
+
 
     }
 

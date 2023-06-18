@@ -1,3 +1,4 @@
+@erel @tc01
 Feature: Vice Dean, öğrenci oluşturabilme
   Scenario: Öğrecinin danışman öğretmeni seçilmelidir.
     Given Kullanıcı _"https://managementonschools.com/" sayfasina gider

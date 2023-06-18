@@ -66,5 +66,6 @@ public class US15_ViceDeanStudent extends Login{
 
     @FindBy(xpath = "(//*[@class='invalid-feedback'])[11]")
     public WebElement passwordalerT;
-
+    @FindBy(xpath = "(//*[@class='table-group-divider']/tr/td)[1]")
+    public WebElement studentnumber;
 }
