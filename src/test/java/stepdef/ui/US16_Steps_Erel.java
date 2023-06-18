@@ -62,7 +62,7 @@ public class US16_Steps_Erel {
     @Then("Kullanici Silme butonuna tiklar")
     public void kullaniciSilmeButonunaTiklar() {
 boolean deleteElement= false;
-        Assert.assertTrue("Element bulunamdı",deleteElement);
+        Assert.assertTrue("Element bulunamadı",deleteElement);
 ReusableMethods.tumSayfaResmi();
     }
 
