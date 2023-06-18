@@ -1,3 +1,4 @@
+@erell @tc001
 Feature: Vice Dean, kullanıcıların gönderdiği mesajları görebilmelidir
   Scenario: Vice Dean silme butonunu gorebilmeli
     Given Kullanıcı _"https://managementonschools.com/" sayfasina gider

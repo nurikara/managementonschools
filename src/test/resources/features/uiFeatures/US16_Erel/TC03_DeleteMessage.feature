@@ -1,3 +1,4 @@
+@erell @tc003
 Feature: Vice Dean mesajları silebilmelidir.
   Scenario: Vice Dean silme butonunu gorebilmeli
     Given Kullanıcı _"https://managementonschools.com/" sayfasina gider

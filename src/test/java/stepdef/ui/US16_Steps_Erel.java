@@ -2,6 +2,7 @@ package stepdef.ui;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
 import pages.Login;
 
 import pages.US15_ViceDeanStudent;
@@ -60,6 +61,8 @@ public class US16_Steps_Erel {
 
     @Then("Kullanici Silme butonuna tiklar")
     public void kullaniciSilmeButonunaTiklar() {
+boolean deleteElement= false;
+        Assert.assertTrue("Element bulunamdı",deleteElement);
 ReusableMethods.tumSayfaResmi();
     }
 

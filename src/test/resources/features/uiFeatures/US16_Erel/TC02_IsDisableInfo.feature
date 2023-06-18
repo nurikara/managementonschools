@@ -1,3 +1,4 @@
+@erell @tc002
 Feature: Vice Dean, kullanıcıların gönderdiği mesajları görebilmelidir
   Scenario:Vice Dean, mesajları, yazarlarını, e-maillerini, gönderilme tarihi ve  subject bilgilerini görüntüleyebilmelidir
     Given Kullanıcı _"https://managementonschools.com/" sayfasina gider
