@@ -22,12 +22,17 @@ public class US08_US09_ViceDeanAddLesson extends Login{
     public WebElement msgLessonCreated;
     @FindBy(xpath = "(//span[text()='»'])[2]")
     public WebElement goLastPage;
-    @FindBy(xpath = "//img[@src='/static/media/logo_02.631e4888a6e3684fc004.png']")
+    @FindBy(xpath = "(//div[text()='Page '])[2]")
     public WebElement schollLogo;
     @FindBy(xpath = "//div[@class='Toastify']")
     public WebElement msgLessonCreated2;
     @FindBy(xpath = "//div[@class='Toastify__toast-body']")
     public WebElement msgLessonCreated3;
+    @FindBy(xpath = "//h5[text()='Lesson List']")
+    public WebElement lessonList;
+
+    @FindBy(xpath = "//span[text()='']")
+    public WebElement LessonNameFaker;
 
 
 
