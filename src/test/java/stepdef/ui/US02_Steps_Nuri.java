@@ -5,6 +5,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.support.ui.Wait;
 import pages.Login;
 import pages.US02_AdminUserList;
 import utilities.ConfigReader;
@@ -68,7 +69,7 @@ public class US02_Steps_Nuri {
 
     @Then("Sayfadan logout yapilarak cikilir")
     public void sayfadan_logout_yapilarak_cikilir() throws InterruptedException {
-        Thread.sleep(1000);
+
 
         login2.menu.click();
 
