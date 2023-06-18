@@ -63,7 +63,8 @@ public class US15_ViceDeanStudent extends Login{
     public WebElement passwordrequired;
     @FindBy(xpath = "//*[@class='Toastify__toast-body']")
     public WebElement genderalert;
-    @FindBy(xpath = "(//*[text()='You have entered an invalid value. Valid values are: MALE, FEMALE']")
-    public WebElement agenderalert;
+
+    @FindBy(xpath = "(//*[@class='invalid-feedback'])[11]")
+    public WebElement passwordalerT;
 
 }

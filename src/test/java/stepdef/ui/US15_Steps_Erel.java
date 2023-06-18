@@ -255,4 +255,88 @@ ReusableMethods.click(vice.studentmanagement);
     public void kullanıcıMotherNameInAltındaRequiredYazısınıGörür() {
         Assert.assertTrue(vice.mothernamerequired.isDisplayed());
     }
+
+
+
+    @Then("Kullanıcı Please enter valid SSN number uyarsını görür.")
+    public void kullanıcıPleaseEnterValidSSNNumberUyarsınıGörür() {
+
+    }
+
+
+
+    @And("Sayfa kapatiliir")
+    public void sayfaKapatiliir() {
+        ReusableMethods.bekle(1);
+        Driver.closeDriver();
+    }
+
+    @And("Kullanıcı SSN BÖLÜMÜNE; {string} ve dokuz rakamdan oluşan numarayı,diğer bölümler girdikten sonra submit e tıklar")
+    public void kullanıcıSSNBÖLÜMÜNEVeDokuzRakamdanOluşanNumarayıDiğerBölümlerGirdiktenSonraSubmitETıklar(String ihtimal) {
+        vice.ssn.sendKeys(ihtimal);
+        vice.name.sendKeys(ConfigReader.getProperty("erelname"));
+        vice.surname.sendKeys(ConfigReader.getProperty("erelsurname"));
+        vice.email.sendKeys(ConfigReader.getProperty("erelemail"));
+        vice.birthDay.sendKeys(ConfigReader.getProperty("ereldateofbirth"));
+        vice.ssn.sendKeys(ConfigReader.getProperty("erelssn"));
+        vice.username.sendKeys(ConfigReader.getProperty("erelusername"));
+        vice.fatherName.sendKeys(ConfigReader.getProperty("erelfathername"));
+        vice.motherName.sendKeys(ConfigReader.getProperty("erelmothername"));
+        vice.smpassword.sendKeys(ConfigReader.getProperty("erelpassword"));
+        vice.birthPlace.sendKeys(ConfigReader.getProperty("erelbirthplace"));
+        vice.phoneNumber.sendKeys(ConfigReader.getProperty("erelphone"));
+        vice.female.click();
+        vice.submit.click();
+
+    }
+
+    @And("Kullanıcı tüm bölümleri girdikten sonra submit e tıklar")
+    public void kullanıcıTümBölümleriGirdiktenSonraSubmitETıklar() {
+        vice.name.sendKeys(ConfigReader.getProperty("erelname"));
+        vice.surname.sendKeys(ConfigReader.getProperty("erelsurname"));
+        vice.email.sendKeys(ConfigReader.getProperty("erelemail"));
+        vice.birthDay.sendKeys(ConfigReader.getProperty("ereldateofbirth"));
+        vice.ssn.sendKeys(ConfigReader.getProperty("erelssn"));
+        vice.username.sendKeys(ConfigReader.getProperty("erelusername"));
+        vice.fatherName.sendKeys(ConfigReader.getProperty("erelfathername"));
+        vice.motherName.sendKeys(ConfigReader.getProperty("erelmothername"));
+        vice.smpassword.sendKeys(ConfigReader.getProperty("erelpassword"));
+        vice.birthPlace.sendKeys(ConfigReader.getProperty("erelbirthplace"));
+        vice.phoneNumber.sendKeys(ConfigReader.getProperty("erelphone"));
+        vice.female.click();
+        vice.submit.click();
+    }
+
+    @Then("Kullanıcı STUDENT LIST bölümünde student number ı görür.")
+    public void kullanıcıSTUDENTLISTBölümündeStudentNumberIGörür() {
+
+    }
+
+
+    @And("Kullanıcı password kısmına {string} İ boş bırakıp diğer alanlar doldurulup sonra submit e tıklar")
+    public void kullanıcıPasswordKısmınaİBoşBırakıpDiğerAlanlarDoldurulupSonraSubmitETıklar(String Pass) {
+        vice.smpassword.sendKeys(Pass);
+        vice.name.sendKeys(ConfigReader.getProperty("erelname"));
+        vice.surname.sendKeys(ConfigReader.getProperty("erelsurname"));
+        vice.email.sendKeys(ConfigReader.getProperty("erelemail"));
+        vice.birthDay.sendKeys(ConfigReader.getProperty("ereldateofbirth"));
+        vice.ssn.sendKeys(ConfigReader.getProperty("erelssn"));
+        vice.username.sendKeys(ConfigReader.getProperty("erelusername"));
+        vice.fatherName.sendKeys(ConfigReader.getProperty("erelfathername"));
+        vice.motherName.sendKeys(ConfigReader.getProperty("erelmothername"));
+        vice.birthPlace.sendKeys(ConfigReader.getProperty("erelbirthplace"));
+        vice.phoneNumber.sendKeys(ConfigReader.getProperty("erelphone"));
+        vice.female.click();
+        vice.submit.click();
+    }
+
+    @Then("Kullanıcı passwordun altında Minimum sekiz character uyarısını görür")
+    public void kullanıcıPasswordunAltındaMinimumSekizCharacterUyarısınıGörür() {
+       // String expected="Minimum 8 character";
+        String actual=vice.passwordalerT.getText();
+       Assert.assertTrue(actual.contains("Minimum 8 character"));
+
+    }
+
+
 }
