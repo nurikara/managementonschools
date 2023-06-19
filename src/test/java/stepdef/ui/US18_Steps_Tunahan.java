@@ -29,7 +29,7 @@ Robot robot;
 
     @When("kullanici_home_page_sayfasindalogin_butonuna_tıklar")
     public void kullanici_home_page_sayfasindalogin_butonuna_tıklar() {
-        tSI.homePageLoginButton.click();
+
     }
 
 
@@ -37,7 +37,7 @@ Robot robot;
     @And("kullanici_login_butonuna_tıklar")
     public void kullanici_login_butonuna_tıklar() {
         ReusableMethods.bekle(1);
-        tSI.loginButton.click();
+
     }
 
     @Then("kullanici_Student_Info_List_gorunurlugunu_dogrular")
@@ -116,7 +116,7 @@ Robot robot;
 
     @And("kullanici_{string}_password_girer")
     public void kullanici__password_girer(String username) {
-        tSI.userNameTextBox.sendKeys(ConfigReader.getProperty(username), Keys.TAB,ConfigReader.getProperty("psw"));
+
     }
 
 */
