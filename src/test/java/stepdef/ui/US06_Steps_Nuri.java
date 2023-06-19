@@ -1,6 +1,7 @@
 package stepdef.ui;
 
 import com.github.javafaker.Faker;
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
@@ -8,7 +9,7 @@ import org.junit.Assert;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 
-import org.testng.asserts.SoftAssert;
+
 import pages.US02_AdminUserList;
 import pages.US06_Dean_ViceDean;
 import utilities.ConfigReader;
@@ -20,7 +21,7 @@ public class US06_Steps_Nuri {
     US06_Dean_ViceDean login = new US06_Dean_ViceDean();
     US02_AdminUserList login2 = new US02_AdminUserList();
 
-    SoftAssert softAssert = new SoftAssert();
+
 
 
     @When("Admin kullanici adi ve sifresini kullanarak Dean panaline giris yapar")
@@ -373,20 +374,11 @@ public class US06_Steps_Nuri {
         Thread.sleep(1000);
         login.addViseDeanSubmit.click();
         Thread.sleep(2000);
-        softAssert.assertNotEquals("Vice dean Saved", "login.addViseDeanAlert.getText()");
-        Thread.sleep(1000);
-        login2.menu.click();
-
-        Thread.sleep(1000);
-
-        login2.logout.click();
-
-        Thread.sleep(1000);
-
-        login2.yes.click();
-
-        Thread.sleep(1000);
-        softAssert.assertAll();
+        System.out.println("login.addViseDeanAlert = " + login.addViseDeanAlert);
+        Thread.sleep(2000);
+        Assert.assertNotEquals("sa",login.addViseDeanAlert.getText());
 
     }
+
+
 }
