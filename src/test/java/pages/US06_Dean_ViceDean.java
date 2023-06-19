@@ -39,11 +39,13 @@ public class US06_Dean_ViceDean extends Login{
 
     @FindBy(xpath ="//div[text()='Required']")
     public WebElement addViseDeanRequired;
+    @FindBy(xpath ="//div[text()='Minimum 8 character']")
+    public WebElement addViseDeanPassWordRequired;
 
     @FindBy(xpath ="//button[text()='Submit']")
     public WebElement addViseDeanSubmit;
 
-    @FindBy(xpath ="//div[@class=\"Toastify__toast-container Toastify__toast-container--top-center\"]")
+    @FindBy(xpath ="//div[@role='alert']")
     public WebElement addViseDeanAlert;
 
 

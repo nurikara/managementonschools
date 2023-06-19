@@ -1,3 +1,4 @@
+@us06
 Feature:Dean, Vice Dean hesabı oluşturabilmelidir.
 
 
@@ -29,4 +30,28 @@ Feature:Dean, Vice Dean hesabı oluşturabilmelidir.
 
   Scenario: "Telefon" girilmelidir. Boş bırakılamaz.
     Then Add ViseDean bolumu doldurulurken TelefonNumarasi kismi bos birakilir
+    And Sayfadan logout yapilarak cikilir
+
+  Scenario:Positive SSN girilmelidir. SSN; 3. ve 5. rakamdan sonra "-" içermeli ve 9 rakamdan oluşmalıdır.
+    Then SSN bolumune uygun sekilde giris yapilir
+    And Sayfadan logout yapilarak cikilir
+
+  Scenario:Negative SSN girilmelidir. SSN; 3. ve 5. rakamdan sonra "-" içermeli ve 9 rakamdan oluşmalıdır.
+    Then SSN bolumune uygun olmayan sekilde giris yapilir
+    And Sayfadan logout yapilarak cikilir
+
+  Scenario: "UserName" girilmelidir. Boş bırakılamaz.
+    Then Add ViseDean bolumu doldurulurken UserName kismi bos birakilir
+    And Sayfadan logout yapilarak cikilir
+
+    Scenario: Password girilebilmelidir.
+      Then Add ViseDean bolumu doldurulurken PassWord kismi bos birakilir
+      And Sayfadan logout yapilarak cikilir
+
+  Scenario:Password en az 8 karakterden oluşmalıdır.
+    Then Add ViseDean bolumu doldurulurken PassWord EnAz 8 karakterden oluşmalıdır
+    And Sayfadan logout yapilarak cikilir
+@deneme
+  Scenario:Password; büyük harf, küçük harf ve bir rakam içermelidir.
+    Then Add ViseDean bolumu doldurulurken Password; büyük harf, küçük harf ve bir rakam içermelidir.
     And Sayfadan logout yapilarak cikilir
