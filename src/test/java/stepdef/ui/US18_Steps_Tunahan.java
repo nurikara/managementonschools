@@ -18,6 +18,7 @@ import java.awt.event.KeyEvent;
 import static utilities.Driver.driver;
 
 public class US18_Steps_Tunahan {
+    /*
 US17_US18_TeacherStudentInfo tSI =new US17_US18_TeacherStudentInfo();
 Robot robot;
     @Given("kullanici_url'e_gider")
@@ -118,6 +119,6 @@ Robot robot;
         tSI.userNameTextBox.sendKeys(ConfigReader.getProperty(username), Keys.TAB,ConfigReader.getProperty("psw"));
     }
 
-
+*/
 
 }
