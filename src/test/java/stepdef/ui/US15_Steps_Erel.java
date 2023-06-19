@@ -170,6 +170,7 @@ ReusableMethods.click(vice.studentmanagement);
     public void kullanıcıYouHaveEnteredAnInvalidValueValidValuesAreMALEFEMALEUyarısınıGörür() {
        // String expected="You have entered an invalid value. Valid values are: MALE, FEMALE";
        //String actual=vice.genderalert.getText();
+        ReusableMethods.bekle(2);
         Assert.assertTrue(vice.genderalert.isDisplayed());
     }
 
