@@ -2,10 +2,8 @@ package pages;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
-import utilities.Driver;
 
-public class US22_US23_US24_US25_Add extends Login{
+public class US22_US23_US24_Add extends Login{
     @FindBy(xpath = "//input[@placeholder='Name']")
     public WebElement addAdminNameTextBoxT;
     @FindBy(xpath = "//button[text()='Submit']")
