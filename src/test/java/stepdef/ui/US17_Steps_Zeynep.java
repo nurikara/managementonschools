@@ -1,30 +1,38 @@
 package stepdef.ui;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.When;
+import org.junit.Assert;
+import org.openqa.selenium.Keys;
 import pages.US17_US18_TeacherStudentInfo;
 import utilities.ConfigReader;
+import utilities.Driver;
 import utilities.ReusableMethods;
 
 public class US17_Steps_Zeynep {
 
-    US17_US18_TeacherStudentInfo tSI;
+    US17_US18_TeacherStudentInfo tSI=new US17_US18_TeacherStudentInfo();
 
 
     @Given("Kullanıcı {string} alanını tıklar")
     public void kullanıcı_alanını_tıklar(String string) {
-
-        switch (string){
-            case "Choose Lesson":
+ReusableMethods.bekle(2);
+        switch (string.toLowerCase()){
+            case "choose lesson":
                 tSI.chooselessonZeynep.click();
-                ;
+
                 break;
-            case "Choose Student":
+            case "choose student":
                 tSI.choosestudentZeynep.click();
                 break;
-            case "Choose Education Term":
+            case "choose education term":
                 tSI.chooseeducationTermZeynep.click();
                 break;
-            case "Submit":
+            case "absentee":
+                tSI.absenteeZeynep.click();
+                break;
+            case "submit":
                 tSI.submitButtonZeynep.click();
                 break;
 
@@ -32,34 +40,69 @@ public class US17_Steps_Zeynep {
         }
 
     }
-    @Given("Kullanıcı {string} alanında açılan derslerden birini seçer")
-    public void kullanıcı_alanında_açılan_derslerden_birini_seçer(String string) {
-        if (string.equals("Choose Lesson")){
-            ReusableMethods.ddmValue(tSI.chooselessonZeynep,"2");
-        } else if (string.equals("Choose Student")) {
-            ReusableMethods.ddmValue(tSI.choosestudentZeynep,"8");
-        } else if (string.equals("Choose Education Term")) {
-            ReusableMethods.ddmValue(tSI.chooseeducationTermZeynep,"3");
-        }
 
 
-    }
-    /*
     @Given("Kullanıcı {string} alanında açılan öğrencilerden birini seçer")
     public void kullanıcı_alanında_açılan_öğrencilerden_birini_seçer(String string) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        ReusableMethods.ddmValue(tSI.choosestudentZeynep,string);
     }
     @Given("Kullanıcı {string} alanında açılan dönemlerden birini seçer")
     public void kullanıcı_alanında_açılan_dönemlerden_birini_seçer(String string) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
-    }*/
-    @Given("Kullanıcı {string},{string},{string},{string} alanlarını uygun şekilde doldurur")
-    public void kullanıcı_alanlarını_uygun_şekilde_doldurur(String string, String string2, String string3, String string4) {
-
+        ReusableMethods.ddmValue(tSI.chooseeducationTermZeynep,string);
     }
 
 
+    @And("Kullanıcı Choose Lesson alanında açılan derslerden birini seçer")
+    public void kullanıcıChooseLessonAlanındaAçılanDerslerdenBiriniSeçer() {
+        ReusableMethods.ddmValue(tSI.chooselessonZeynep, "2");
+    }
 
+    @And("Kullanıcı {int} saniye bekler")
+    public void kullanıcıSaniyeBekler(int arg0) {
+        ReusableMethods.bekle(2);
+    }
+
+//    @And("Kullanıcı absentee alanına devamsızlık bilgisini girer")
+//    public void kullanıcıAbsenteeAlanınaDevamsızlıkBilgisiniGirer() {
+//        tSI.absenteeZeynep.sendKeys("5");
+//    }
+//
+//    @And("Kullanıcı miditerm exam alnına not bilgisi girer")
+//    public void kullanıcıMiditermExamAlnınaNotBilgisiGirer() {
+//        tSI.midtermExamZeynep.sendKeys("85");
+//    }
+//
+//    @And("Kullanıcı final exam alnına not bilgisi girer")
+//    public void kullanıcıFinalExamAlnınaNotBilgisiGirer() {
+//        tSI.finalExamZeynep.sendKeys("75");
+//    }
+//
+//    @And("Kullanıcı değerlendirme yazısı yazar")
+//    public void kullanıcıDeğerlendirmeYazısıYazar() {
+//        tSI.infoNoteZeynep.sendKeys("Başarılar Dilerim");
+//    }
+
+    @And("Kullanıcı sayfayı kapatır")
+    public void kullanıcıSayfayıKapatır() {
+        Driver.closeDriver();
+    }
+
+    @When("Kullanıcı gerekli alanları doldurur {string},{string},{string},{string}")
+    public void kullanıcıGerekliAlanlarıDoldurur(String absentee, String miditermexam, String finalexam, String infonote) {
+
+        tSI.absenteeZeynep.sendKeys(absentee,Keys.TAB,miditermexam,Keys.TAB,finalexam,Keys.TAB,infonote);
+
+       // Assert.assertEquals(tSI.absenteeZeynep.getText(),"8");
+    }
+
+
+    @And("Kullanıcı devamsizlik bilgisinin girildiğini doğrular")
+    public void kullanıcıDevamsizlikBilgisininGirildiğiniDoğrular() {
+        Assert.assertTrue(tSI.absenteeZeynep.getText().contains("8"));
+    }
+
+    @And("Kullanıcı {string} alanına girilen değeri doğrular")
+    public void kullanıcıAlanınaGirilenDeğeriDoğrular(String string) {
+        Assert.assertTrue(tSI.absenteeZeynep.isDisplayed());
+    }
 }
