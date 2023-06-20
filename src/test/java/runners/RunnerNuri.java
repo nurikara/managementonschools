@@ -16,8 +16,8 @@ import org.junit.runner.RunWith;
         },
         monochrome = false,//konsolu okunakli hala getirir false olunca kullanılmayacak.
         features = "src/test/resources/features",
-        glue = {"stepdef"},
-        tags ="@deneme",
+        glue = {"stepdef","hooks"},
+        tags ="@dd",
         dryRun = false
 )
 
