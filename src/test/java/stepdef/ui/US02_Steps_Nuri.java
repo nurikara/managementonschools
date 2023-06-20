@@ -69,15 +69,7 @@ public class US02_Steps_Nuri {
     public void sayfadan_logout_yapilarak_cikilir() throws InterruptedException {
 
 
-        login2.menu.click();
-
-        Thread.sleep(1000);
-
-        login2.logout.click();
-
-        Thread.sleep(1000);
-
-        login2.yes.click();
+      Driver.closeDriver();
 
     }
 

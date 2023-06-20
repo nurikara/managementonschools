@@ -48,6 +48,14 @@ public class US06_Dean_ViceDean extends Login{
     @FindBy(xpath ="//div[@role='alert']")
     public WebElement addViseDeanAlert;
 
+    @FindBy(xpath ="(//li[@class='page-item'])[4]")
+    public WebElement addViseDeanListeSonu;
+
+    @FindBy(xpath ="//tbody//tr//td[5]")
+    public WebElement addViseDeanTableUserName;
+
+
+
 
 
 
