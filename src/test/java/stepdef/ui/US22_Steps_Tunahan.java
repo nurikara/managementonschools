@@ -3,22 +3,15 @@ package stepdef.ui;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
-import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
-import pages.US22_US23_US24_US25_Add;
+import pages.US22_US23_US24_Add;
 import utilities.ConfigReader;
-import utilities.Driver;
 import utilities.ReusableMethods;
 
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-import java.util.List;
-import java.util.NoSuchElementException;
 import java.util.Random;
 
 public class US22_Steps_Tunahan {
-    US22_US23_US24_US25_Add add = new US22_US23_US24_US25_Add();
+    US22_US23_US24_Add add = new US22_US23_US24_Add();
 
 
     String userName;

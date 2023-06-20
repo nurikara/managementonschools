@@ -4,6 +4,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
@@ -13,6 +14,7 @@ import utilities.ConfigReader;
 import utilities.Driver;
 
 
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 import static utilities.ReusableMethods.*;
 
@@ -151,6 +153,8 @@ public class ElifStepDefs {
     @And("Kullanıcı update butonuna tıklar.")
     public void kullanıcıUpdateButonunaTıklar() {
         actions.sendKeys(Keys.PAGE_DOWN).perform();
+//        boolean updateButton=false;
+//        assertTrue("Update butonu ile ilgili herhengi birsey yoktur",updateButton);
         tumSayfaResmi();//#Update butonu ile ilgili herhengi birsey yoktur.BUG
     }
 

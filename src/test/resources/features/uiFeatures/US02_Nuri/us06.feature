@@ -1,9 +1,7 @@
 @us06
 Feature:Dean, Vice Dean hesabı oluşturabilmelidir.
 
-
   Background:
-
     Given Admin ilgili sitenin anasayfasina gider
     When Admin kullanici adi ve sifresini kullanarak Dean panaline giris yapar
     And Add ViseDean yazigi goruntulenir
@@ -20,9 +18,14 @@ Feature:Dean, Vice Dean hesabı oluşturabilmelidir.
     Then Add ViseDean bolumu doldurulurken brithPlace kismi bos birakilir
     And Sayfadan logout yapilarak cikilir
 
+
+
   Scenario: "Cinsiyet" girilmelidir. Boş bırakılamaz.
     Then Add ViseDean bolumu doldurulurken Cinsiyet kismi bos birakilir
     And Sayfadan logout yapilarak cikilir
+
+
+
 
   Scenario: "DogumTarihi" girilmelidir. Boş bırakılamaz.
     Then Add ViseDean bolumu doldurulurken DogumTarihi kismi bos birakilir
@@ -44,14 +47,15 @@ Feature:Dean, Vice Dean hesabı oluşturabilmelidir.
     Then Add ViseDean bolumu doldurulurken UserName kismi bos birakilir
     And Sayfadan logout yapilarak cikilir
 
-    Scenario: Password girilebilmelidir.
-      Then Add ViseDean bolumu doldurulurken PassWord kismi bos birakilir
-      And Sayfadan logout yapilarak cikilir
+  Scenario: Password girilebilmelidir.
+    Then Add ViseDean bolumu doldurulurken PassWord kismi bos birakilir
+    And Sayfadan logout yapilarak cikilir
 
   Scenario:Password en az 8 karakterden oluşmalıdır.
     Then Add ViseDean bolumu doldurulurken PassWord EnAz 8 karakterden oluşmalıdır
     And Sayfadan logout yapilarak cikilir
-@deneme
+
+
   Scenario:Password; büyük harf, küçük harf ve bir rakam içermelidir.
     Then Add ViseDean bolumu doldurulurken Password; büyük harf, küçük harf ve bir rakam içermelidir.
     And Sayfadan logout yapilarak cikilir
