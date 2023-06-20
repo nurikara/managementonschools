@@ -45,7 +45,8 @@ public class US17_US18_TeacherStudentInfo extends Login{
     @FindBy(xpath = "//*[text()='Submit']")
     public WebElement submitButtonZeynep;
 
-
+@FindBy(xpath = "//*[text()='Student Info saved Successfully']")
+    public WebElement savedYazısıZeynep;
 
 
 }

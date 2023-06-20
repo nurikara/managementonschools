@@ -105,4 +105,18 @@ ReusableMethods.bekle(2);
     public void kullanıcıAlanınaGirilenDeğeriDoğrular(String string) {
         Assert.assertTrue(tSI.absenteeZeynep.isDisplayed());
     }
+
+    @And("Kullanıcı ders öğrenci ve dönem seçebildiğini görür")
+    public void kullanıcıDersÖğrenciVeDönemSeçebildiğiniGörür() {
+        ReusableMethods.bekle(2);
+        Assert.assertEquals("2",tSI.chooselessonZeynep.getAttribute("value"));
+        Assert.assertEquals("9",tSI.choosestudentZeynep.getAttribute("value"));
+        Assert.assertEquals("10",tSI.chooseeducationTermZeynep.getAttribute("value"));
+    }
+
+    @And("Kullanıcı başarılı bir şekilde not girişi yapar")
+    public void kullanıcıBaşarılıBirŞekildeNotGirişiYapar() {
+ReusableMethods.bekle(2);
+Assert.assertEquals(tSI.savedYazısıZeynep.getText(),"Student Info saved Successfully");
+    }
 }
