@@ -17,8 +17,8 @@ import org.junit.runner.RunWith;
 
         //konsolu okunakli hala getirir false olunca kullanılmayacak.
         features = "src/test/resources",
-        glue = {"stepdef","Hooks"},
-        tags ="@nuri",
+        glue = {"stepdef","hooks"},
+        tags ="@US02Api",
         monochrome = false,//konsolu okunakli hala getirir false olunca kullanılmayacak.
         dryRun = false
 )

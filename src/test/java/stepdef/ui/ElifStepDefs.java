@@ -13,11 +13,10 @@ import pages.US10_US11_US12_ViceDeanLessonProgram;
 import utilities.ConfigReader;
 import utilities.Driver;
 
-<<<<<<< HEAD
-=======
 
-import static org.junit.Assert.assertFalse;
->>>>>>> e6821dc4260034c6a4fdeb9a28fc2743da181d18
+
+
+
 import static org.junit.Assert.assertTrue;
 import static utilities.ReusableMethods.*;
 
