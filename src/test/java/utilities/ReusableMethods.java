@@ -238,6 +238,9 @@ public class ReusableMethods {
         }
     }
 
+
+
+
     //JS Scroll
     public static void scroll(WebElement element) {
         JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();

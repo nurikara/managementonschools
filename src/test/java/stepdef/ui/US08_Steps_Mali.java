@@ -8,6 +8,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en_old.Ac;
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -30,6 +31,7 @@ public class US08_Steps_Mali {
 
     @And("Sayfa kapatilir")
     public void sayfaKapatilir() {driver.close();
+
     }
 
     @Given("Kullanici Lessons basligini tiklar")
@@ -169,5 +171,32 @@ public class US08_Steps_Mali {
             }
 
         }
+    }
+
+    @And("Son kayıtlanan data satirinda bulunan delete ikonuna tiklar")
+    public void sonKayıtlananDataSatirindaBulunanDeleteIkonunaTiklar() {
+        List<WebElement> cop=driver.findElements(By.xpath("//i[@class='fa-solid fa-trash']"));
+        int numofLastElement=cop.size();
+        System.out.println("numofLastElement = " + numofLastElement);
+        driver.findElement(By.xpath("(//i[@class='fa-solid fa-trash'])["+numofLastElement+"]")).click();
+       // JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+       // js.executeScript("arguments["+numofLastElement+"].click();", cop);
+        ReusableMethods.bekle(1);
+    }
+
+    @And("Ekranda basarili silme mesaji goruntulenir")
+    public void ekrandaBasariliSilmeMesajiGoruntulenir() {
+        String actualData=locate.msgLessonCreated2.getText();
+        System.out.println("actualData = " + actualData);
+        Assert.assertTrue(actualData.contains("Lesson Deleted"));
+    }
+
+    @And("fail durumu için sayfa resmini alır")
+    public void failDurumuIcinSayfaResminiAlır() {
+        ReusableMethods.webElementResmi(locate.addLessonUpdateElement);
+        boolean updateElementVarMi = false;
+        Assert.assertTrue("Element sayfada bulunamadı.", updateElementVarMi);
+
+
     }
 }
