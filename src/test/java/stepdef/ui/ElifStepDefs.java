@@ -12,9 +12,9 @@ import pages.US10_US11_US12_ViceDeanLessonProgram;
 import utilities.ConfigReader;
 import utilities.Driver;
 
-
 import static org.junit.Assert.assertTrue;
 import static utilities.ReusableMethods.*;
+
 
 public class ElifStepDefs {
     WebDriver driver = Driver.getDriver();
@@ -35,7 +35,7 @@ public class ElifStepDefs {
     @When("Kullanıcı login butonuna basar")
     public void kullanıcıLoginButonunaBasar() {
         lessonProgram.homeLoginButton.click();
-        scroll(lessonProgram.LoginButton);
+
 
     }
 

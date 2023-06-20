@@ -1,16 +1,14 @@
 package utilities;
 
+
 import org.apache.commons.io.FileUtils;
-import org.junit.Assert;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import java.io.File;
 import java.io.IOException;
-import java.sql.*;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.util.ArrayList;
@@ -21,84 +19,7 @@ import static org.junit.Assert.assertTrue;
 
 public class ReusableMethods {
 
-    private static Connection connection;
-    private static Statement statement;
-    private static ResultSet resultSet;
 
-    public static void closeConnection() {
-        try {
-            if (resultSet != null) {
-                resultSet.close();
-            }
-            if (statement != null) {
-                statement.close();
-            }
-            if (connection != null) {
-                connection.close();
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public static void createConnection() {
-        String url = "jdbc:postgresql://localhost:5432/jdbc";
-        String user = "postgres";
-        String password = ConfigReader.getProperty("postgresPassword");
-        try {
-            connection = DriverManager.getConnection(url, user, password);
-        } catch (SQLException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-    }
-
-    public static List<String> getColumnNames(String query) {
-        executeQuery(query);
-        List<String> columns = new ArrayList<>();
-        ResultSetMetaData rsmd;
-        try {
-            rsmd = resultSet.getMetaData();
-            int columnCount = rsmd.getColumnCount();
-            for (int i = 1; i <= columnCount; i++) {
-                columns.add(rsmd.getColumnName(i));
-            }
-        } catch (SQLException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-        return columns;
-    }
-    public static List<Object> getColumnData(String query, String column) {
-        executeQuery(query);
-        List<Object> rowList = new ArrayList<>();
-        ResultSetMetaData rsmd;
-        try {
-            rsmd = resultSet.getMetaData();
-            while (resultSet.next()) {
-                rowList.add(resultSet.getObject(column));
-            }
-        } catch (SQLException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-        return rowList;
-    }
-
-    public static void executeQuery(String query) {
-        try {
-            statement = connection.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
-        } catch (SQLException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-        try {
-            resultSet = statement.executeQuery(query);
-        } catch (SQLException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-    }
     //HARD WAIT METHOD
     public static void bekle(int saniye) {
         try {
@@ -238,9 +159,6 @@ public class ReusableMethods {
         }
     }
 
-
-
-
     //JS Scroll
     public static void scroll(WebElement element) {
         JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
@@ -339,7 +257,8 @@ public class ReusableMethods {
         }
     }
 
-    //Alttaki uc method sadce bu site icin gecerli Locate'ler degistigi icin baska sitede kullanilmaz
+
+//Alttaki uc method sadce bu site icin gecerli Locate'ler degistigi icin baska sitede kullanilmaz
     //Dinamik olsun diye bu sekilde yaptim
     public static void selectFromList( String textFromList) {
         Driver.getDriver().findElement(By.xpath("//div[@id='myCountryautocomplete-list']//div[.='" + textFromList + "']")).click();
@@ -350,46 +269,5 @@ public class ReusableMethods {
     public static void clickDelete(int sayi){
         Driver.getDriver().findElement(By.xpath("(//a[text()='delete'])["+sayi+"]"));
     }
-
-    /**
-     * @param str degeri expected metin
-     * @param atr degeri actual metin
-    bu metot expected metinin alertteki actual metini icerdigini dogrulamak icin
-     */
-    public static void assertTextContainsAssertTrue(String str, String atr) {
-        assertTrue(str.contains(atr));
-    }
-
-    /**Bu metot bir webelementin secili olup olmadigini dogrular
-     *  @param webElement girilecek webelement dir.
-     */
-    public void assertTrueIsSelected(WebElement webElement){
-        Assert.assertTrue(webElement.isSelected());
-    }
-
-    /** Bu metot iki string degerin birbirine equal olup olmadigini dogrular
-     @param str girilecek 1. metindir
-     @param str1 girilecek 2. metindir
-     */
-    public void assertTrueEquals(String str, String str1){
-        Assert.assertTrue(str.equals(str1));
-    }
-    /**
-     *  JavaScript ile webelement olusturma
-     * @param javascriptYolu internet sitesinden sag klik ile JS yolunu kopyala ile alınan metin olacak
-     */
-    public static WebElement webelementJavaScript(String javascriptYolu) {
-        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
-        WebElement webElement = (WebElement) js.executeScript("return "+javascriptYolu+"");
-        return webElement;
-    }
-    /**
-     *  JavaScript ile webelement olusturup isEnabled oldugunu sorgulama
-     * @param str internet sitesinden sag klik ile JS yolunu kopyala ile alınan metin olacak
-     */
-    public static void assertIsEnabled(String str){
-        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
-        WebElement webElement = (WebElement) js.executeScript("return "+str+"");
-        assertTrue(webElement.isEnabled());
-    }
 }
+

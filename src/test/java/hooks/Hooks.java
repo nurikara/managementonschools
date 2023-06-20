@@ -1,7 +1,6 @@
 package hooks;
 
 
-import io.cucumber.core.gherkin.Step;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
@@ -10,7 +9,7 @@ import org.openqa.selenium.TakesScreenshot;
 import utilities.Driver;
 
 
-public class Hooks {
+public class Hooks  {
      /*
     Hooks her bir Scenario yada Scenario Outline dan ONCE yada SONRA calistirilan bir classdir.
    ==> Neden hooks kullanilir?
@@ -26,9 +25,9 @@ public class Hooks {
     }//@Before yanina("buraya tag belirtiyoruz.")sonra sadece rumner da belirttigimiz tags calısır.Ama belirtmazsek de kıstlama
     //koymamıs oluruz ve before ıcıne koydugumuz bilgi tum testlerden once hep calısır
 
-
     @After
     public void tearDown(Scenario scenario) {
+
         if (scenario.isFailed()) {//Eger fail olursa alınan ekran goruntusunu rapora ekle
             final byte[] failedScreenShot = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
             scenario.attach(failedScreenShot, "image/png", "failed_scnenaio" + scenario.getName());

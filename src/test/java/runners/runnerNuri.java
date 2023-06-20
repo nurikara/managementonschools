@@ -14,12 +14,12 @@ import org.junit.runner.RunWith;
                 "junit:target/xml-report/cucumber.xml",
                 "rerun:target/failedRerun.txt"
         },
-        monochrome = false,//konsolu okunakli hala getirir false olunca kullanılmayacak.
-        features = "src/test/resources/features",
-        glue = {"stepdef"},
-        tags ="@deneme",
+        //konsolu okunakli hala getirir false olunca kullanılmayacak.
+        features = "src/test/resources",
+        glue = {"stepdef","Hooks"},
+        tags ="@nuri",
         dryRun = false
 )
 
-public class RunnerNuri {
+public class runnerNuri {
 }
