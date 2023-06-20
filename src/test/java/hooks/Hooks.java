@@ -8,6 +8,8 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import utilities.Driver;
 
+import static baseUrl.ManagementSchoolBaseUrl.setUp;
+
 
 public class Hooks {
      /*
@@ -20,8 +22,10 @@ public class Hooks {
      */
 
     @Before() //==> import io.cucumber.java.Before==>import cucumberdan alinmali
-    public void setUp() {
-        System.out.println("Before Method");
+    public void setUpApi() {
+        setUp();
+
+
     }//@Before yanina("buraya tag belirtiyoruz.")sonra sadece rumner da belirttigimiz tags calısır.Ama belirtmazsek de kıstlama
     //koymamıs oluruz ve before ıcıne koydugumuz bilgi tum testlerden once hep calısır
 
