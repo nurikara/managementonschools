@@ -5,6 +5,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
+import java.util.List;
+
 public class US08_US09_ViceDeanAddLesson extends Login{
 
 
@@ -37,6 +39,8 @@ public class US08_US09_ViceDeanAddLesson extends Login{
     public WebElement trashBox;
     @FindBy(xpath = "(//div[@class='container-fluid'])[4]")
     public WebElement addLessonUpdateElement;
+    @FindBy(xpath = "//i[@class='fa-solid fa-trash']")
+    public List<WebElement> cop;
 
 
 
