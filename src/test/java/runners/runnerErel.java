@@ -19,11 +19,11 @@ import org.junit.runner.RunWith;
         monochrome = false,//konsolu okunakli hala getirir false olunca kullanılmayacak.
         features = "src/test/resources/features",
         glue = {"stepdef", "hooks"},//bu parametre ile kodalrımızı yazdıgımız stepDefinition classının package ını belirtiriz.
-        tags = "@erel",//buraya herhangi birsey yazabiliriz. biz bu tagsı nerede kullacagız:benim calıstırmak ıstedıgım senaryoya isim verebilmemdir.
+        tags = "@US16_DBTestMessage",//buraya herhangi birsey yazabiliriz. biz bu tagsı nerede kullacagız:benim calıstırmak ıstedıgım senaryoya isim verebilmemdir.
 
 
 
-        dryRun = false
+        dryRun = true // browser ı açmıyor
 )
 
 
