@@ -6,3 +6,4 @@ Feature: Vice Dean, öğrenci oluşturabilme
     And Kullanıcı geçerli VİCE DEAN OLARAK user name ve password u girer
     And Kullanıcı menuden student management e tıklar
     Then Kullanıcı istediği danışman öğretmeni seçer
+    And Sayfa kapatiliir
