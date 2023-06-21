@@ -7,7 +7,7 @@ Feature: US02 Admin Guest User List
     And Acilan pencerenin sol ust kosesine gidilerek Menu butonuna tiklanir
     And Sayganin sol kisminda acilan main menu kisminin altindaki Guset User segmesi tiklanir
 
-
+@dd
   Scenario:Admin Guest User List, Name, Phone Number, SSN, User Name bilgilerini görebilmeli
     Given Acilan sayfada Gust User listesi goruntulenir
     Then Sayfadan logout yapilarak cikilir

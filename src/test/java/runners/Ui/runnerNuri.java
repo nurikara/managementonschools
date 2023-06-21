@@ -1,4 +1,4 @@
-package runners;
+package runners.Ui;
 
 
 import io.cucumber.junit.Cucumber;
@@ -14,11 +14,14 @@ import org.junit.runner.RunWith;
                 "junit:target/xml-report/cucumber.xml",
                 "rerun:target/failedRerun.txt"
         },
+
+        //konsolu okunakli hala getirir false olunca kullanılmayacak.
+        features = "src/test/resources",
+        glue = {"stepdef","hooks"},
+        tags ="@dd",
         monochrome = false,//konsolu okunakli hala getirir false olunca kullanılmayacak.
-        features = "src/test/resources/features",
-        glue = {"stepdef", "hooks"},
-        tags ="@erel",
         dryRun = false
 )
-public class runnerErelUS15_US16_US25 {
+
+public class runnerNuri {
 }
