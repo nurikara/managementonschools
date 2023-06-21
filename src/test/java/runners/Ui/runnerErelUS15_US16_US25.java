@@ -1,4 +1,4 @@
-package runners;
+package runners.Ui;
 
 
 import io.cucumber.junit.Cucumber;
@@ -16,10 +16,9 @@ import org.junit.runner.RunWith;
         },
         monochrome = false,//konsolu okunakli hala getirir false olunca kullanılmayacak.
         features = "src/test/resources/features",
-        glue = {"stepdef","hooks"},
-        tags ="@dd",
+        glue = {"stepdef", "hooks"},
+        tags ="@erel",
         dryRun = false
 )
-
-public class RunnerNuri {
+public class runnerErelUS15_US16_US25 {
 }
