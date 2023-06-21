@@ -26,9 +26,7 @@ public class US06_Steps_Nuri {
     US06_Dean_ViceDean login = new US06_Dean_ViceDean();
     US02_AdminUserList login2 = new US02_AdminUserList();
 
-    Actions actions=new Actions(Driver.getDriver());
-
-
+    Actions actions = new Actions(Driver.getDriver());
 
 
     @When("Admin kullanici adi ve sifresini kullanarak Dean panaline giris yapar")
@@ -159,8 +157,8 @@ public class US06_Steps_Nuri {
         Thread.sleep(1000);
         login.addViseDeanPASSWORD.sendKeys("Emre4344");
         Thread.sleep(1000);
-       login.addViseDeanSubmit.click();
-       Thread.sleep(3000);
+        login.addViseDeanSubmit.click();
+        Thread.sleep(3000);
 
         actions.sendKeys(Keys.PAGE_DOWN);
         Thread.sleep(3000);
@@ -169,9 +167,10 @@ public class US06_Steps_Nuri {
 
         login.addViseDeanListeSonu.click();
 
-       Thread.sleep(3000);
+        Thread.sleep(3000);
 
-        List<WebElement>  UserListe =Driver.getDriver().findElements(By.xpath("//tbody//tr//td[5]"));
+
+        List<WebElement> UserListe = login.ListUserName;
 
         boolean flag = false;
 
@@ -406,7 +405,7 @@ public class US06_Steps_Nuri {
         System.out.println("login.addViseDeanAlert = " + login.addViseDeanAlert);
         Thread.sleep(2000);
 
-        Assert.assertNotEquals("sa",login.addViseDeanAlert.getText());
+        Assert.assertNotEquals("sa", login.addViseDeanAlert.getText());
 
     }
 
