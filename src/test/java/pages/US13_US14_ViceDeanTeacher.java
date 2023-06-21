@@ -5,6 +5,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
+import java.util.List;
+
 public class US13_US14_ViceDeanTeacher extends Login {
 
     @FindBy(xpath = "//button[text()='Menu']")
@@ -50,6 +52,11 @@ public class US13_US14_ViceDeanTeacher extends Login {
     public WebElement passwordUpdate;
     @FindBy(xpath = "//button[text()='Submit']")
     public WebElement submitButton;
+    @FindBy(xpath = "//div[text()='Page ']")
+    public WebElement pageText;
+
+
+
     @FindBy(xpath = "(//button[text()='Submit'])[2]")
     public WebElement submitButtonUpdate;
     @FindBy(id = "react-select-4-input")
@@ -58,6 +65,8 @@ public class US13_US14_ViceDeanTeacher extends Login {
     public WebElement latestNewsText;
     @FindBy(xpath = "//div[@class='Toastify']")
     public WebElement msgLessonCreated2;
+    @FindBy(xpath = "//button[@type='button']")
+    public List<WebElement> editIconList;
 
 
 
