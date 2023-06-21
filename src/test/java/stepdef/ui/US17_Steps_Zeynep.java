@@ -2,9 +2,11 @@ package stepdef.ui;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
+import pages.US13_US14_ViceDeanTeacher;
 import pages.US17_US18_TeacherStudentInfo;
 import utilities.ConfigReader;
 import utilities.Driver;
@@ -13,6 +15,7 @@ import utilities.ReusableMethods;
 public class US17_Steps_Zeynep {
 
     US17_US18_TeacherStudentInfo tSI=new US17_US18_TeacherStudentInfo();
+    US13_US14_ViceDeanTeacher viceDeanTeacher=new US13_US14_ViceDeanTeacher();
 
 
     @Given("Kullanıcı {string} alanını tıklar")
@@ -36,6 +39,11 @@ ReusableMethods.bekle(2);
                 tSI.submitButtonZeynep.click();
                 break;
             case "menü" :
+                viceDeanTeacher.menuButton.click();
+                break;
+            case "teacher management" :
+                viceDeanTeacher.teacherMenagementButton.click();
+                break;
 
 
 
@@ -86,6 +94,7 @@ ReusableMethods.bekle(2);
 
     @And("Kullanıcı sayfayı kapatır")
     public void kullanıcıSayfayıKapatır() {
+
         Driver.closeDriver();
     }
 
@@ -122,4 +131,7 @@ ReusableMethods.bekle(2);
         Assert.assertEquals(tSI.savedYazısıZeynep.getText(), "Student Info saved Successfully");
         ReusableMethods.tumSayfaResmi();
     }
+
+
+
 }

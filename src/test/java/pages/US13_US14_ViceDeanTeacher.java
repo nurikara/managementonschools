@@ -70,7 +70,8 @@ public class US13_US14_ViceDeanTeacher extends Login {
     public List<WebElement> editIconList;
 
 
-
+@FindBy(xpath = "//*[@class=' css-1wy0on6']")
+    public WebElement chooseLessonTeacher;
 
 
 
