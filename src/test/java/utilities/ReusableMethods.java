@@ -269,5 +269,5 @@ public class ReusableMethods {
     public static void clickDelete(int sayi){
         Driver.getDriver().findElement(By.xpath("(//a[text()='delete'])["+sayi+"]"));
     }
-}
+
 
