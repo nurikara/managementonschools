@@ -392,6 +392,21 @@ public class ReusableMethods {
         WebElement webElement = (WebElement) js.executeScript("return "+str+"");
         assertTrue(webElement.isEnabled());
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     public static Connection getConnection(){
         try {
             return DriverManager.getConnection("jdbc:postgresql://managementonschools.com:5432/school_management", "select_user", "43w5ijfso");
