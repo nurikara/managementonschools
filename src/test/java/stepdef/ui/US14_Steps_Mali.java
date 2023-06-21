@@ -39,7 +39,7 @@ public class US14_Steps_Mali {
         locate.teacherMenagementButton.click();
         ReusableMethods.bekle(1);
         locate.selectLessonInput.click();
-        locate.selectLessonInput.sendKeys("Phyton", Keys.TAB);
+        locate.selectLessonInput.sendKeys("Sırtustu Yuzme", Keys.TAB);
         ReusableMethods.bekle(1);
         name=faker.name().firstName();
         System.out.println("name = " + name);
@@ -94,6 +94,7 @@ public class US14_Steps_Mali {
 
     @Then("Liste son sirada bulunan ogretmen bilgileri girilen data ile dogrulanir")
     public void listeSonSiradaBulunanOgretmenBilgileriGirilenDataIleDogrulanir() {
+
         List<WebElement> actualData=driver.findElements(By.xpath("//td"));
 
         for (int i = 0; i <actualData.size() ; i++) {
@@ -115,11 +116,14 @@ public class US14_Steps_Mali {
     @And("Son siradaki ogretmen bilgileri edit butona basar")
     public void sonSiradakiOgretmenBilgileriEditButonaBasar() {
 
-        List<WebElement> editIconList=driver.findElements(By.xpath("//button[@type='button']"));
+        List<WebElement> editIconList=locate.editIconList;
         ReusableMethods.scroll(locate.submitButton);
+        //ReusableMethods.scroll(locate.pageText);
+        ReusableMethods.scroll(locate.teacherListText);
         ReusableMethods.bekle(1);
         int size=editIconList.size();
         System.out.println("size = " + size);
+        ReusableMethods.bekle(1);
         driver.findElement(By.xpath("(//button[@type='button'])["+size+"]")).click();
 
 
@@ -267,7 +271,7 @@ public class US14_Steps_Mali {
 
         //edit button tıklaması için dinamiklocate alınıyor. çünkü sayfadaki liste değişiyor
 
-        List<WebElement> editIconList=driver.findElements(By.xpath("//button[@type='button']"));
+        List<WebElement> editIconList=locate.editIconList;
         ReusableMethods.scroll(locate.submitButton);
         ReusableMethods.bekle(1);
         int size=editIconList.size();
@@ -300,6 +304,23 @@ public class US14_Steps_Mali {
         ReusableMethods.bekle(1);
 
 
+    }
+
+    @And("gecerli giris mesaji goruntulenir")
+    public void gecerliGirisMesajiGoruntulenir() {
+        ReusableMethods.bekle(1);
+        Assert.assertTrue(locate.msgLessonCreated2.isDisplayed());
+        String msg=locate.msgLessonCreated2.getText();
+        System.out.println("msg = " + msg);
+        Assert.assertTrue(msg.contains("successfully"));
+    }
+
+    @Given("kullanici menu baslıgından teacher alanına girer")
+    public void kullaniciMenuBaslıgındanTeacherAlanınaGirer() {
+        ReusableMethods.bekle(1);
+        locate.menuButton.click();
+        ReusableMethods.bekle(1);
+        locate.teacherMenagementButton.click();
     }
 }
 

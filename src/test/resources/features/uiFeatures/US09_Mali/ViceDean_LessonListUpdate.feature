@@ -1,5 +1,5 @@
 @all
-Feature: US08 Vice Dean Update Lesson
+Feature: US09 Vice Dean Update Lesson
   @first @second @third
   Scenario:   Login
     Given Kullanici  "ViceDean" olarak giriş yapar
