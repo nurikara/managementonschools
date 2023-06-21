@@ -17,8 +17,8 @@ import org.junit.runner.RunWith;
         monochrome = false,//konsolu okunakli hala getirir false olunca kullanılmayacak.
         features = "src/test/resources/features",
         glue = {"stepdef", "hooks"},
-        tags ="@erel",
-        dryRun = false
+        tags ="@US25_DBTestAdmin",
+        dryRun = true
 )
 public class runnerErelUS15_US16_US25 {
 }
