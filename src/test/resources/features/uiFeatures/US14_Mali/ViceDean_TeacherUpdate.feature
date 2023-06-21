@@ -1,13 +1,16 @@
-Feature: US08 Vice Dean Add Lesson
+Feature: US14 Vice Dean Teacher Update
 
-  @step1 @step2
-  Scenario:   Login
+
+  Scenario:     Login
     Given Kullanici  "ViceDean" olarak giriş yapar
+
 
   Scenario: TC01 ViceDean Ogretmen Eklemesi Yapma _POZİTİVE
     Given Kullanici AddTeacher alani inputlarini doldurarak gecerli bir giris yapar
+    And gecerli giris mesaji goruntulenir
 
-  @step1
+    #bu senerya üst senaryoya bağımlıdır
+
   Scenario: TC02 Girilen Ogretmen Bilgilerini Listede Dogrulama
     Given Kullanici Ogretmen Listesi Son Sayfaya Gider
     Then Liste son sirada bulunan ogretmen bilgileri girilen data ile dogrulanir

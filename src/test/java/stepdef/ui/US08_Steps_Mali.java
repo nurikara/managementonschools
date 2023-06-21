@@ -166,7 +166,8 @@ public class US08_Steps_Mali {
 
     @And("Son kayıtlanan data satirinda bulunan delete ikonuna tiklar")
     public void sonKayıtlananDataSatirindaBulunanDeleteIkonunaTiklar() {
-        List<WebElement> cop=driver.findElements(By.xpath("//i[@class='fa-solid fa-trash']"));
+        List<WebElement> cop=locate.cop;
+
         int numofLastElement=cop.size();
         System.out.println("numofLastElement = " + numofLastElement);
         driver.findElement(By.xpath("(//i[@class='fa-solid fa-trash'])["+numofLastElement+"]")).click();
