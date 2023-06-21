@@ -1,6 +1,6 @@
-@DBAddLesson
+@DBAddLesson @db
 Feature: Databasede AddLesson
-  @db
+
   Background:   Login
     Given Kullanici  "ViceDean" olarak giriş yapar
 

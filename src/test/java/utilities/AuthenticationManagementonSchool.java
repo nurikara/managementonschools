@@ -13,7 +13,7 @@ public class AuthenticationManagementonSchool {
     }
 
     public static String generateToken(){
-        String body = "{\"password\": \"12345678\",\"username\": \"AdminB129\"}";
+        String body = "{\"password\": \"12345678\",\"username\": \"DEAN\"}";
         Response response = given().contentType(ContentType.JSON).body(body).post("https://managementonschools.com/app/auth/login");
         return response.jsonPath().getString("token");
     }
