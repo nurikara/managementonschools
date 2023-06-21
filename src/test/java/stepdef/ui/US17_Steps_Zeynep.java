@@ -35,6 +35,8 @@ ReusableMethods.bekle(2);
             case "submit":
                 tSI.submitButtonZeynep.click();
                 break;
+            case "menü" :
+
 
 
         }
@@ -116,7 +118,8 @@ ReusableMethods.bekle(2);
 
     @And("Kullanıcı başarılı bir şekilde not girişi yapar")
     public void kullanıcıBaşarılıBirŞekildeNotGirişiYapar() {
-ReusableMethods.bekle(2);
-Assert.assertEquals(tSI.savedYazısıZeynep.getText(),"Student Info saved Successfully");
+        ReusableMethods.bekle(2);
+        Assert.assertEquals(tSI.savedYazısıZeynep.getText(), "Student Info saved Successfully");
+        ReusableMethods.tumSayfaResmi();
     }
 }
