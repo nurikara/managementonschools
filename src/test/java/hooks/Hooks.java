@@ -1,6 +1,10 @@
 package hooks;
 
-import io.cucumber.java.*;
+
+import io.cucumber.java.After;
+
+import io.cucumber.java.Before;
+import io.cucumber.java.Scenario;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import pages.US02_AdminUserList;
@@ -12,6 +16,7 @@ import static baseUrl.ManagementSchoolBaseUrl.setUp;
 public class Hooks {
 
     US02_AdminUserList login2 = new US02_AdminUserList();
+
      /*
     Hooks her bir Scenario yada Scenario Outline dan ONCE yada SONRA calistirilan bir classdir.
    ==> Neden hooks kullanilir?
@@ -22,7 +27,9 @@ public class Hooks {
      */
 
 
-    @Before() //==> import io.cucumber.java.Before==>import cucumberdan alinmali
+
+
+    @Before("@Api") //==> import io.cucumber.java.Before==>import cucumberdan alinmali
     public void setUpApi() {
         setUp();
 
@@ -32,12 +39,13 @@ public class Hooks {
     @After
     public void tearDown(Scenario scenario) throws InterruptedException {
 
+
         if (scenario.isFailed()) {//Eger fail olursa alınan ekran goruntusunu rapora ekle
             final byte[] failedScreenShot = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
             scenario.attach(failedScreenShot, "image/png", "failed_scnenaio" + scenario.getName());
         }
       //  Driver.closeDriver();
-    }
+    }}
 
     /*
     Scenario'lar arasındaki bağlantıyı sağlayan glue parametresine koyduğumuz stepDefinition package'ı içerisinde
@@ -47,4 +55,3 @@ methodlar çalışacaktır.
     İstersek yeni bir package oluşturup bunun içinede Hooks class'ını koyabiliriz. Eğer yeni bir package içerisine
 koyarsak Runner class'ındaki glue parametresine bu package'ı da eklememiz gerekir
  */
-}
