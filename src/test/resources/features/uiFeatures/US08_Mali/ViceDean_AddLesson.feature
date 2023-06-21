@@ -1,15 +1,16 @@
 
 Feature: US08 Vice Dean Add Lesson
-  @ilk @iki @uc
+
+  @ilk @iki @uc @dbase
   Scenario:   Login
     Given Kullanici  "ViceDean" olarak giriş yapar
 
-    @ilk
+    @ilk @dbase
     Scenario:TC01 Lessons Add Lesson Alanı Pozitive
       Given Kullanici Lessons basligini tiklar
-      Then LessonName alanina ders ismi girer
+      Then LessonName alanina "frgr" ismi girer
       Then Coppulsory checkbox kutusunu tiklar
-      Then CreditScore input alanı int deger girer
+      Then CreditScore input alanı "7" int deger girer
       Then Submit butonunu tiklar
       Then Basarili kayıtlama mesaji goruntulenir
 

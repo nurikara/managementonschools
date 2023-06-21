@@ -3,9 +3,7 @@ package stepdef.ui;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.junit.Assert;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.support.ui.Wait;
 import pages.Login;
 import pages.US02_AdminUserList;
 import utilities.ConfigReader;
@@ -71,15 +69,7 @@ public class US02_Steps_Nuri {
     public void sayfadan_logout_yapilarak_cikilir() throws InterruptedException {
 
 
-        login2.menu.click();
-
-        Thread.sleep(1000);
-
-        login2.logout.click();
-
-        Thread.sleep(1000);
-
-        login2.yes.click();
+      Driver.closeDriver();
 
     }
 
