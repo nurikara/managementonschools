@@ -1,4 +1,4 @@
-package stepdef.db.us10_11_12;
+package stepdef.db;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
