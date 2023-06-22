@@ -1,4 +1,4 @@
-package runners.Ui;
+package runners.api;
 
 
 import io.cucumber.junit.Cucumber;
@@ -21,5 +21,5 @@ import org.junit.runner.RunWith;
         dryRun = false
 )
 
-public class RunnerElif {
+public class Runner_Api {
 }

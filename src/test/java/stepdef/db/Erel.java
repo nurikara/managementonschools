@@ -1,17 +1,15 @@
 package stepdef.db;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-
 import java.sql.*;
-
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-
 import static utilities.DataBaseUtils.getResultSet;
 
 
 
-public class DB_Erel {
+
+
+public class Erel {
     ResultSet resultSet;
 
     @Given("{string} ile student cagir")

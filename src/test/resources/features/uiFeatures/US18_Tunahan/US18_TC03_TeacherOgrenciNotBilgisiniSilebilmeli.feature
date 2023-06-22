@@ -1,4 +1,4 @@
-
+@dmr @us18
 Feature: US18_Teacher_ogrenci_notlarini_gorebilmeli_güncelleyebilmeli
 
   Scenario: TC03_Teacher_ogrenci_not_bilgisin_silebilmeli
@@ -9,4 +9,3 @@ Feature: US18_Teacher_ogrenci_notlarini_gorebilmeli_güncelleyebilmeli
     And kullanici_StudentInfoLıstdeki_delete_butonunun_gorunurlugunu_dogrular
     And kullanici_delete_butonuna_basar
     Then kullanici_ogrencinin_not_bilgilerinin_silindigini_dogrular
-    And kullanici_sayfayi_kapatır
