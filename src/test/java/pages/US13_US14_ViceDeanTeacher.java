@@ -73,6 +73,14 @@ public class US13_US14_ViceDeanTeacher extends Login {
 @FindBy(xpath = "//*[@class=' css-19bb58m']")
     public WebElement chooseLessonTeacher;
 
+@FindBy(xpath = "//*[text()='Required']")
+    public WebElement surnameRequared;
+
+@FindBy(xpath = "//*[text()='Teacher saved successfully']")
+    public WebElement teacherSavedsuccessfully;
+
+@FindBy(xpath = "(//*[@class='invalid-feedback'])[7]")
+    public WebElement minimumcharacteruyarısı;
 
 
 
