@@ -1,11 +1,19 @@
 package runners.Ui;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
 
+<<<<<<< HEAD
 @RunWith(Cucumber.class)//cucumber ile junitin entegre olmasını saglayan test calıstırıcı notasyonudur.
 //Senaryoların nerede ve nasıl calısacagi ,hangi raporu kullanacagı ile alakalı secenekleri  ayarlar.
+=======
+@RunWith(Cucumber.class)
+>>>>>>> main
 @CucumberOptions(
         plugin = {
                 "pretty",//konsolu renkli yazdirir
@@ -13,6 +21,7 @@ import org.junit.runner.RunWith;
                 "json:target/json-reports/cucumber.json",
                 "junit:target/xml-report/cucumber.xml",
                 "rerun:target/failedRerun.txt"
+<<<<<<< HEAD
 
         },
         //plugin de rapor alacagımız ve raporlar uretecegimiz yerleri belirliyoruz,bizim icin onemli olan html onemli.
@@ -29,4 +38,12 @@ import org.junit.runner.RunWith;
 
 public class runner {
 
-}
+=======
+        },
+        monochrome = false,//konsolu okunakli hala getirir false olunca kullanılmayacak.
+        features = "src/test/resources/features",
+        glue = {"stepdef", "hooks"},
+        tags ="@lessonProgram",
+        dryRun = false
+)
+
