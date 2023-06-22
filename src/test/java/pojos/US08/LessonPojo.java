@@ -1,17 +1,24 @@
 package pojos.US08;
 
+import io.cucumber.core.internal.com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class LessonPojo {
+
+
      private String lessonName;
-     private Boolean compulsory;
+     private String compulsory;
      private String creditScore;
+     private String lessonId;
 
     public LessonPojo() {
     }
 
-    public LessonPojo(String lessonName, Boolean compulsory, String creditScore) {
+    public LessonPojo(String lessonName, String compulsory, String creditScore, String lessonId) {
         this.lessonName = lessonName;
         this.compulsory = compulsory;
         this.creditScore = creditScore;
+        this.lessonId = lessonId;
     }
 
     public String getLessonName() {
@@ -22,11 +29,11 @@ public class LessonPojo {
         this.lessonName = lessonName;
     }
 
-    public Boolean getCompulsory() {
+    public String getCompulsory() {
         return compulsory;
     }
 
-    public void setCompulsory(Boolean compulsory) {
+    public void setCompulsory(String compulsory) {
         this.compulsory = compulsory;
     }
 
@@ -38,12 +45,21 @@ public class LessonPojo {
         this.creditScore = creditScore;
     }
 
+    public String getLessonId() {
+        return lessonId;
+    }
+
+    public void setLessonId(String lessonId) {
+        this.lessonId = lessonId;
+    }
+
     @Override
     public String toString() {
         return "LessonPojo{" +
                 "lessonName='" + lessonName + '\'' +
-                ", compulsory=" + compulsory +
+                ", compulsory='" + compulsory + '\'' +
                 ", creditScore='" + creditScore + '\'' +
+                ", lessonId='" + lessonId + '\'' +
                 '}';
     }
 }
