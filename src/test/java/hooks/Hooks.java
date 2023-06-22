@@ -3,7 +3,6 @@ package hooks;
 import io.cucumber.java.*;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import pages.US02_AdminUserList;
 import utilities.Driver;
 
 import static baseUrl.ManagementSchoolBaseUrl.setUp;
@@ -11,7 +10,7 @@ import static baseUrl.ManagementSchoolBaseUrl.setUp;
 
 public class Hooks {
 
-    US02_AdminUserList login2 = new US02_AdminUserList();
+
      /*
     Hooks her bir Scenario yada Scenario Outline dan ONCE yada SONRA calistirilan bir classdir.
    ==> Neden hooks kullanilir?

@@ -1,4 +1,4 @@
-@lessonProgram
+@lessonProgram @api
 Feature: Create Lesson Program By API
   Scenario: TC01_Create_LessonProgram
 
