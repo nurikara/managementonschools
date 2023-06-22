@@ -49,7 +49,7 @@ public class US06_Steps_Nuri {
 
     @Then("Add ViseDean bolumu doldurulurken name kismi bos birakilir")
     public void add_vise_dean_bolumu_doldurulurken_name_kismi_bos_birakilir() throws InterruptedException {
-
+Thread.sleep(2000);
 
         Actions actions = new Actions(Driver.getDriver());
 
