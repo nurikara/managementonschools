@@ -28,8 +28,11 @@ public class Hooks {
 
 
 
+    @Before ("@Api") //==> import io.cucumber.java.Before==>import cucumberdan alinmali
 
-    @Before("@Api") //==> import io.cucumber.java.Before==>import cucumberdan alinmali
+
+
+
     public void setUpApi() {
         setUp();
 
