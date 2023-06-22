@@ -1,4 +1,4 @@
-package runners;
+package runners.db;
 
 
 import io.cucumber.junit.Cucumber;
@@ -17,8 +17,9 @@ import org.junit.runner.RunWith;
         monochrome = false,//konsolu okunakli hala getirir false olunca kullanılmayacak.
         features = "src/test/resources/features",
         glue = {"stepdef", "hooks"},
-        tags ="@erel",
+        tags ="@lessonProgram",
         dryRun = false
 )
-public class runnerErelUS15_US16_US25 {
+
+public class Runner_Db {
 }

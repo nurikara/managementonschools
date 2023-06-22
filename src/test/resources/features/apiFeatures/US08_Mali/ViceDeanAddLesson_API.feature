@@ -4,4 +4,4 @@ Feature: Lesson Olusturma US08_API testi
     And response ile post edilen  datalarini dogrula
     Examples:
       | lessonName | compulsory | creditScore |
-      | makemoney  | true       | 3           |
+      | make_money | true       | 3           |
