@@ -63,6 +63,7 @@ ReusableMethods.click(vice.studentmanagement);
 
     @Then("Kullanıcı name in altında Required yazısını görür.")
     public void kullanıcıNameInAltındaRequiredYazısınıGörür() {
+
         Assert.assertTrue(vice.namerequired.isDisplayed());
     }
 
