@@ -6,7 +6,10 @@ import java.sql.*;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
-import static utilities.ReusableMethods.getResultSet;
+
+import static utilities.DataBaseUtils.getResultSet;
+
+
 
 public class US15_16_25_DBStepdefs {
     ResultSet resultSet;
