@@ -82,8 +82,13 @@ public class US13_US14_ViceDeanTeacher extends Login {
 @FindBy(xpath = "(//*[@class='invalid-feedback'])[7]")
     public WebElement minimumcharacteruyarısı;
 
+@FindBy(xpath = "(//[text()='Selenium'])[2]")
+    public WebElement seleniumSecim;
 
+@FindBy(xpath = "//*[text()='Minimum 8 character']")
+    public WebElement password8characteruyarısı;
 
-
+@FindBy(xpath = "//*[text()='Please enter valid email']")
+    public WebElement validemailuyarısı;
 
 }

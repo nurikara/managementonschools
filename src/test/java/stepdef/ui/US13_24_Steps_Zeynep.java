@@ -18,19 +18,20 @@ public class US13_24_Steps_Zeynep {
 
     @Then("Kullanıcı Choose Lessons alanını tıklayarak çıkan listeden ders seçimini yapar")
     public void kullanıcıChooseLessonsAlanınıTıklayarakÇıkanListedenDersSeçiminiYapar() {
-     ReusableMethods.ddmIndex(viceDeanTeacher.chooseLessonTeacher,5);
+     viceDeanTeacher.selectLessonInput.sendKeys("Java", Keys.TAB);
+
     }
 
     @And("Kullanıcı ders seçildiğini  doğrular")
     public void kullanıcıDersSeçildiğiniDoğrular() {
         ReusableMethods.bekle(2);
-        Assert.assertTrue(viceDeanTeacher.chooseLessonTeacher.getText().contains("Java"));
+        Assert.assertTrue(viceDeanTeacher.selectLessonInput.isDisplayed());
     }
 
     @And("Kullanıcı Vice Dean olarak Choose Lesson alanını tıklar")
     public void kullanıcıViceDeanOlarakChooseLessonAlanınıTıklar() {
+        viceDeanTeacher.selectLessonInput.click();
 
-        viceDeanTeacher.chooseLessonTeacher.click();
     }
 
 
@@ -79,6 +80,7 @@ public class US13_24_Steps_Zeynep {
     @And("Kullanıcı requared yazısını görür")
     public void kullanıcıRequaredYazısınıGörür() {
        Assert.assertTrue(viceDeanTeacher.surnameRequared.isDisplayed());
+       ReusableMethods.tumSayfaResmi("Required");
     }
 
 
@@ -87,16 +89,40 @@ public class US13_24_Steps_Zeynep {
     public void kullanıcıTeacherSavedSuccesfullyYazısıGörür() {
         ReusableMethods.bekle(2);
         Assert.assertTrue(viceDeanTeacher.teacherSavedsuccessfully.isDisplayed());
-    }
-
-    @And("Ssn bölümüne minimum {int} karakter girilmesi gerektiği uyarısı verir")
-    public void ssnBölümüneMinimumKarakterGirilmesiGerektiğiUyarısıVerir(int arg0) {
-
+        ReusableMethods.tumSayfaResmi("Teacher Saved Successfully");
     }
 
     @And("Ssn bölümüne minimum onbir karakter girilmesi gerektiği uyarısı verir")
     public void ssnBölümüneMinimumOnbirKarakterGirilmesiGerektiğiUyarısıVerir() {
         ReusableMethods.bekle(2);
         Assert.assertTrue(viceDeanTeacher.minimumcharacteruyarısı.isDisplayed());
+    }
+
+    @When("Kullanıcı istenilen alanları geçerli değerlerle doldurur {string}, {string}, {string},{string}, {string},{string}, {string} ,{string}ve {string}")
+    public void kullanıcıIstenilenAlanlarıGeçerliDeğerlerleDoldururVe(String name, String surname, String birthplace, String email, String phone, String dateofbirth, String username,String ssn, String password) {
+
+
+        viceDeanTeacher.nameInput.sendKeys(name, Keys.TAB,surname,Keys.TAB,birthplace,Keys.TAB,email,Keys.TAB,phone);
+        viceDeanTeacher.birthDayInput.sendKeys(dateofbirth,Keys.TAB,ssn,Keys.TAB,username,Keys.TAB,password);
+    }
+
+    @Then("Kullanıcı minimum sekiz karakter uyarısını görür")
+    public void kullanıcıMinimumSekizKarakterUyarısınıGörür() {
+        viceDeanTeacher.password8characteruyarısı.isDisplayed();
+    }
+
+    @Then("Kullanıcı büyük harf girmeyince please enter valid email uyarı yazısını görür")
+    public void kullanıcıBüyükHarfGirmeyincePleaseEnterValidEmailUyarıYazısınıGörür() {
+        Assert.assertTrue(viceDeanTeacher.validemailuyarısı.isDisplayed());
+    }
+
+    @Then("Kullanıcı küçük harf girmeyince please enter valid email uyarı yazısını görür")
+    public void kullanıcıKüçükHarfGirmeyincePleaseEnterValidEmailUyarıYazısınıGörür() {
+        Assert.assertTrue(viceDeanTeacher.validemailuyarısı.isDisplayed());
+    }
+
+    @Then("Kullanıcı rakam girmeyince please enter valid email uyarı yazısını görür")
+    public void kullanıcıRakamGirmeyincePleaseEnterValidEmailUyarıYazısınıGörür() {
+        Assert.assertTrue(viceDeanTeacher.validemailuyarısı.isDisplayed());
     }
 }
