@@ -8,6 +8,7 @@ import static io.restassured.RestAssured.given;
 
 public class AuthenticationManagementonSchool {
 
+
     public static void main(String[] args) {
         System.out.println("generateToken() = " + generateToken());
     }
