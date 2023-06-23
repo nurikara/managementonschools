@@ -29,6 +29,7 @@ Robot robot;
 
     @When("kullanici_home_page_sayfasindalogin_butonuna_tıklar")
     public void kullanici_home_page_sayfasindalogin_butonuna_tıklar() {
+        tSI.homePageLogin.click();
 
     }
 
@@ -116,7 +117,8 @@ Robot robot;
 
     @And("kullanici_{string}_password_girer")
     public void kullanici__password_girer(String username) {
-
+            tSI.username.sendKeys(ConfigReader.getProperty(username),Keys.TAB,ConfigReader.getProperty("psw"),Keys.TAB,Keys.ENTER);
+        System.out.println();
     }
 
 */

@@ -55,7 +55,6 @@ Feature:Dean, Vice Dean hesabı oluşturabilmelidir.
     Then Add ViseDean bolumu doldurulurken PassWord EnAz 8 karakterden oluşmalıdır
     And Sayfadan logout yapilarak cikilir
 
-
   Scenario:Password; büyük harf, küçük harf ve bir rakam içermelidir.
     Then Add ViseDean bolumu doldurulurken Password; büyük harf, küçük harf ve bir rakam içermelidir.
     And Sayfadan logout yapilarak cikilir
