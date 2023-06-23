@@ -152,7 +152,6 @@ public class Api_Elif extends ManagementSchoolBaseUrl {
 
     @Given("send get negative request to url by id")
     public void sendGetNegativeRequestToUrlById() {
-
         //Set the url
        // spec.pathParams("first", "lessonPrograms", "second","getById","third", lessonId);
          //-->https://managementonschools.com/app/lessonPrograms/getById/526
@@ -171,7 +170,6 @@ public class Api_Elif extends ManagementSchoolBaseUrl {
      }
 
          */
-
     }
 
     @Then("Validate get negative response body")
@@ -183,6 +181,4 @@ public class Api_Elif extends ManagementSchoolBaseUrl {
 //        assertEquals("/app/lessonPrograms/getById/"+lessonId+"",jsonPath.getString("path"));
 
     }
-
-
 }
