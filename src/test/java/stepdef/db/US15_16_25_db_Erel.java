@@ -9,7 +9,7 @@ import static utilities.DataBaseUtils.getResultSet;
 
 
 
-public class Erel {
+public class US15_16_25_db_Erel {
     ResultSet resultSet;
 
     @Given("{string} ile student cagir")

@@ -12,17 +12,7 @@ Feature: Aday öğrenciler sisteme kayıt olabilmelidir.
 
 
 
-    #Loop deneme senaryosu
- # @LoopDB
-  #Scenario:
-   # Given birthplace "batch129" ile guest useri cagir
-    #Then kac tane user oldugunu bul
 
-
-  #@DBNegative
-  #Scenario: Silinen guest useri dogrula
-   # Given silinen "alican129" ile guest useri cagir
-    #Then tablein bos oldugunu dogrula
 
 
 
