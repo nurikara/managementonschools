@@ -106,8 +106,10 @@ public class DB_Elif {
 
     @Then("Lesson Program and validate")
     public void lessonProgramAndValidate() throws SQLException {
+
         LessonNamePojo expectedData=new LessonNamePojo(3,"JavaScript",5,true);
         System.out.println("expectedData = " + expectedData);
+
 
         assertEquals(expectedData.getLessonName(),resultSet.getObject("lesson_name"));
         assertEquals(expectedData.getCreditScore(),resultSet.getObject("credit_score"));
