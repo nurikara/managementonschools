@@ -6,9 +6,9 @@ Feature: US09 Vice Dean Update Lesson
   @first
   Scenario:   TC01 are List datas  Display
     Given Kullanici Lessons basligini tiklar
-    Then LessonName alanina "HTML" ismi girer
+    Then LessonName alanina "vğg" ismi girer
     Then Coppulsory checkbox kutusunu tiklar
-    Then CreditScore input alanı "7" int deger girer
+    Then CreditScore input alanı "8" int deger girer
     Then Submit butonunu tiklar
     And sayfa iceriginde LessonList goruntulenir
     And LessonList son sayfaya gidilir
@@ -17,7 +17,7 @@ Feature: US09 Vice Dean Update Lesson
   @second
   Scenario:   TC02 Lesson data delete
     Given Kullanici Lessons basligini tiklar
-    Then LessonName alanina "HTML" ismi girer
+    Then LessonName alanina "rhf" ismi girer
     Then Coppulsory checkbox kutusunu tiklar
     Then CreditScore input alanı "7" int deger girer
     Then Submit butonunu tiklar
@@ -29,7 +29,7 @@ Feature: US09 Vice Dean Update Lesson
   Scenario:   TC03 Lesson data update
     Given Kullanici Lessons basligini tiklar
     And sayfa iceriginde LessonList goruntulenir
-    And fail durumu için sayfa resmini alır
+    And UPDATE BUTTON yok fail durumu için sayfa resmini alır
 
 
 
