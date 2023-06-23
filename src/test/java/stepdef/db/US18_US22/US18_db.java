@@ -1,4 +1,4 @@
-package stepdef.db;
+package stepdef.db.US18_US22;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
