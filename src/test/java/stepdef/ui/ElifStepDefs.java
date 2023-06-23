@@ -156,8 +156,8 @@ public class ElifStepDefs {
     @And("Kullanıcı update butonuna tıklar.")
     public void kullanıcıUpdateButonunaTıklar() {
         actions.sendKeys(Keys.PAGE_DOWN).perform();
-//        boolean updateButton=false;
-//        assertTrue("Update butonu ile ilgili herhengi birsey yoktur",updateButton);
+        boolean updateButton=false;
+        assertTrue("Update butonu ile ilgili herhengi birsey yoktur",updateButton);
         tumSayfaResmi();//#Update butonu ile ilgili herhengi birsey yoktur.BUG
     }
 
