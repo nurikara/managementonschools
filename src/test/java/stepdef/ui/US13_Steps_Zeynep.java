@@ -5,13 +5,11 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.Select;
 import pages.US13_US14_ViceDeanTeacher;
-import utilities.Driver;
+import pages.US22_US23_US24_Add;
 import utilities.ReusableMethods;
 
-public class US13_24_Steps_Zeynep {
+public class US13_Steps_Zeynep {
 
     US13_US14_ViceDeanTeacher viceDeanTeacher=new US13_US14_ViceDeanTeacher();
 
@@ -125,4 +123,6 @@ public class US13_24_Steps_Zeynep {
     public void kullanıcıRakamGirmeyincePleaseEnterValidEmailUyarıYazısınıGörür() {
         Assert.assertTrue(viceDeanTeacher.validemailuyarısı.isDisplayed());
     }
+
+
 }

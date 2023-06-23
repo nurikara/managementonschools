@@ -12,4 +12,7 @@ public class US22_US23_US24_Add extends Login{
     public WebElement tableLastButton;
     @FindBy(xpath = "//table")
     public WebElement tablo;
+
+    @FindBy(xpath = " //*[@class=' css-19bb58m']")
+    public WebElement chooseLesoonZeynep;
 }
