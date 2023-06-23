@@ -23,7 +23,7 @@ public class ConfigReader {
     }
 
 
-    public static String getProperty(String key){
+    public static java.lang.String getProperty(String key){
 
 
 

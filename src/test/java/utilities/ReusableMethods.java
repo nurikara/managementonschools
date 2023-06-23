@@ -1,5 +1,6 @@
 package utilities;
 
+import com.github.javafaker.Faker;
 import org.apache.commons.io.FileUtils;
 import org.junit.Assert;
 import org.openqa.selenium.*;
@@ -8,6 +9,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.awt.*;
+import java.awt.event.KeyEvent;
 import java.io.File;
 import java.io.IOException;
 import java.sql.*;
@@ -16,6 +19,7 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Random;
 
 import static org.junit.Assert.assertTrue;
 
@@ -69,6 +73,7 @@ public class ReusableMethods {
         }
         return columns;
     }
+
     public static List<Object> getColumnData(String query, String column) {
         executeQuery(query);
         List<Object> rowList = new ArrayList<>();
@@ -99,6 +104,7 @@ public class ReusableMethods {
             e.printStackTrace();
         }
     }
+
     //HARD WAIT METHOD
     public static void bekle(int saniye) {
         try {
@@ -119,7 +125,7 @@ public class ReusableMethods {
     }
 
     //Alert getText()
-    public static void alertText() {
+    public static void alertText(String s) {
         Driver.getDriver().switchTo().alert().getText();
     }
 
@@ -324,9 +330,10 @@ public class ReusableMethods {
 
     /**
      * Bu metot Action class kullanarak bir webelementin ustune gidip bekler
+     *
      * @param element yerine webelement'in locate koyulmalidir
      */
-    public static void moveToElementWithAction(WebElement element){
+    public static void moveToElementWithAction(WebElement element) {
         Actions action = new Actions(Driver.getDriver());
         action.moveToElement(element).perform();
         try {
@@ -338,55 +345,154 @@ public class ReusableMethods {
 
     //Alttaki uc method sadce bu site icin gecerli Locate'ler degistigi icin baska sitede kullanilmaz
     //Dinamik olsun diye bu sekilde yaptim
-    public static void selectFromList( String textFromList) {
+    public static void selectFromList(String textFromList) {
         Driver.getDriver().findElement(By.xpath("//div[@id='myCountryautocomplete-list']//div[.='" + textFromList + "']")).click();
     }
-    public static void clickEdit(int sayi){
-        Driver.getDriver().findElement(By.xpath("(//a[@href='#edit'])["+sayi+"]"));
+
+    public static void clickEdit(int sayi) {
+        Driver.getDriver().findElement(By.xpath("(//a[@href='#edit'])[" + sayi + "]"));
     }
-    public static void clickDelete(int sayi){
-        Driver.getDriver().findElement(By.xpath("(//a[text()='delete'])["+sayi+"]"));
+
+    public static void clickDelete(int sayi) {
+        Driver.getDriver().findElement(By.xpath("(//a[text()='delete'])[" + sayi + "]"));
     }
 
     /**
      * @param str degeri expected metin
      * @param atr degeri actual metin
-    bu metot expected metinin alertteki actual metini icerdigini dogrulamak icin
+     *            bu metot expected metinin alertteki actual metini icerdigini dogrulamak icin
      */
     public static void assertTextContainsAssertTrue(String str, String atr) {
         assertTrue(str.contains(atr));
     }
 
-    /**Bu metot bir webelementin secili olup olmadigini dogrular
-     *  @param webElement girilecek webelement dir.
+    /**
+     * Bu metot bir webelementin secili olup olmadigini dogrular
+     *
+     * @param webElement girilecek webelement dir.
      */
-    public void assertTrueIsSelected(WebElement webElement){
+    public void assertTrueIsSelected(WebElement webElement) {
         Assert.assertTrue(webElement.isSelected());
     }
 
-    /** Bu metot iki string degerin birbirine equal olup olmadigini dogrular
-     @param str girilecek 1. metindir
-     @param str1 girilecek 2. metindir
+    /**
+     * Bu metot iki string degerin birbirine equal olup olmadigini dogrular
+     *
+     * @param str  girilecek 1. metindir
+     * @param str1 girilecek 2. metindir
      */
-    public void assertTrueEquals(String str, String str1){
+    public void assertTrueEquals(String str, String str1) {
         Assert.assertTrue(str.equals(str1));
     }
+
     /**
-     *  JavaScript ile webelement olusturma
+     * JavaScript ile webelement olusturma
+     *
      * @param javascriptYolu internet sitesinden sag klik ile JS yolunu kopyala ile alınan metin olacak
      */
     public static WebElement webelementJavaScript(String javascriptYolu) {
         JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
-        WebElement webElement = (WebElement) js.executeScript("return "+javascriptYolu+"");
+        WebElement webElement = (WebElement) js.executeScript("return " + javascriptYolu + "");
         return webElement;
     }
+
     /**
-     *  JavaScript ile webelement olusturup isEnabled oldugunu sorgulama
+     * JavaScript ile webelement olusturup isEnabled oldugunu sorgulama
+     *
      * @param str internet sitesinden sag klik ile JS yolunu kopyala ile alınan metin olacak
      */
-    public static void assertIsEnabled(String str){
+    public static void assertIsEnabled(String str) {
         JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
-        WebElement webElement = (WebElement) js.executeScript("return "+str+"");
+        WebElement webElement = (WebElement) js.executeScript("return " + str + "");
         assertTrue(webElement.isEnabled());
     }
+
+    public static String fakerInput(String faker2) {
+        Faker faker = new Faker();
+        if (faker2 == "name") {
+            String fakerFirstName = faker.name().firstName();
+            return fakerFirstName;
+
+        } else if (faker2 == "surname") {
+
+            String fakerLastName = faker.name().lastName();
+            return fakerLastName;
+
+        }  else if (faker2 == "birthPlace") {
+            String fakerTownCity = faker.address().cityName();
+            return fakerTownCity;
+
+
+        }  else if (faker2 == "dateOfBirth") {
+            Date birthDate = faker.date().birthday();
+            SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy");
+            String birthDateStr = sdf.format(birthDate);
+            return birthDateStr;
+
+
+        }else if (faker2 == "phoneNumber1"){
+
+            String fakePhoneNumber = faker.numerify("###-###-####");
+            return fakePhoneNumber;
+
+        } else if (faker2 == "phoneNumber2"){
+
+            String fakePhoneNumber = faker.numerify("###-###-###");
+            return fakePhoneNumber;
+
+        } else if (faker2 == "phoneNumber3"){
+
+            String fakePhoneNumber = faker.numerify("###-###-#####");
+            return fakePhoneNumber;
+
+        } else if (faker2 == "ssn1") {
+
+            String ssn = faker.numerify("###-##-####");
+            return ssn;
+
+        }  else if (faker2 == "ssn2") {
+
+            String ssn = faker.numerify("#########");
+            return ssn;
+
+        }  else if (faker2 == "ssn3") {
+
+            String ssn = faker.numerify("###########");
+            return ssn;
+
+        }  else if (faker2 == "ssn4") {
+
+            String ssn = faker.regexify("[a-zA-Z]{11}");
+            return ssn;
+
+        } else if (faker2 == "username") {
+            String fakeUsername = faker.name().username();
+            return fakeUsername;
+
+        }  else if (faker2 == "password1") {
+            String password = faker.regexify("[A-Z]{1}[a-zA-Z0-9]{7}");
+            return password;
+        }else if (faker2 == "password2") {
+            String password = faker.regexify("[a-zA-Z0-9]{1,7}");
+            return password;
+        }else if (faker2 == "password3") {
+            String password = faker.regexify("[a-zA-Z]{8}");
+            return password;
+        }else if (faker2 == "password4") {
+            String password = faker.regexify("[0-9]{8}");
+            return password;
+        }
+
+
+        return faker2;
+    }
+
+    public static void robotDelete() throws AWTException {
+        Robot robot=new Robot();
+        for (int i = 0; i < 40; i++) {
+            robot.keyPress(KeyEvent.VK_BACK_SPACE);
+            robot.keyRelease(KeyEvent.VK_BACK_SPACE);
+        }
+    }
 }
+

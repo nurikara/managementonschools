@@ -28,6 +28,7 @@ Robot robot;
 
     @When("kullanici_home_page_sayfasindalogin_butonuna_tıklar")
     public void kullanici_home_page_sayfasindalogin_butonuna_tıklar() {
+
         tSI.homePageLogin.click();
     }
 
