@@ -172,7 +172,7 @@ public class ElifStepDefs {
         actions.scrollToElement(lessonProgram.chooseTeacherLabel);
         bekle(2);
         Select select=new Select(lessonProgram.chooseTeacherTextBox);
-        select.selectByIndex(5);
+        select.selectByIndex(17);
 //        click(lessonProgram.chooseTeacherTextBox);
 //        bekle(5);
 //        lessonProgram.chooseTeacherTextBox.sendKeys("sefa sefa");
