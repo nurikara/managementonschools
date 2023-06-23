@@ -15,14 +15,18 @@ public class US19_US20_TeacherAddMeetList extends Login {
  @FindBy(xpath = "//div[3]/div[2]/div/a[2]")
     public WebElement MeetManagement;
 
-    @FindBy(xpath = "//*[@id='react-select-3-placeholder']")
+    @FindBy(xpath = "  //*[@id='root']/div/main/div/div[1]/div[2]/div/div/form/div/div[1]/div/div/div[2]/div")
     public WebElement SelectStudentMenuLine ;
 
     @FindBy(xpath = "//*[@class=' css-9jq23d']")
     public WebElement SelectedStudent;
 
-@FindBy(xpath = "//input[@id='date']")
+@FindBy(id ="date")
     public WebElement date;
+
+@FindBy(xpath = "//*[@class='form-label']")
+    public WebElement selectdate;
+
 
 @FindBy(xpath = "//input[@id='startTime']")
     public WebElement StartTime;
@@ -49,6 +53,12 @@ public class US19_US20_TeacherAddMeetList extends Login {
 
 @FindBy(xpath = "(//div[@class='invalid-feedback'])[4]")
     public WebElement DescriptionRequired;
+
+@FindBy(xpath = "")
+    public WebElement popupmessage;
+
+
+
 
 
 
