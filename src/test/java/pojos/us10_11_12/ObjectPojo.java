@@ -15,9 +15,13 @@ import java.util.List;
 public class ObjectPojo {
 
     private Integer lessonProgramId;
+
     private String startTime;
+
     private String stopTime;
+
     private ArrayList<LessonNamePojo> lessonName;
+
     private String day;
 
 }

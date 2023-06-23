@@ -12,8 +12,11 @@ import lombok.NoArgsConstructor;
 public class LessonNamePojo {
 
     private Integer lessonId;
+
     private String lessonName;
+
     private Integer creditScore;
+
     private Boolean compulsory;
 
 }

@@ -11,9 +11,13 @@ import lombok.NoArgsConstructor;
 @JsonIgnoreProperties(ignoreUnknown = true)
 
 public class ExpectedDataPojo {
+
     private ObjectPojo object;
+
     private String message;
+
     private String httpStatus;
+
 
 
 }

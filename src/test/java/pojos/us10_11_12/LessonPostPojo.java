@@ -14,9 +14,13 @@ import java.util.List;
 public class LessonPostPojo {
 
     private String day;
+
     private Integer educationTermId;
+
     private List<Integer> lessonIdList;
+
     private String startTime;
+
     private String stopTime;
 
 
