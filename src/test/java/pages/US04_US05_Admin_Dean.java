@@ -71,22 +71,6 @@ public class US04_US05_Admin_Dean extends Login {
     public WebElement usernameDeanReq;
     @FindBy(css = "div:nth-of-type(9) .invalid-feedback")
     public WebElement passwordDeanReq;
-    @FindBy(css = ".Toastify__toast-body > div:nth-of-type(2)")
-    public WebElement genderDeanTest;
-    @FindBy(css = ".Toastify__toast-body > div:nth-of-type(2)")
-    public WebElement paswordTest;
-    @FindBy(css = ".Toastify__toast-body > div:nth-of-type(2)")
-    public WebElement phoneTest;
-    @FindBy(css = ".Toastify__toast-body > div:nth-of-type(2)")
-    public WebElement ssnTest;
-    @FindBy(css = ".Toastify__toast-body > div:nth-of-type(2)")
-    public WebElement usernameTest;
-
-    @FindBy(css = ".Toastify__toast-body > div:nth-of-type(2)")
-    public WebElement nameTest;
-
-    @FindBy(css = ".Toastify__toast-body > div:nth-of-type(2)")
-    public WebElement birthPlaceTest;
 
     @FindBy(xpath = "(//div[@class='Toastify'])[2]")
     public WebElement saveTest;
@@ -140,47 +124,11 @@ public class US04_US05_Admin_Dean extends Login {
     @FindBy(css = ".modal-body #username")
     public WebElement usernameEditDean;
 
-
-
     @FindBy(css = ".modal-body #password")
     public WebElement passwordEditDean;
 
     @FindBy(css = ".modal-footer > .fw-semibold")
     public WebElement submitEditDean;
-
-    @FindBy(css = ".modal-body .row > div:nth-of-type(1) .invalid-feedback")
-    public WebElement nameReqEdit;
-
-    @FindBy(css = ".modal-body div:nth-of-type(2) .invalid-feedback")
-    public WebElement surnameReqEdit;
-
-    @FindBy(css = ".modal-body div:nth-of-type(3) .invalid-feedback")
-    public WebElement birPlaceReqEdit;
-
-    @FindBy(css = ".modal-body .col .invalid-feedback")
-    public WebElement birdDayReqEdit;
-
-    @FindBy(css = ".modal-body div:nth-of-type(6) .invalid-feedback")
-    public WebElement phoneReqEdit;
-
-    @FindBy(css = ".modal-body div:nth-of-type(7) .invalid-feedback")
-    public WebElement ssnReqEdit;
-
-    @FindBy(css = ".modal-body div:nth-of-type(8) .invalid-feedback")
-    public WebElement userNameReqEdit;
-
-    @FindBy(css = ".modal-body div:nth-of-type(9) .invalid-feedback")
-    public WebElement passwordReqEdit;
-
-    @FindBy(css = ".Toastify__toast-body > div:nth-of-type(2)")
-    public WebElement editDeanOk;
-
-
-
-
-
-
-
 
 
 }

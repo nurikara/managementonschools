@@ -76,6 +76,7 @@ public class US_05_StepDefs {
         ReusableMethods.bekle(1);
         adminDean.birtPlaceEditDean.click();
         ReusableMethods.robotDelete();
+        robot.keyPress(KeyEvent.VK_DELETE);
         adminDean.birtPlaceEditDean.sendKeys(ReusableMethods.fakerInput("birthPlace"));
 
         ReusableMethods.bekle(1);
