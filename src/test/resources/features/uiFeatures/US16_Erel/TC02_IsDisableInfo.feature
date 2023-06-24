@@ -11,3 +11,4 @@ Feature: Vice Dean, kullanıcıların gönderdiği mesajları görebilmelidir
     * Mesaj gonderilme tarihini gorur
     * Mesaj subject textini gorur
     * Message textini gorur
+    And Sayfa kapatiliir

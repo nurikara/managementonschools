@@ -13,6 +13,8 @@ Feature: US-13 Vice Dean, Teacher oluşturabilmeli
 
 
 
+
+
     Scenario: TC-01 Vice Dean öğretmenin gireceği dersi seçebilmeli
       And Kullanıcı ders seçildiğini  doğrular
       And sayfayi kapatir
