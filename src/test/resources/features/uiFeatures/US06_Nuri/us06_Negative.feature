@@ -1,4 +1,4 @@
-@US06
+@US06_Negative
 Feature:Dean, Vice Dean hesabı oluşturabilmelidir.
 
   Background:
@@ -25,8 +25,6 @@ Feature:Dean, Vice Dean hesabı oluşturabilmelidir.
     And Sayfadan logout yapilarak cikilir
 
 
-
-
   Scenario: "DogumTarihi" girilmelidir. Boş bırakılamaz.
     Then Add ViseDean bolumu doldurulurken DogumTarihi kismi bos birakilir
     And Sayfadan logout yapilarak cikilir
@@ -35,9 +33,7 @@ Feature:Dean, Vice Dean hesabı oluşturabilmelidir.
     Then Add ViseDean bolumu doldurulurken TelefonNumarasi kismi bos birakilir
     And Sayfadan logout yapilarak cikilir
 
-  Scenario:Positive SSN girilmelidir. SSN; 3. ve 5. rakamdan sonra "-" içermeli ve 9 rakamdan oluşmalıdır.
-    Then SSN bolumune uygun sekilde giris yapilir
-    And Sayfadan logout yapilarak cikilir
+
 
   Scenario:Negative SSN girilmelidir. SSN; 3. ve 5. rakamdan sonra "-" içermeli ve 9 rakamdan oluşmalıdır.
     Then SSN bolumune uygun olmayan sekilde giris yapilir

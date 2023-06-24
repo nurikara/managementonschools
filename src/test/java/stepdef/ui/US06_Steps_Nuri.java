@@ -172,11 +172,11 @@ Thread.sleep(2000);
 
         List<WebElement> UserListe = login.ListUserName;
 
-        boolean flag = false;
+        boolean flag = true;
 
         for (WebElement w : UserListe) {
             if (w.getText().equals(Fakename)) {
-                flag = true;
+                flag = false;
                 break;
             }
             Assert.assertTrue(flag);
