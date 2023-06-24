@@ -25,10 +25,11 @@ public class US_04_StepDefs {
 
     }
 
-    @Then("Kullanıcı LOG IN e tıklar")
-    public void kullanıcı_log_ın_e_tıklar() {
+    @Then("Kullanıcı logine tıklar")
+    public void kullanıcı_logine_tıklar() {
         adminDean.homePageLogin.click();
         ReusableMethods.bekle(1);
+
 
     }
 
@@ -117,8 +118,8 @@ public class US_04_StepDefs {
     }
 
 
-    @And("Kullanici Submit butonuna tıklar")
-    public void kullaniciSubmitButonunaTıklar() {
+    @And("Kullanici Submit butona tıklar")
+    public void kullaniciSubmitButonaTıklar() {
         adminDean.submitButton1.click();
         ReusableMethods.bekle(1);
     }
