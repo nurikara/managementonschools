@@ -32,6 +32,7 @@ public class US08_Steps_Mali {
     Faker faker=new Faker();
 
     static String name;
+    static String creditScore;
     ResultSet resultSet;
 
     @And("Sayfa kapatilir")
@@ -41,6 +42,7 @@ public class US08_Steps_Mali {
 
     @Given("Kullanici Lessons basligini tiklar")
     public void kullaniciLessonsBasliginiTiklar() {
+        ReusableMethods.scroll(locate.Lessons);
         locate.Lessons.click();
 
     }
@@ -157,8 +159,9 @@ public class US08_Steps_Mali {
                 Assert.assertEquals(name,actualData.get(i).getText());
                 Assert.assertEquals("Yes",actualData.get(i+1).getText());
                 System.out.println("actualData compulsory = " + actualData.get(i + 1).getText());
-                Assert.assertEquals("5",actualData.get(i+2).getText());
+                Assert.assertEquals(creditScore,actualData.get(i+2).getText());
                 System.out.println("actualData  creditScore = " + actualData.get(i + 2).getText());
+
             }
 
         }
@@ -183,14 +186,7 @@ public class US08_Steps_Mali {
         Assert.assertTrue(actualData.contains("Lesson Deleted"));
     }
 
-    @And("fail durumu için sayfa resmini alır")
-    public void failDurumuIcinSayfaResminiAlır() {
-        ReusableMethods.webElementResmi(locate.addLessonUpdateElement);
-        boolean updateElementVarMi = false;
-        Assert.assertTrue("Element sayfada bulunamadı.", updateElementVarMi);
 
-
-    }
 
     @Then("Cagırılan ders {string}, {string}, {string} bilgilerini icerir")
     public void cagırılanDersBilgileriniIcerir(String dersismi, String compulsory, String creditScore) throws SQLException {
@@ -219,7 +215,8 @@ public class US08_Steps_Mali {
 
     @Then("CreditScore input alanı {string} int deger girer")
     public void creditscoreInputAlanıIntDegerGirer(String arg0) {
-        locate.creditScore.sendKeys(arg0);
+        creditScore=arg0;
+        locate.creditScore.sendKeys(creditScore);
         ReusableMethods.bekle(1);
     }
 
@@ -244,4 +241,11 @@ public class US08_Steps_Mali {
     }
 
 
+    @And("UPDATE BUTTON yok fail durumu için sayfa resmini alır")
+    public void updateBUTTONYokFailDurumuIcinSayfaResminiAlır() {
+        ReusableMethods.webElementResmi(locate.addLessonUpdateElement);
+        boolean updateElementVarMi = false;
+        Assert.assertTrue("Element sayfada bulunamadı.", updateElementVarMi);
+
+    }
 }

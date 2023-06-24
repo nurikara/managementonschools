@@ -155,10 +155,12 @@ public class ElifStepDefs {
 
     @And("Kullanıcı update butonuna tıklar.")
     public void kullanıcıUpdateButonunaTıklar() {
+
         actions.sendKeys(Keys.PAGE_DOWN).perform();
-//        boolean updateButton=false;
-//        assertTrue("Update butonu ile ilgili herhengi birsey yoktur",updateButton);
+        boolean updateButton=false;
+        assertTrue("Update butonu ile ilgili herhengi birsey yoktur,bununla ilgili ekran resmi alındı.",updateButton);
         tumSayfaResmi();//#Update butonu ile ilgili herhengi birsey yoktur.BUG
+
     }
 
     @And("Kullanıcı Lesson Assıgment List bolumunden ders secer")
@@ -172,7 +174,7 @@ public class ElifStepDefs {
         actions.scrollToElement(lessonProgram.chooseTeacherLabel);
         bekle(2);
         Select select=new Select(lessonProgram.chooseTeacherTextBox);
-        select.selectByIndex(5);
+        select.selectByIndex(17);
 //        click(lessonProgram.chooseTeacherTextBox);
 //        bekle(5);
 //        lessonProgram.chooseTeacherTextBox.sendKeys("sefa sefa");
