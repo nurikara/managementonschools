@@ -7,4 +7,4 @@ Feature: Vice Dean mesajları silebilmelidir.
     And Kullanici Menu buttonuna tiklar
     And Kullanici Menu icersinde Contact Get All secnegine tiklar
     Then Kullanici Silme butonuna tiklar
-    And sayfayi kapatir
+    And Sayfa kapatiliir

@@ -5,21 +5,15 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 
 import io.cucumber.java.en.Then;
-import io.cucumber.java.en_old.Ac;
 import org.junit.Assert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import pages.Login;
 import pages.US08_US09_ViceDeanAddLesson;
-import utilities.ConfigReader;
 import utilities.DataBaseUtils;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
-import javax.xml.xpath.XPath;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;

@@ -12,4 +12,13 @@ public class US22_US23_US24_Add extends Login{
     public WebElement tableLastButton;
     @FindBy(xpath = "//table")
     public WebElement tablo;
+
+    @FindBy(xpath ="//div[@class=' css-19bb58m']")
+    public WebElement chooseLesoonZeynep;
+
+
+    @FindBy(id = "react-select-2-listbox")
+    public WebElement lessonlistZeynep;
 }
+//  @FindBy(xpath = "//div[@class=' css-19bb58m']")
+//    public WebElement chooseLesoonZeynep;
