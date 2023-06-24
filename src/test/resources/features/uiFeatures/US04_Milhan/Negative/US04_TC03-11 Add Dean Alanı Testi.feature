@@ -3,7 +3,7 @@ Feature: US04_Admin Dean ekleyebilmeli
 
     Background:
       Given Kullanıcı "url"ye gider
-      Then Kullanıcı LOG IN e tıklar
+      Then Kullanıcı logine tıklar
       And Kullanıcı username ve password yazar
       And Kullanıcı Login butonuna tıklar
       Then Kullanıcı Menu'den Dean Management sayfasına gider
