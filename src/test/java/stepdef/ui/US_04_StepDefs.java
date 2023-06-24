@@ -30,6 +30,7 @@ public class US_04_StepDefs {
         adminDean.homePageLogin.click();
         ReusableMethods.bekle(1);
 
+
     }
 
     @And("Kullanıcı geçerli Admin olarak user name'i girer")
