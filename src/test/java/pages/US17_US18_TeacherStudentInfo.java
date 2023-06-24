@@ -20,6 +20,33 @@ public class US17_US18_TeacherStudentInfo extends Login{
     @FindBy(xpath = "(//td//button)[2]")
     public WebElement studentInfoDeleteButtonTuna;
 
+@FindBy(id = "lessonId")
+    public WebElement chooselessonZeynep;
+
+    @FindBy(id = "studentId")
+    public WebElement choosestudentZeynep;
+
+    @FindBy(id = "educationTermId")
+    public WebElement chooseeducationTermZeynep;
+
+    @FindBy(id = "absentee")
+    public WebElement absenteeZeynep;
+
+
+    @FindBy(id = "midtermExam")
+    public WebElement midtermExamZeynep;
+
+    @FindBy(id = "finalExam")
+    public WebElement finalExamZeynep;
+
+    @FindBy(id = "infoNote")
+    public WebElement infoNoteZeynep;
+
+    @FindBy(xpath = "//*[text()='Submit']")
+    public WebElement submitButtonZeynep;
+
+@FindBy(xpath = "//*[text()='Student Info saved Successfully']")
+    public WebElement savedYazısıZeynep;
 
 
 }

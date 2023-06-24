@@ -5,19 +5,17 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 
 import io.cucumber.java.en.Then;
-import io.cucumber.java.en_old.Ac;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import pages.Login;
 import pages.US08_US09_ViceDeanAddLesson;
-import utilities.ConfigReader;
+import utilities.DataBaseUtils;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
-import javax.xml.xpath.XPath;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.List;
 
 
@@ -26,34 +24,30 @@ public class US08_Steps_Mali {
     WebDriver driver= Driver.getDriver();
 
     Faker faker=new Faker();
+
     static String name;
+    static String creditScore;
+    ResultSet resultSet;
 
     @And("Sayfa kapatilir")
     public void sayfaKapatilir() {driver.close();
+
     }
 
     @Given("Kullanici Lessons basligini tiklar")
     public void kullaniciLessonsBasliginiTiklar() {
+        ReusableMethods.scroll(locate.Lessons);
         locate.Lessons.click();
 
     }
-    @Then("LessonName alanina ders ismi girer")
-    public void lessonnameAlaninaDersIsmiGirer() {
-        name=faker.app().name();
-        locate.lessonName.sendKeys(name);
-        ReusableMethods.bekle(1);
-    }
+
     @Then("Coppulsory checkbox kutusunu tiklar")
     public void coppulsoryCheckboxKutusunuTiklar() {
         locate.compulsoryCheckbox.click();
         ReusableMethods.bekle(1);
-    }
+}
 
-    @Then("CreditScore input alanı int deger girer")
-    public void creditscoreInputAlanıIntDegerGirer() {
-        locate.creditScore.sendKeys("5");
-        ReusableMethods.bekle(1);
-    }
+
 
     @Then("Submit butonunu tiklar")
     public void submitButonunuTiklar() throws InterruptedException {
@@ -84,12 +78,7 @@ public class US08_Steps_Mali {
         driver.close();
     }
 
-    @Then("Kayıtlanan data son sayfada goruntulenir")
-    public void kayıtlananDataSonSayfadaGoruntulenir() {
-      //  ReusableMethods.scroll(locate.schollLogo);
-      //  ReusableMethods.bekle(1);
-      //  locate.goLastPage.click();
-    }
+
 
     @Then("Basarisiz giris mesaji goruntulenir")
     public void basarisizGirisMesajiGoruntulenir() {
@@ -164,10 +153,93 @@ public class US08_Steps_Mali {
                 Assert.assertEquals(name,actualData.get(i).getText());
                 Assert.assertEquals("Yes",actualData.get(i+1).getText());
                 System.out.println("actualData compulsory = " + actualData.get(i + 1).getText());
-                Assert.assertEquals("5",actualData.get(i+2).getText());
+                Assert.assertEquals(creditScore,actualData.get(i+2).getText());
                 System.out.println("actualData  creditScore = " + actualData.get(i + 2).getText());
+
             }
 
         }
+    }
+
+    @And("Son kayıtlanan data satirinda bulunan delete ikonuna tiklar")
+    public void sonKayıtlananDataSatirindaBulunanDeleteIkonunaTiklar() {
+        List<WebElement> cop=locate.cop;
+
+        int numofLastElement=cop.size();
+        System.out.println("numofLastElement = " + numofLastElement);
+        driver.findElement(By.xpath("(//i[@class='fa-solid fa-trash'])["+numofLastElement+"]")).click();
+       // JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+       // js.executeScript("arguments["+numofLastElement+"].click();", cop);
+        ReusableMethods.bekle(1);
+    }
+
+    @And("Ekranda basarili silme mesaji goruntulenir")
+    public void ekrandaBasariliSilmeMesajiGoruntulenir() {
+        String actualData=locate.msgLessonCreated2.getText();
+        System.out.println("actualData = " + actualData);
+        Assert.assertTrue(actualData.contains("Lesson Deleted"));
+    }
+
+
+
+    @Then("Cagırılan ders {string}, {string}, {string} bilgilerini icerir")
+    public void cagırılanDersBilgileriniIcerir(String dersismi, String compulsory, String creditScore) throws SQLException {
+        resultSet.next();
+        String actualLessonName=resultSet.getString("lesson_name");
+        System.out.println("lessonName = " + actualLessonName);
+        String actualCompulsory=resultSet.getString("is_compulsory");
+        System.out.println("actualCompulsory = " + actualCompulsory);
+        String actualCreditScore=resultSet.getString("credit_score");
+        System.out.println("actualCreditScore = " + actualCreditScore);
+
+
+
+        Assert.assertEquals(dersismi,actualLessonName);
+        Assert.assertEquals(compulsory,actualCompulsory);
+        Assert.assertEquals(creditScore,actualCreditScore);
+
+    }
+
+    @Then("LessonName alanina {string} ismi girer")
+    public void lessonnameAlaninaIsmiGirer(String arg0) {
+        name=arg0;
+        locate.lessonName.sendKeys(name);
+        ReusableMethods.bekle(1);
+    }
+
+    @Then("CreditScore input alanı {string} int deger girer")
+    public void creditscoreInputAlanıIntDegerGirer(String arg0) {
+        creditScore=arg0;
+        locate.creditScore.sendKeys(creditScore);
+        ReusableMethods.bekle(1);
+    }
+
+    @Given("Kayıtlamasi yapilan {string} ve {string} ile ders bilgileri cagırılır")
+    public void kayıtlamasiYapilanVeIleDersBilgileriCagırılır(String ders, String credit) {
+        locate.Lessons.click();
+        name=ders;
+        locate.lessonName.sendKeys(name);
+        ReusableMethods.bekle(1);
+        locate.compulsoryCheckbox.click();
+        ReusableMethods.bekle(1);
+        locate.creditScore.sendKeys(credit);
+        ReusableMethods.bekle(1);
+        locate.addLessonSubmit.click();
+        ReusableMethods.bekle(1);
+
+        String quary="SELECT * FROM lesson WHERE lesson_name='"+ders+"'";
+        System.out.println("quary = " + quary);
+        resultSet=DataBaseUtils.getResultSet(quary);
+
+
+    }
+
+
+    @And("UPDATE BUTTON yok fail durumu için sayfa resmini alır")
+    public void updateBUTTONYokFailDurumuIcinSayfaResminiAlır() {
+        ReusableMethods.webElementResmi(locate.addLessonUpdateElement);
+        boolean updateElementVarMi = false;
+        Assert.assertTrue("Element sayfada bulunamadı.", updateElementVarMi);
+
     }
 }

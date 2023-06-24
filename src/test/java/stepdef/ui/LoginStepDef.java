@@ -1,8 +1,7 @@
 package stepdef.ui;
 
-import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import pages.Login;
 import utilities.ConfigReader;
@@ -15,7 +14,6 @@ public class LoginStepDef {
 
     @Given("Kullanici  {string} olarak giriş yapar")
     public void kullaniciOlarakGirisYapar(String arg0) {
-
         driver.get(ConfigReader.getProperty("url"));
         locate.homePageLogin.click();
         ReusableMethods.bekle(1);
@@ -37,10 +35,12 @@ public class LoginStepDef {
                 break;
 
         }
-        ReusableMethods.bekle(1);
-        locate.password.sendKeys(ConfigReader.getProperty("psw"));
-        locate.LoginButton.click();
-        ReusableMethods.bekle(1);
+        ReusableMethods.bekle(2);
+        locate.password.sendKeys(ConfigReader.getProperty("psw"), Keys.TAB,Keys.ENTER);
+
+
 
     }
+
+
 }
