@@ -1,5 +1,5 @@
 
-
+@us13
 Feature: US-13 Vice Dean, Teacher oluşturabilmeli
   Background:Login
     Given Kullanici  "vicedean" olarak giriş yapar

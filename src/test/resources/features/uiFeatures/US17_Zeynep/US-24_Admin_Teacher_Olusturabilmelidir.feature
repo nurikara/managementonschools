@@ -1,4 +1,4 @@
-
+@us24
 Feature: US-13 Admin, Teacher oluşturabilmeli
   Background:Login
     Given Kullanici  "admin" olarak giriş yapar

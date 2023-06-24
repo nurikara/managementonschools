@@ -1,4 +1,4 @@
-
+@us17
   Feature: US-17 Teacher öğrencilere not verebilmeli
     Background:Login
       Given Kullanici  "teacher" olarak giriş yapar
