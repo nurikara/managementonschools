@@ -2,13 +2,11 @@ package stepdef.ui;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
 import pages.US13_US14_ViceDeanTeacher;
 import pages.US17_US18_TeacherStudentInfo;
-import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
 

@@ -1,8 +1,6 @@
 package stepdef.ui;
 
-import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import pages.Login;
