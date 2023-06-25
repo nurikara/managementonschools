@@ -1,6 +1,6 @@
-@erel @tc07
+@erel @tc08
 Feature: Vice Dean, öğrenci oluşturabilme
-  Scenario: Doğum tarihi girilmelidir. Boş bırakılamaz.
+  Scenario: Cinsiyet seçilmelidir. Boş bırakılamaz.
     Given Kullanıcı _"https://managementonschools.com/" sayfasina gider
     When Kullanıcı LOG IN e tıklar
     And Kullanıcı geçerli VİCE DEAN OLARAK user name ve password u girer
