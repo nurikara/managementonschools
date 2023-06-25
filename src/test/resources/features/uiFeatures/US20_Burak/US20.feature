@@ -21,10 +21,12 @@ Feature: TC01 : Toplantıların, Date, Start Time, Stop Time ve Description gör
       Then Submit butonuna tiklanir degisiklikler kaydedilir
       Then sayfa kapatilir
 
+
   @us20tc03
     Scenario: Toplantilari silebilmeli
     Then Sayfa’da sag altta bulunan cop tenekesine tiklar.
     Then sayfa kapatilir
+
 
 
 
