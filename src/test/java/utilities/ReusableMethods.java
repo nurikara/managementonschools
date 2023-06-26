@@ -7,6 +7,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import pages.US01_AdayOgRegister;
 
 import java.io.File;
 import java.io.IOException;
@@ -392,4 +393,6 @@ public class ReusableMethods {
         WebElement webElement = (WebElement) js.executeScript("return "+str+"");
         assertTrue(webElement.isEnabled());
     }
+
+
 }
