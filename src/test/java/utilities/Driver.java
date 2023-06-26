@@ -38,18 +38,16 @@ public class Driver {
         sayfada RETURN et. Bunun sadece yapmamız gereken if(driver==null) kullanmak
          */
         if (driver == null) {
-            switch (ConfigReader.getProperty("browser")) {
-                case "chrome":
-                    WebDriverManager.chromedriver().setup();
-                    driver = new ChromeDriver(new ChromeOptions().addArguments("--remote-allow-origins=*"));
-                    break;
-                case "edge":
-                    WebDriverManager.edgedriver().setup();
-                    driver = new EdgeDriver(new EdgeOptions().addArguments("--remote-allow-origins=*"));
-                    break;
-                default:
-                    WebDriverManager.chromedriver().setup();
-                    driver = new ChromeDriver(new ChromeOptions().addArguments("--remote-allow-origins=*"));
+            CharSequence browser = ConfigReader.getProperty("browser");
+            if (browser.equals("chrome")) {
+                WebDriverManager.chromedriver().setup();
+                driver = new ChromeDriver(new ChromeOptions().addArguments("--remote-allow-origins=*"));
+            } else if (browser.equals("edge")) {
+                WebDriverManager.edgedriver().setup();
+                driver = new EdgeDriver(new EdgeOptions().addArguments("--remote-allow-origins=*"));
+            } else {
+                WebDriverManager.chromedriver().setup();
+                driver = new ChromeDriver(new ChromeOptions().addArguments("--remote-allow-origins=*"));
             }
 
             driver.manage().window().maximize();

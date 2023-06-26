@@ -42,8 +42,7 @@ ReusableMethods.click(vice.studentmanagement);
     public void kullanıcı_istediği_danışman_öğretmeni_seçer() {
         ReusableMethods.click(vice.teacherselectddm);
         Select select=new Select(vice.teacherselectddm);
-        select.selectByIndex(1);
-
+        select.selectByValue("6");
     }
 
 
