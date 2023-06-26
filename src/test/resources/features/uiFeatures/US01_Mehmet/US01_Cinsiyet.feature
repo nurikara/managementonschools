@@ -14,6 +14,7 @@ Feature: Aday ogrenciler sisteme kayit olabilmelidir
     Then kullanici_register_butonuna_tiklar
       # Gelen mesajin "Guest User registered."'a esit  oldugunu dogruluyorum
     Then kullanici_basarili_sekilde_kayit_yaptirdigini_dogrular
+
     Examples:
       | name | surname | BirthPlace | Phone | DateOfBirth | Ssn | Username | Password |
       | diga | yildiz | adana | 100-500-0003 | 01-01-1950 | 100-50-0003 | username35 | Password16. |
