@@ -46,11 +46,11 @@ Feature:Dean, Vice Dean hesabı oluşturabilmelidir.
   Scenario: Password girilebilmelidir.
     Then Add ViseDean bolumu doldurulurken PassWord kismi bos birakilir
     And Sayfadan logout yapilarak cikilir
-
+@sunum
   Scenario:Password en az 8 karakterden oluşmalıdır.
     Then Add ViseDean bolumu doldurulurken PassWord EnAz 8 karakterden oluşmalıdır
     And Sayfadan logout yapilarak cikilir
-
+@sunum
   Scenario:Password; büyük harf, küçük harf ve bir rakam içermelidir.
     Then Add ViseDean bolumu doldurulurken Password; büyük harf, küçük harf ve bir rakam içermelidir.
     And Sayfadan logout yapilarak cikilir

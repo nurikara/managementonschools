@@ -401,11 +401,11 @@ Thread.sleep(2000);
         login.addViseDeanPASSWORD.sendKeys("emre4344");
         Thread.sleep(1000);
         login.addViseDeanSubmit.click();
-        Thread.sleep(2000);
-        System.out.println("login.addViseDeanAlert = " + login.addViseDeanAlert);
-        Thread.sleep(2000);
 
-        Assert.assertNotEquals("sa", login.addViseDeanAlert.getText());
+
+        Thread.sleep(1000);
+
+      Assert.assertNotEquals("Vice dean Saved",login.addViseDeanAlert.getText());
 
     }
 
