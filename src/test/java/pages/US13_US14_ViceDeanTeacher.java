@@ -5,7 +5,10 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
+import java.util.List;
+
 public class US13_US14_ViceDeanTeacher extends Login {
+
 
     @FindBy(xpath = "//button[text()='Menu']")
     public WebElement menuButton;
@@ -50,6 +53,11 @@ public class US13_US14_ViceDeanTeacher extends Login {
     public WebElement passwordUpdate;
     @FindBy(xpath = "//button[text()='Submit']")
     public WebElement submitButton;
+    @FindBy(xpath = "//div[text()='Page ']")
+    public WebElement pageText;
+
+
+
     @FindBy(xpath = "(//button[text()='Submit'])[2]")
     public WebElement submitButtonUpdate;
     @FindBy(id = "react-select-4-input")
@@ -58,12 +66,29 @@ public class US13_US14_ViceDeanTeacher extends Login {
     public WebElement latestNewsText;
     @FindBy(xpath = "//div[@class='Toastify']")
     public WebElement msgLessonCreated2;
+    @FindBy(xpath = "//button[@type='button']")
+    public List<WebElement> editIconList;
 
 
+@FindBy(xpath = "//*[@class=' css-19bb58m']")
+    public WebElement chooseLessonTeacher;
 
+@FindBy(xpath = "//*[text()='Required']")
+    public WebElement surnameRequared;
 
+@FindBy(xpath = "//*[text()='Teacher saved successfully']")
+    public WebElement teacherSavedsuccessfully;
 
+@FindBy(xpath = "(//*[@class='invalid-feedback'])[7]")
+    public WebElement minimumcharacteruyarısı;
 
+@FindBy(xpath = "(//[text()='Selenium'])[2]")
+    public WebElement seleniumSecim;
 
+@FindBy(xpath = "//*[text()='Minimum 8 character']")
+    public WebElement password8characteruyarısı;
+
+@FindBy(xpath = "//*[text()='Please enter valid email']")
+    public WebElement validemailuyarısı;
 
 }

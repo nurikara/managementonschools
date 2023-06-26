@@ -32,7 +32,16 @@ public class US07_DeanMessage extends Login {
  @FindBy(xpath = "//button[@class='btn btn-warning']")
     public WebElement YesButton ;
 
-
+    @FindBy(xpath = "(//tbody[@class='table-group-divider']/tr/td)[1]")
+    public WebElement contactName;
+    @FindBy(xpath = "(//tbody[@class='table-group-divider']/tr/td)[2]")
+    public WebElement contactEmail;
+    @FindBy(xpath = "(//tbody[@class='table-group-divider']/tr/td)[2]")
+    public WebElement contactDate;
+    @FindBy(xpath = "(//tbody[@class='table-group-divider']/tr/td)[2]")
+    public WebElement contactSubject;
+    @FindBy(xpath = "(//tbody[@class='table-group-divider']/tr/td)[2]")
+    public WebElement contactMessage;
 
 
 }

@@ -1,12 +1,12 @@
 package stepdef.ui;
 
 import com.github.javafaker.Faker;
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
 
@@ -14,6 +14,9 @@ import pages.US02_AdminUserList;
 import pages.US06_Dean_ViceDean;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.ReusableMethods;
+
+import java.util.List;
 
 import static org.junit.Assert.*;
 
@@ -21,7 +24,7 @@ public class US06_Steps_Nuri {
     US06_Dean_ViceDean login = new US06_Dean_ViceDean();
     US02_AdminUserList login2 = new US02_AdminUserList();
 
-
+    Actions actions = new Actions(Driver.getDriver());
 
 
     @When("Admin kullanici adi ve sifresini kullanarak Dean panaline giris yapar")
@@ -131,6 +134,9 @@ public class US06_Steps_Nuri {
 
     @Then("Add ViseDean bolumu doldurulurken Cinsiyet kismi bos birakilir")
     public void addViseDeanBolumuDoldurulurkenCinsiyetKismiBosBirakilir() throws InterruptedException {
+
+        String Fakename = Faker.instance().name().username();
+
         Actions actions = new Actions(Driver.getDriver());
         actions.sendKeys(Keys.PAGE_UP).perform();
         login.addViseDeanName.sendKeys("Nuri");
@@ -145,14 +151,34 @@ public class US06_Steps_Nuri {
         Thread.sleep(1000);
         login.addViseDeanSSN.sendKeys("123-12-1234");
         Thread.sleep(1000);
-        login.addViseDeanUSERNAME.sendKeys("nurikara");
+        login.addViseDeanUSERNAME.sendKeys(Fakename);
         Thread.sleep(1000);
         login.addViseDeanPASSWORD.sendKeys("Emre4344");
         Thread.sleep(1000);
-        Assert.assertFalse(login.addViseDeanSubmit.isEnabled());
-        Thread.sleep(2000);
+        login.addViseDeanSubmit.click();
+        Thread.sleep(3000);
+
+        actions.sendKeys(Keys.PAGE_DOWN);
+        Thread.sleep(3000);
+
+        ReusableMethods.click(login.addViseDeanListeSonu);
+
+        login.addViseDeanListeSonu.click();
+
+        Thread.sleep(3000);
 
 
+        List<WebElement> UserListe = login.ListUserName;
+
+        boolean flag = false;
+
+        for (WebElement w : UserListe) {
+            if (w.getText().equals(Fakename)) {
+                flag = true;
+                break;
+            }
+            Assert.assertTrue(flag);
+        }
 
     }
 
@@ -376,7 +402,8 @@ public class US06_Steps_Nuri {
         Thread.sleep(2000);
         System.out.println("login.addViseDeanAlert = " + login.addViseDeanAlert);
         Thread.sleep(2000);
-        Assert.assertNotEquals("sa",login.addViseDeanAlert.getText());
+
+        Assert.assertNotEquals("sa", login.addViseDeanAlert.getText());
 
     }
 

@@ -5,6 +5,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
+import java.util.List;
+
 public class US06_Dean_ViceDean extends Login{
 
     @FindBy(xpath =" //h5")
@@ -47,6 +49,14 @@ public class US06_Dean_ViceDean extends Login{
 
     @FindBy(xpath ="//div[@role='alert']")
     public WebElement addViseDeanAlert;
+
+    @FindBy(xpath ="(//li[@class='page-item'])[4]")
+    public WebElement addViseDeanListeSonu;
+
+    @FindBy(xpath ="//tbody//tr//td[5]")
+    public List<WebElement> ListUserName;
+
+
 
 
 

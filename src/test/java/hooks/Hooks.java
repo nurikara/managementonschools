@@ -1,16 +1,21 @@
 package hooks;
 
 
-import io.cucumber.core.gherkin.Step;
 import io.cucumber.java.After;
+
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import utilities.Driver;
 
+import static baseUrl.ManagementSchoolBaseUrl.setUp;
+
 
 public class Hooks {
+
+
+
      /*
     Hooks her bir Scenario yada Scenario Outline dan ONCE yada SONRA calistirilan bir classdir.
    ==> Neden hooks kullanilir?
@@ -20,21 +25,24 @@ public class Hooks {
        Before ve After metot lari. After da ekran goruntusu almak icin kullandigim kodlar vardir
      */
 
-    @Before() //==> import io.cucumber.java.Before==>import cucumberdan alinmali
-    public void setUp() {
-        System.out.println("Before Method");
-    }//@Before yanina("buraya tag belirtiyoruz.")sonra sadece rumner da belirttigimiz tags calısır.Ama belirtmazsek de kıstlama
-    //koymamıs oluruz ve before ıcıne koydugumuz bilgi tum testlerden once hep calısır
 
+
+    @Before () //==> import io.cucumber.java.Before==>import cucumberdan alinmali
+    public void setUpApi() {
+        setUp();
+    }
 
     @After
-    public void tearDown(Scenario scenario) {
+    public void tearDown(Scenario scenario) throws InterruptedException {
+
+
         if (scenario.isFailed()) {//Eger fail olursa alınan ekran goruntusunu rapora ekle
             final byte[] failedScreenShot = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
             scenario.attach(failedScreenShot, "image/png", "failed_scnenaio" + scenario.getName());
         }
-        //Driver.closeDriver();
+
     }
+}
 
     /*
     Scenario'lar arasındaki bağlantıyı sağlayan glue parametresine koyduğumuz stepDefinition package'ı içerisinde
@@ -44,4 +52,3 @@ methodlar çalışacaktır.
     İstersek yeni bir package oluşturup bunun içinede Hooks class'ını koyabiliriz. Eğer yeni bir package içerisine
 koyarsak Runner class'ındaki glue parametresine bu package'ı da eklememiz gerekir
  */
-}

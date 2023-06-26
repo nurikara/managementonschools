@@ -22,7 +22,11 @@ public class US15_Steps_Erel {
     }
     @When("Kullanıcı LOG IN e tıklar")
     public void kullanıcı_log_ın_e_tıklar() {
-log.login.click();
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
+        log.login.click();
     }
     @When("Kullanıcı geçerli VİCE DEAN OLARAK user name ve password u girer")
     public void kullanıcı_geçerli_vice_dean_olarak_user_name_ve_password_u_girer() {
@@ -63,6 +67,7 @@ ReusableMethods.click(vice.studentmanagement);
 
     @Then("Kullanıcı name in altında Required yazısını görür.")
     public void kullanıcıNameInAltındaRequiredYazısınıGörür() {
+
         Assert.assertTrue(vice.namerequired.isDisplayed());
     }
 
