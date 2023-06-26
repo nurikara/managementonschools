@@ -1,6 +1,7 @@
 package utilities;
 
 
+import com.github.javafaker.Faker;
 import org.apache.commons.io.FileUtils;
 import org.junit.Assert;
 import org.openqa.selenium.*;
@@ -8,6 +9,10 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import pages.US01_AdayOgRegister;
+
+import java.awt.*;
+import java.awt.event.KeyEvent;
 import java.io.File;
 import java.io.IOException;
 import java.sql.*;
@@ -260,7 +265,7 @@ public class ReusableMethods {
     }
 
 
-//Alttaki uc method sadce bu site icin gecerli Locate'ler degistigi icin baska sitede kullanilmaz
+    //Alttaki uc method sadce bu site icin gecerli Locate'ler degistigi icin baska sitede kullanilmaz
     //Dinamik olsun diye bu sekilde yaptim
     public static void selectFromList( String textFromList) {
         Driver.getDriver().findElement(By.xpath("//div[@id='myCountryautocomplete-list']//div[.='" + textFromList + "']")).click();
@@ -309,39 +314,4 @@ public class ReusableMethods {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-    public static Connection getConnection(){
-        try {
-            return DriverManager.getConnection("jdbc:postgresql://managementonschools.com:5432/school_management", "select_user", "43w5ijfso");
-        }catch (SQLException e){
-            throw new RuntimeException(e);
-        }
-
-    }
-    public static Statement getStatement(){
-        try {
-            return getConnection().createStatement();
-        }catch (SQLException e){
-            throw new RuntimeException(e);
-        }
-    }
-    public static ResultSet getResultSet(String query){
-        try {
-            return getStatement().executeQuery(query);
-        }catch (SQLException e){
-            throw new RuntimeException(e);
-        }
-    }
-}
 

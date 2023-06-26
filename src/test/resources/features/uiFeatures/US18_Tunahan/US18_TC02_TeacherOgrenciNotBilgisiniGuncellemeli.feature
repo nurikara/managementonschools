@@ -1,3 +1,4 @@
+@dmr @us18
 Feature: US18_Teacher_ogrenci_notlarini_gorebilmeli_güncelleyebilmeli
   Scenario: TC02_Teacher_not_bilgisini_guncelleyebilmeli
 
@@ -9,7 +10,6 @@ Feature: US18_Teacher_ogrenci_notlarini_gorebilmeli_güncelleyebilmeli
     And kullanici_ogrenci_bilgilerini_gunceller_ve_submit_butonuna_tıklar
     And kullanici_edit_ekranini_kapatir_
     Then kullanici_ogrenci_not_bilgisinin_guncellendigini_dogrular
-    And kullanici_sayfayi_kapatır
 
 
 

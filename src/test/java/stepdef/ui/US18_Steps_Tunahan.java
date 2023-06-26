@@ -1,23 +1,7 @@
 package stepdef.ui;
 
-import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
-import org.junit.Assert;
-import org.openqa.selenium.Keys;
-import pages.US17_US18_TeacherStudentInfo;
-import utilities.ConfigReader;
-import utilities.Driver;
-import utilities.ReusableMethods;
-
-import java.awt.*;
-import java.awt.event.InputEvent;
-import java.awt.event.KeyEvent;
-
-import static utilities.Driver.driver;
-
 public class US18_Steps_Tunahan {
+    /*
 US17_US18_TeacherStudentInfo tSI =new US17_US18_TeacherStudentInfo();
 Robot robot;
     @Given("kullanici_url'e_gider")
@@ -28,6 +12,8 @@ Robot robot;
 
     @When("kullanici_home_page_sayfasindalogin_butonuna_tıklar")
     public void kullanici_home_page_sayfasindalogin_butonuna_tıklar() {
+
+        tSI.homePageLogin.click();
 
     }
 
@@ -115,9 +101,10 @@ Robot robot;
 
     @And("kullanici_{string}_password_girer")
     public void kullanici__password_girer(String username) {
-
+            tSI.username.sendKeys(ConfigReader.getProperty(username),Keys.TAB,ConfigReader.getProperty("psw"),Keys.TAB,Keys.ENTER);
+        System.out.println();
     }
 
-
+*/
 
 }

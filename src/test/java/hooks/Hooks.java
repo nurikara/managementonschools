@@ -7,7 +7,6 @@ import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import pages.US02_AdminUserList;
 import utilities.Driver;
 
 import static baseUrl.ManagementSchoolBaseUrl.setUp;
@@ -15,7 +14,7 @@ import static baseUrl.ManagementSchoolBaseUrl.setUp;
 
 public class Hooks {
 
-    US02_AdminUserList login2 = new US02_AdminUserList();
+
 
      /*
     Hooks her bir Scenario yada Scenario Outline dan ONCE yada SONRA calistirilan bir classdir.
@@ -28,11 +27,10 @@ public class Hooks {
 
 
 
+
     @Before ("@Api") //==> import io.cucumber.java.Before==>import cucumberdan alinmali
     public void setUpApi() {
         setUp();
-
-
     }
 
     @After
@@ -43,8 +41,9 @@ public class Hooks {
             final byte[] failedScreenShot = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
             scenario.attach(failedScreenShot, "image/png", "failed_scnenaio" + scenario.getName());
         }
-      //  Driver.closeDriver();
-    }}
+
+    }
+}
 
     /*
     Scenario'lar arasındaki bağlantıyı sağlayan glue parametresine koyduğumuz stepDefinition package'ı içerisinde

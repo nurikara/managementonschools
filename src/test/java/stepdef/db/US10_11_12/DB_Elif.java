@@ -1,9 +1,13 @@
-package stepdef.db.us10_11_12;
+package stepdef.db.US10_11_12;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import pojos.us10_11_12.LessonNamePojo;
+import pojos.us10_11_12.LessonPostPojo;
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -14,6 +18,7 @@ public class DB_Elif {
     Connection connection;
     Statement statement;
     ResultSet resultSet;
+    LessonNamePojo expectedData;
 
     @Given("{string} ile guest useri cagir")
     public void ile_guest_useri_cagir(String username) throws SQLException {
@@ -85,5 +90,30 @@ public class DB_Elif {
     @Then("table nın bos oldugunu dogrula.")
     public void tableNınBosOldugunuDogrula() throws SQLException {
         assertFalse(resultSet.next());  //data yoksa true donecek yani test gececek (false->false) varsa fail olacak(false->true) test.
+    }
+
+    //Choose Lesson
+
+    @Given("Connect to database")
+    public void connectToDatabase() throws SQLException {
+        //Query i calıstır
+        String query="select * from lesson where lesson_name='JavaScript'";
+        resultSet=getResultSet(query);
+        resultSet.next();
+
+
+    }
+
+    @Then("Lesson Program and validate")
+    public void lessonProgramAndValidate() throws SQLException {
+
+        LessonNamePojo expectedData=new LessonNamePojo(3,"JavaScript",5,true);
+        System.out.println("expectedData = " + expectedData);
+
+
+        assertEquals(expectedData.getLessonName(),resultSet.getObject("lesson_name"));
+        assertEquals(expectedData.getCreditScore(),resultSet.getObject("credit_score"));
+        assertEquals(expectedData.getCompulsory(),resultSet.getObject("is_compulsory"));
+
     }
 }
