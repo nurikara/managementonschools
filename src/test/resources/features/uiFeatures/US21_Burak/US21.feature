@@ -6,8 +6,6 @@ Feature: US21-Students, choose lesson, grades and announcement
     When Kullanici_LOG_IN'e_tiklar
     And Kullanici_gecerli_Student_olarak_Username_ve_Password'u_girer
 
-
-
   @us21tc01
     Scenario:
     Then Karsisina cikan sayfada Lesson Teacher Day Start time ve Stop time bilgilerini gorur
