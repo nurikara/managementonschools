@@ -42,12 +42,20 @@ public class Hooks {
         }
 
         Driver.closeDriver();
+<<<<<<< HEAD
     }}
 
 
 
 
 
+=======
+
+      //  Driver.closeDriver();
+
+    }
+}
+>>>>>>> main
 
     /*
     Scenario'lar arasındaki bağlantıyı sağlayan glue parametresine koyduğumuz stepDefinition package'ı içerisinde

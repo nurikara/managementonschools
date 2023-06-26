@@ -7,3 +7,4 @@ Feature: Vice Dean, kullanıcıların gönderdiği mesajları görebilmelidir
     And Kullanici Menu buttonuna tiklar
     And Kullanici Menu icersinde Contact Get All secnegine tiklar
     Then Silme butonu gorur
+    And Sayfa kapatiliir

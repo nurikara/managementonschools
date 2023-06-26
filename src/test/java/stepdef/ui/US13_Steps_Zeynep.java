@@ -6,7 +6,6 @@ import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
 import pages.US13_US14_ViceDeanTeacher;
-import pages.US22_US23_US24_Add;
 import utilities.ReusableMethods;
 
 public class US13_Steps_Zeynep {
