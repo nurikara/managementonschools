@@ -1,4 +1,4 @@
-@US02Api @Api
+
   Feature: Aday öğrenciler sisteme kayıt olabilmelidir. Api
 
     Scenario Outline: US01_GuestUser
