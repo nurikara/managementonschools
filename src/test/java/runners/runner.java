@@ -20,7 +20,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
 
         glue = {"stepdef", "hooks"},//bu parametre ile kodalrımızı yazdıgımız stepDefinition classının package ını belirtiriz.
-        tags = "",//buraya herhangi birsey yazabiliriz. biz bu tagsı nerede kullacagız:benim calıstırmak ıstedıgım senaryoya isim verebilmemdir.
+        tags = "@sunum",//buraya herhangi birsey yazabiliriz. biz bu tagsı nerede kullacagız:benim calıstırmak ıstedıgım senaryoya isim verebilmemdir.
 
         dryRun = false
 )
