@@ -22,10 +22,10 @@ public class US15_Steps_Erel {
     }
     @When("Kullanıcı LOG IN e tıklar")
     public void kullanıcı_log_ın_e_tıklar() {
-<<<<<<< HEAD
-=======
 
->>>>>>> main
+
+
+
         log.login.click();
     }
     @When("Kullanıcı geçerli VİCE DEAN OLARAK user name ve password u girer")

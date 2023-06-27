@@ -19,8 +19,7 @@ import static org.junit.Assert.assertEquals;
 public class Api_Mali extends ManagementSchoolBaseUrl {
 
     LessonPojo expectedLessonPojo;
-    OuterPojoUS08 expectedDataOuterPojo;
-    OuterPojoUS08 outerPojo;
+
     Response response;
     String lessonId;
     HashMap expectedDataMap;
@@ -41,16 +40,51 @@ public class Api_Mali extends ManagementSchoolBaseUrl {
         //Set the url  https://managementonschools.com/app/lessons/save  -Query param a gerek yok
         setUp();
         spec.pathParams("first","lessons","second", "save");
+        /*
+        SİLİNECEK
+         //Set the expected data
+        //1. Yol: String ile --> Tavsiye edilmez
+        String expectedDataString = "{ \"description\": \"Created By API\", \"price\": 123, \"roomNumber\": " + roomNumber + ", \"roomType\": \"TWIN\", \"status\": true }";
 
-        //Set the expected data
+        //2. Yol: Map ile
+        expectedDataMap = new HashMap<>();
+        expectedDataMap.put("description", "Created By API");
+        expectedDataMap.put("price", 123);
+        expectedDataMap.put("roomNumber", roomNumber);
+        expectedDataMap.put("roomType", "TWIN");
+        expectedDataMap.put("status", true);
+         */
 
+        //Set the expected data 3 ŞEKİLDE OLUŞTURABİLİRİZ 1.String 2. Map 3. Pojo
+
+        //1.String ile
+        String expectedDataString ="{\n" +
+                "                \"compulsory\": "+arg1+",\n" +
+                "                \"creditScore\": "+arg2+",\n" +
+                "                \"lessonName\": \""+arg0+"\"\n" +
+                "                }";
+        System.out.println("expectedDataString = " + expectedDataString);
+
+        //2. Map ile
+
+        HashMap exDataMap = new HashMap<>();
+        exDataMap.put("compulsory",arg1);
+        exDataMap.put("creditScore",arg2);
+        exDataMap.put("lessonName",arg0);
+        System.out.println("exDataMap = " + exDataMap);
+
+        //3. pojo ile
         expectedLessonPojo=new LessonPojo(""+arg0+"",""+arg1+"",""+arg2+"","");
-        System.out.println(expectedLessonPojo);
+        System.out.println("expectedLessonPojo : "+expectedLessonPojo);
 
         //Send the request and get the response
 
+        //response=given(spec).body(expectedDataString).post("{first}/{second}");
+        //response=given(spec).body(exDataMap).post("{first}/{second}");
         response=given(spec).body(expectedLessonPojo).post("{first}/{second}");
         response.prettyPrint();
+
+        //3 şekilde de adım PASS oldu
 
     }
     @Then("response ile post edilen  datalarini dogrula")
