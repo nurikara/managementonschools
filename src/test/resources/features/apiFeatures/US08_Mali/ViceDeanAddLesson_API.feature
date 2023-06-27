@@ -4,4 +4,4 @@ Feature: US08 Lesson Create API testi
     And response ile post edilen  datalarini dogrula
     Examples:
       | lessonName | compulsory | creditScore |
-      | filmSSs3   | true       | 3           |
+      | film2      | true       | 4           |

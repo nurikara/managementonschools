@@ -2,8 +2,12 @@ package stepdef.api;
 
 import baseUrl.ManagementSchoolBaseUrl;
 import com.github.javafaker.Faker;
+import com.google.gson.Gson;
 import io.cucumber.java.en.*;
+import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
+import org.hamcrest.Matchers;
+import org.junit.Assert;
 import pojos.us08.LessonPojo;
 import pojos.us08.OuterPojoUS08;
 import pojos.us14.US14_Pojo;
@@ -12,9 +16,12 @@ import utilities.ObjectMapperUtils;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import static io.restassured.RestAssured.given;
+import static org.hamcrest.CoreMatchers.equalTo;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class Api_Mali extends ManagementSchoolBaseUrl {
 
@@ -23,6 +30,7 @@ public class Api_Mali extends ManagementSchoolBaseUrl {
     Response response;
     String lessonId;
     HashMap expectedDataMap;
+    HashMap exDataMap;
 
 
 
@@ -40,20 +48,7 @@ public class Api_Mali extends ManagementSchoolBaseUrl {
         //Set the url  https://managementonschools.com/app/lessons/save  -Query param a gerek yok
         setUp();
         spec.pathParams("first","lessons","second", "save");
-        /*
-        SİLİNECEK
-         //Set the expected data
-        //1. Yol: String ile --> Tavsiye edilmez
-        String expectedDataString = "{ \"description\": \"Created By API\", \"price\": 123, \"roomNumber\": " + roomNumber + ", \"roomType\": \"TWIN\", \"status\": true }";
 
-        //2. Yol: Map ile
-        expectedDataMap = new HashMap<>();
-        expectedDataMap.put("description", "Created By API");
-        expectedDataMap.put("price", 123);
-        expectedDataMap.put("roomNumber", roomNumber);
-        expectedDataMap.put("roomType", "TWIN");
-        expectedDataMap.put("status", true);
-         */
 
         //Set the expected data 3 ŞEKİLDE OLUŞTURABİLİRİZ 1.String 2. Map 3. Pojo
 
@@ -67,7 +62,7 @@ public class Api_Mali extends ManagementSchoolBaseUrl {
 
         //2. Map ile
 
-        HashMap exDataMap = new HashMap<>();
+        exDataMap = new HashMap<>();
         exDataMap.put("compulsory",arg1);
         exDataMap.put("creditScore",arg2);
         exDataMap.put("lessonName",arg0);
@@ -100,19 +95,71 @@ public class Api_Mali extends ManagementSchoolBaseUrl {
     "httpStatus": "OK"
 }
          */
+        //Do assertion 6 şekilde yapılabilir
+        //1. Yol: then() methodu + HamcrestMatcher
+        //2. Yol: JsonPath ile
+        //3. Yol: Map ile
+        //4. Yol: Pojo class ile
+        //5. Yol: pojo class + ObjectMapper ile (Tavsiye edilen)
+        //6. Yol: pojo class + Gson ile
+
+
         System.out.println("response.asString() = " + response.asString());
 
+        //1. yol
+        response.then().
+                statusCode(200).
+                contentType("application/json").
+                body("message", Matchers.equalTo("Lesson Created")).
+                body("httpStatus", Matchers.equalTo("OK")); //object girmedik body leri ayrı method yapmasa idil soft assertion oluyordu
 
+        //2.yol Json . zaten response ile dönen data Json formatında
+
+        JsonPath jsonPath = response.jsonPath();
+        System.out.println("jsonPath = " + jsonPath.prettyPrint());
+
+        System.out.println("jsonPath.getMap(\"object\").get(\"lessonName\") = " + jsonPath.getMap("object").get("lessonName").toString());
+        assertEquals(""+expectedLessonPojo.getLessonName()+"",jsonPath.getMap("object").get("lessonName"));
+        assertEquals("Lesson Created", jsonPath.getString("message"));
+        assertEquals("OK", jsonPath.getString("httpStatus"));
+        assertEquals(200, response.statusCode());
+
+        //3. Yol: Map ile
+
+        Map<String, Object> actDataMap = response.as(HashMap.class);
+
+        assertTrue( actDataMap.get("object").toString().contains(exDataMap.get("lessonName").toString()));
+        assertTrue( actDataMap.get("object").toString().contains(exDataMap.get("creditScore").toString()));
+        assertTrue( actDataMap.get("message").toString().contains("Lesson Created"));
+
+        //4. yol pojo class ile
+        OuterPojoUS08 actualPojo=response.as(OuterPojoUS08.class);
+
+        assertEquals(expectedLessonPojo.getLessonName(), actualPojo.getObject().getLessonName());
+        assertEquals(expectedLessonPojo.getCompulsory(), actualPojo.getObject().getCompulsory());
+        assertEquals(expectedLessonPojo.getCreditScore(), actualPojo.getObject().getCreditScore());
+        assertEquals("Lesson Created", actualPojo.getMessage());
+        assertEquals("OK", actualPojo.getHttpStatus());
+
+
+        //5. Yol: pojo class + ObjectMapper ile (Tavsiye edilen) readValue() metodu istediğin class a dönüştürüyor
         OuterPojoUS08 actualDataObjectMapper= ObjectMapperUtils.convertJsonToJava(response.asString(), OuterPojoUS08.class);
         lessonId=actualDataObjectMapper.getObject().getLessonId();
         System.out.println("lessonId: "+lessonId);
         System.out.println("actualData = " + actualDataObjectMapper.getObject().getLessonName());
 
-        //LessonPojo actualDataPojoGson = new Gson().fromJson(response.asString(), LessonPojo.class);
-
         assertEquals(expectedLessonPojo.getLessonName(), actualDataObjectMapper.getObject().getLessonName());
         assertEquals(expectedLessonPojo.getCreditScore(), actualDataObjectMapper.getObject().getCreditScore());
         assertEquals(expectedLessonPojo.getCompulsory(), actualDataObjectMapper.getObject().getCompulsory());
+
+        //6. Yol: pojo class + Gson ile
+        OuterPojoUS08 actualDataPojoGson = new Gson().fromJson(response.asString(), OuterPojoUS08.class);
+
+        assertEquals(expectedLessonPojo.getLessonName(), actualDataPojoGson.getObject().getLessonName());
+        assertEquals(expectedLessonPojo.getCreditScore(), actualDataPojoGson.getObject().getCreditScore());
+        assertEquals(expectedLessonPojo.getCompulsory(), actualDataPojoGson.getObject().getCompulsory());
+
+
 
     }
 
