@@ -24,7 +24,7 @@ public class US07_Steps_Ismail {
     Actions actions = new Actions(Driver.getDriver());
     @Given("Kullanıcı adrese gider")
     public void kullanıcıAdreseGider() {
-        driver.get(ConfigReader.getProperty("url"));
+
     }
 
     @And("Kullanıcı geçerli  DEAN OLARAK user name girer")
