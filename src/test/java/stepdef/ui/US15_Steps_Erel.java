@@ -21,10 +21,7 @@ public class US15_Steps_Erel<string> {
 
         Driver.getDriver().get((java.lang.String) Url);
     }
-    @When("Kullanıcı LOG IN e tıklar")
-    public void kullanıcı_log_ın_e_tıklar() {
-        log.login.click();
-    }
+
     @When("Kullanıcı geçerli VİCE DEAN OLARAK user name ve password u girer")
     public void kullanıcı_geçerli_vice_dean_olarak_user_name_ve_password_u_girer() {
 log.username.sendKeys(ConfigReader.getProperty("username"));
@@ -341,5 +338,9 @@ ReusableMethods.click(vice.studentmanagement);
 
     }
 
+    @When("Kullanıcı LOG IN e tıklar")
+    public void kullanıcı_log_ın_e_tıklar() {
 
+        log.login.click();
+    }
 }
