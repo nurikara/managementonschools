@@ -21,7 +21,7 @@ public class US_04_StepDefs {
 
     @Given("Kullanıcı \"url\"ye gider")
     public void kullanıcı_url_ye_gider() {
-        driver.get(ConfigReader.getProperty("url"));
+        driver.get((String) ConfigReader.getProperty("url"));
 
     }
 

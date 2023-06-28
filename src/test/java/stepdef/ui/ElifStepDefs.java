@@ -28,7 +28,7 @@ public class ElifStepDefs {
 
     @Given("Kullanici belirtilen url adresine gider")
     public void kullaniciBelirtilenUrlAdresineGider() {
-        driver.get(ConfigReader.getProperty("url"));
+        driver.get((String) ConfigReader.getProperty("url"));
     }
 
     @And("Sayfayi kapatilir")
