@@ -9,7 +9,7 @@ Feature: US14 Vice Dean Teacher Update
     Given Kullanici AddTeacher alani inputlarini doldurarak gecerli bir giris yapar
     And gecerli giris mesaji goruntulenir
 
-    #bu senerya üst senaryoya bağımlıdır
+    #bu seneryo üst senaryoya bağımlıdır
 
   Scenario: TC02 Girilen Ogretmen Bilgilerini Listede Dogrulama
     Given Kullanici Ogretmen Listesi Son Sayfaya Gider
