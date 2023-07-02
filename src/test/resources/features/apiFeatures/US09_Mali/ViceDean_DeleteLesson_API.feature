@@ -1,5 +1,5 @@
-Feature: US09 Vice Dean Delete Lesson API Testi
-  Scenario: TC01_ViceDean Ders Siler
-    Given del request yaparak ismi "film" verilen lesson silinir
-    And Delete edilen datanin gelen Response dogrulamasi yapilir
+Feature: US09 Vice Dean Delete Lesson API Test
+  Scenario: TC01_ViceDean Delete Lesson
+    Given lesson with the name_"film12"_deletes by del request
+    And validate the deleted datas with response
 
