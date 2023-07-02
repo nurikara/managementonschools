@@ -1,7 +1,7 @@
 Feature: US08 Lesson Create API test
   Scenario Outline: TC01 ViceDean Create Lesson
     Given create lesson with_"<lessonName>"_"<compulsory>"_"<creditScore>"_datas_by post request
-    And validate the response datas with posted
+    And verify the response datas with posted
     Examples:
       | lessonName | compulsory | creditScore |
-      | film12     | true       | 4           |
+      | film07     | true       | 4           |

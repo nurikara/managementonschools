@@ -16,7 +16,7 @@ public class US01_Steps_Mehmet {
 
     @Given("kullanici_ilgili_sitenin_sayfasina_gider")
     public void kullanici_ilgili_sitenin_sayfasina_gider() {
-        Driver.getDriver().get(ConfigReader.getProperty("url"));
+      //  Driver.getDriver().get(ConfigReader.getProperty("url"));
     }
 
     @And("kullanici_homeRegister_butonuna_tiklar")

@@ -114,8 +114,8 @@ public class Mali2 {
         response.prettyPrint();
     }
 
-    @Then("Validate the posted datas with response")
-    public void validateThePostedDatasWithResponse() {
+    @Then("Verify the posted datas with response")
+    public void VerifyThePostedDatasWithResponse() {
         //do assertion  HEM POJO HEM DE MAP İLE ASSERTİON YAPILDI
 
         //actual data
@@ -238,8 +238,8 @@ public class Mali2 {
     }
 
 
-    @Then("Validate the updated datas with response")
-    public void validateTheUpdatedDatasWithResponse() {
+    @Then("Verify the updated datas with response")
+    public void VerifyTheUpdatedDatasWithResponse() {
         //do assertion
         US14_Pojo_Outer actulaDataUpdatePojo=response.as(US14_Pojo_Outer.class);
         System.out.println("actulaDataPojo = " + actulaDataUpdatePojo);
