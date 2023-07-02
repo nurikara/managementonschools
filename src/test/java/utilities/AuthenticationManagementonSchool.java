@@ -13,12 +13,14 @@ public class AuthenticationManagementonSchool {
         System.out.println("generateToken() = " + generateToken());
     }
 
-    public static String generateToken(){
-        String body = "{\"password\": \"12345678\",\"username\": \"DEAN\"}";
-        Response response = given().contentType(ContentType.JSON).body(body).post("https://managementonschools.com/app/auth/login");
+    public static String generateToken() {
+        String body = "{\"password\": \"12345678\",\"username\": \"AdminB129\"}";
+        Response response = given().
+                body(body).
+                contentType(ContentType.JSON).
+                post("https://managementonschools.com/app/auth/login");
         return response.jsonPath().getString("token");
-
-
     }
+
 
 }
