@@ -242,4 +242,6 @@ public class US08_Steps_Mali {
         Assert.assertTrue("Element sayfada bulunamadı.", updateElementVarMi);
 
     }
+
+
 }

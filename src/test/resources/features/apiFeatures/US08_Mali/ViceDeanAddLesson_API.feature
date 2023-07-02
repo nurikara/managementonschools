@@ -1,7 +1,7 @@
-Feature: US08 Lesson Create API testi
-  Scenario Outline: TC01 ViceDean Ders Olusturur
-    Given post request yaparak "<lessonName>"_"<compulsory>"_"<creditScore>"  datalar ile ders olustur
-    And response ile post edilen  datalarini dogrula
+Feature: US08 Lesson Create API test
+  Scenario Outline: TC01 ViceDean Create Lesson
+    Given create lesson with_"<lessonName>"_"<compulsory>"_"<creditScore>"_datas_by post request
+    And validate the response datas with posted
     Examples:
       | lessonName | compulsory | creditScore |
-      | film2      | true       | 4           |
+      | film12     | true       | 4           |

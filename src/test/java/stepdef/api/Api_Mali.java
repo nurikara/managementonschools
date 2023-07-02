@@ -36,9 +36,10 @@ public class Api_Mali extends ManagementSchoolBaseUrl {
 
 
     //US08
-    @Given("post request yaparak {string}_{string}_{string}  datalar ile ders olustur")
-    public void postRequestYaparak__DatalarIleDersOlustur(String arg0, String arg1, String arg2) {
-         /*
+
+    @Given("create lesson with_{string}_{string}_{string}_datas_by post request")
+    public void createLessonWith____datas_byPostRequest(String arg0, String arg1, String arg2) {
+     /*
                 {
                 "compulsory": true,
                 "creditScore": 0,
@@ -82,9 +83,9 @@ public class Api_Mali extends ManagementSchoolBaseUrl {
         //3 şekilde de adım PASS oldu
 
     }
-    @Then("response ile post edilen  datalarini dogrula")
-    public void responseIlePostEdilenDatalariniDogrula() {
-        /*
+    @And("validate the response datas with posted")
+    public void validateTheResponseDatasWithPosted() {
+      /*
          "object": {
         "lessonId": 509,
         "lessonName": "hukukgukuk",
@@ -159,17 +160,15 @@ public class Api_Mali extends ManagementSchoolBaseUrl {
         assertEquals(expectedLessonPojo.getCreditScore(), actualDataPojoGson.getObject().getCreditScore());
         assertEquals(expectedLessonPojo.getCompulsory(), actualDataPojoGson.getObject().getCompulsory());
 
-
-
     }
 
 
 
 
-    //US09
 
-    @Given("del request yaparak ismi {string} verilen lesson silinir")
-    public void delRequestYaparakIsmiVerilenLessonSilinir(String arg0) {
+    //US09
+    @Given("lesson with the name_{string}_deletes by del request")
+    public void lessonWithTheName__deletesByDelRequest(String arg0) {
         //del request yapmamız için silinecek id bilinmesi gerekir. dolayısıyla önce get request yapılarak id alınmalıdır.
         //birinci aşama get request by lessonname
         //set the url
@@ -207,13 +206,10 @@ public class Api_Mali extends ManagementSchoolBaseUrl {
 
         response=given(spec).delete("{first}/{second}/{third}");
         response.prettyPrint();
-
     }
 
-
-
-    @And("Delete edilen datanin gelen Response dogrulamasi yapilir")
-    public void deleteEdilenDataninGelenResponseDogrulamasiYapilir() {
+    @And("validate the deleted datas with response")
+    public void validateTheDeletedDatasWithResponse() {
         System.out.println("response.asString() = " + response.asString());
 
         HashMap actualData=new HashMap();
@@ -222,6 +218,5 @@ public class Api_Mali extends ManagementSchoolBaseUrl {
         assertEquals(expectedDataMap.get("httpStatus"),actualData.get("httpStatus"));
 
     }
-
 
 }
