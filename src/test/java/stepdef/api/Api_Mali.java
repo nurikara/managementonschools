@@ -83,8 +83,8 @@ public class Api_Mali extends ManagementSchoolBaseUrl {
         //3 şekilde de adım PASS oldu
 
     }
-    @And("validate the response datas with posted")
-    public void validateTheResponseDatasWithPosted() {
+    @And("verify the response datas with posted")
+    public void verifyTheResponseDatasWithPosted() {
       /*
          "object": {
         "lessonId": 509,
@@ -208,8 +208,8 @@ public class Api_Mali extends ManagementSchoolBaseUrl {
         response.prettyPrint();
     }
 
-    @And("validate the deleted datas with response")
-    public void validateTheDeletedDatasWithResponse() {
+    @And("Verify the deleted datas with response")
+    public void verifyTheDeletedDatasWithResponse() {
         System.out.println("response.asString() = " + response.asString());
 
         HashMap actualData=new HashMap();
@@ -218,5 +218,7 @@ public class Api_Mali extends ManagementSchoolBaseUrl {
         assertEquals(expectedDataMap.get("httpStatus"),actualData.get("httpStatus"));
 
     }
+
+
 
 }
