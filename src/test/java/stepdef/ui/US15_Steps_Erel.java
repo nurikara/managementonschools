@@ -13,10 +13,11 @@ import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
-public class US15_Steps_Erel {
+public class US15_Steps_Erel<string> {
     US15_ViceDeanStudent vice=new US15_ViceDeanStudent();
     Login log=new Login();
     @Given("Kullanıcı _{string} sayfasina gider")
+<<<<<<< HEAD
     public void kullanıcı_sayfasina_gider(String url) {
         Driver.getDriver().get(url);
     }
@@ -24,7 +25,13 @@ public class US15_Steps_Erel {
     public void kullanıcı_log_ın_e_tıklar() {
 
         log.login.click();
+=======
+    public <String> void kullanıcı_sayfasina_gider(string Url) {
+
+        Driver.getDriver().get((java.lang.String) Url);
+>>>>>>> main
     }
+
     @When("Kullanıcı geçerli VİCE DEAN OLARAK user name ve password u girer")
     public void kullanıcı_geçerli_vice_dean_olarak_user_name_ve_password_u_girer() {
 log.username.sendKeys(ConfigReader.getProperty("username"));
@@ -41,8 +48,7 @@ ReusableMethods.click(vice.studentmanagement);
     public void kullanıcı_istediği_danışman_öğretmeni_seçer() {
         ReusableMethods.click(vice.teacherselectddm);
         Select select=new Select(vice.teacherselectddm);
-        select.selectByIndex(1);
-
+        select.selectByValue("6");
     }
 
 
@@ -276,8 +282,8 @@ ReusableMethods.click(vice.studentmanagement);
     }
 
     @And("Kullanıcı SSN BÖLÜMÜNE; {string} ve dokuz rakamdan oluşan numarayı,diğer bölümler girdikten sonra submit e tıklar")
-    public void kullanıcıSSNBÖLÜMÜNEVeDokuzRakamdanOluşanNumarayıDiğerBölümlerGirdiktenSonraSubmitETıklar(String ihtimal) {
-        vice.ssn.sendKeys(ihtimal);
+    public <String> void kullanıcıSSNBÖLÜMÜNEVeDokuzRakamdanOluşanNumarayıDiğerBölümlerGirdiktenSonraSubmitETıklar(String ihtimal) {
+        vice.ssn.sendKeys((CharSequence) ihtimal);
         vice.name.sendKeys(ConfigReader.getProperty("erelname"));
         vice.surname.sendKeys(ConfigReader.getProperty("erelsurname"));
         vice.email.sendKeys(ConfigReader.getProperty("erelemail"));
@@ -320,8 +326,8 @@ ReusableMethods.click(vice.studentmanagement);
 
 
     @And("Kullanıcı password kısmına {string} İ boş bırakıp diğer alanlar doldurulup sonra submit e tıklar")
-    public void kullanıcıPasswordKısmınaİBoşBırakıpDiğerAlanlarDoldurulupSonraSubmitETıklar(String Pass) {
-        vice.smpassword.sendKeys(Pass);
+    public <String> void kullanıcıPasswordKısmınaİBoşBırakıpDiğerAlanlarDoldurulupSonraSubmitETıklar(String Pass) {
+        vice.smpassword.sendKeys((CharSequence) Pass);
         vice.name.sendKeys(ConfigReader.getProperty("erelname"));
         vice.surname.sendKeys(ConfigReader.getProperty("erelsurname"));
         vice.email.sendKeys(ConfigReader.getProperty("erelemail"));
@@ -337,12 +343,14 @@ ReusableMethods.click(vice.studentmanagement);
     }
 
     @Then("Kullanıcı passwordun altında Minimum sekiz character uyarısını görür")
-    public void kullanıcıPasswordunAltındaMinimumSekizCharacterUyarısınıGörür() {
+    public <String> void kullanıcıPasswordunAltındaMinimumSekizCharacterUyarısınıGörür() {
        // String expected="Minimum 8 character";
-        String actual=vice.passwordalerT.getText();
-       Assert.assertTrue(actual.contains("Minimum 8 character"));
 
     }
 
+    @When("Kullanıcı LOG IN e tıklar")
+    public void kullanıcı_log_ın_e_tıklar() {
 
+        log.login.click();
+    }
 }

@@ -5,6 +5,7 @@ Feature: US08 Vice Dean Add Lesson
   Scenario:   Login
     Given Kullanici  "ViceDean" olarak giriş yapar
 
+
     @ilk @dbase
     Scenario:TC01 Lessons Add Lesson Alanı Pozitive
       Given Kullanici Lessons basligini tiklar

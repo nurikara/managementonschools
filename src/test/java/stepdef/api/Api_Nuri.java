@@ -21,24 +21,24 @@ public class Api_Nuri {
 
         //Set the url
         //https://managementonschools.com/app/guestUser/getAll?size=1000
-        spec.pathParams("first","guestUser","second","getAll")
-                .queryParam("size","1000");
+        spec.pathParams("first", "guestUser", "second", "getAll")
+                .queryParam("size", "1000");
 
         //Send the request and get the response
-         response = given(spec).get("{first}/{second}");
+        response = given(spec).get("{first}/{second}");
         response.prettyPrint();
 //https://managementonschools.com/app/guestUser/getAll?page=0&size=1000
     }
+
     @Then("body sunlari icermeli: {string}, {string}, {string}, {string}, {string}, {string}, {string},{string}")
-    public void body_sunlari_icermeli(String name, String surname, String birthplace, String phone, String gender, String dateOfBirth, String ssn , String username) {
+    public void body_sunlari_icermeli(String name, String surname, String birthplace, String phone, String gender, String dateOfBirth, String ssn, String username) {
 
 
         JsonPath jsonPath = response.jsonPath();
 
-        String actSSN=jsonPath.getList("content.findAll{it.username=='"+username+"'}.ssn").get(0).toString();
-        String actSurname=jsonPath.getList("content.findAll{it.username=='"+username+"'}.surname").get(0).toString();
-        String actBirthPlace=jsonPath.getList("content.findAll{it.username=='"+username+"'}.birthPlace").get(0).toString();
-
+        String actSSN = jsonPath.getList("content.findAll{it.username=='" + username + "'}.ssn").get(0).toString();
+        String actSurname = jsonPath.getList("content.findAll{it.username=='" + username + "'}.surname").get(0).toString();
+        String actBirthPlace = jsonPath.getList("content.findAll{it.username=='" + username + "'}.birthPlace").get(0).toString();
 
 
         assertEquals(surname, actSurname);
