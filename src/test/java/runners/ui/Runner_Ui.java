@@ -1,4 +1,4 @@
-package runners.api;
+package runners.ui;
 
 
 import io.cucumber.junit.Cucumber;
@@ -19,19 +19,23 @@ import org.junit.runner.RunWith;
         glue = {"stepdef", "hooks"},
 
 
+        tags ="@sunum",    //       ===>> Burasi bos kalacak
 
 
 
-
-
-
-
-
-
-
-        tags ="",
         dryRun = false
 )
 
-public class Runner_Api {
+public class Runner_Ui {
 }
+
+
+
+
+
+
+
+
+
+
+

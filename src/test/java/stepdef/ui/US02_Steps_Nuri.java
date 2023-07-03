@@ -22,7 +22,7 @@ public class US02_Steps_Nuri {
     @Given("Admin ilgili sitenin anasayfasina gider")
     public void admin_ilgili_sitenin_anasayfasina_gider() {
 
-        Driver.getDriver().get(ConfigReader.getProperty("url"));
+        Driver.getDriver().get((String) ConfigReader.getProperty("url"));
 
     }
 

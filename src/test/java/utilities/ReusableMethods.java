@@ -9,6 +9,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import pages.US01_AdayOgRegister;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
@@ -310,43 +311,6 @@ public class ReusableMethods {
         WebElement webElement = (WebElement) js.executeScript("return "+str+"");
         assertTrue(webElement.isEnabled());
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    public static Connection getConnection(){
-        try {
-            return DriverManager.getConnection("jdbc:postgresql://managementonschools.com:5432/school_management", "select_user", "43w5ijfso");
-        }catch (SQLException e){
-            throw new RuntimeException(e);
-        }
-
-    }
-    public static Statement getStatement(){
-        try {
-            return getConnection().createStatement();
-        }catch (SQLException e){
-            throw new RuntimeException(e);
-        }
-    }
-    public static ResultSet getResultSet(String query){
-        try {
-            return getStatement().executeQuery(query);
-        }catch (SQLException e){
-            throw new RuntimeException(e);
-        }
-    }
     public static String fakerInput(String faker2) {
         Faker faker = new Faker();
         if (faker2 == "name") {
@@ -426,7 +390,6 @@ public class ReusableMethods {
 
         return faker2;
     }
-
     public static void robotDelete() throws AWTException {
         Robot robot = new Robot();
         for (int i = 0; i < 40; i++) {
@@ -434,6 +397,8 @@ public class ReusableMethods {
             robot.keyRelease(KeyEvent.VK_BACK_SPACE);
         }
     }
-
 }
+
+
+
 
