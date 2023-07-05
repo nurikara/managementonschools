@@ -14,7 +14,7 @@ public class AuthenticationManagementonSchool {
     }
 
     public static String generateToken() {
-        String body = "{\"password\": \"12345678\",\"username\": \"AdminB129\"}";
+        String body = "{\"password\": \"485424698\",\"username\": \"Admin\"}";
         Response response = given().
                 body(body).
                 contentType(ContentType.JSON).

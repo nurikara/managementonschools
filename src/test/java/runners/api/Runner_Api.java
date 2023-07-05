@@ -20,16 +20,7 @@ import org.junit.runner.RunWith;
 
 
 
-
-
-
-
-
-
-
-
-
-        tags ="",
+        tags ="@mali",
         dryRun = false
 )
 

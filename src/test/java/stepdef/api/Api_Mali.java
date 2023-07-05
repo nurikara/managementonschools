@@ -1,6 +1,8 @@
 package stepdef.api;
 
 import baseUrl.ManagementSchoolBaseUrl;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.javafaker.Faker;
 import com.google.gson.Gson;
 import io.cucumber.java.en.*;
@@ -47,7 +49,7 @@ public class Api_Mali extends ManagementSchoolBaseUrl {
                 }
          */
         //Set the url  https://managementonschools.com/app/lessons/save  -Query param a gerek yok
-        setUp();
+
         spec.pathParams("first","lessons","second", "save");
 
 
@@ -84,7 +86,7 @@ public class Api_Mali extends ManagementSchoolBaseUrl {
 
     }
     @And("verify the response datas with posted")
-    public void verifyTheResponseDatasWithPosted() {
+    public void verifyTheResponseDatasWithPosted() throws JsonProcessingException {
       /*
          "object": {
         "lessonId": 509,
@@ -94,7 +96,7 @@ public class Api_Mali extends ManagementSchoolBaseUrl {
     },
     "message": "Lesson Created",
     "httpStatus": "OK"
-}
+        }
          */
         //Do assertion 6 şekilde yapılabilir
         //1. Yol: then() methodu + HamcrestMatcher
@@ -120,6 +122,7 @@ public class Api_Mali extends ManagementSchoolBaseUrl {
         System.out.println("jsonPath = " + jsonPath.prettyPrint());
 
         System.out.println("jsonPath.getMap(\"object\").get(\"lessonName\") = " + jsonPath.getMap("object").get("lessonName").toString());
+        //response um bir list değil, olsaydı getList() metodu ve Groovy language kullanacaktım
         assertEquals(""+expectedLessonPojo.getLessonName()+"",jsonPath.getMap("object").get("lessonName"));
         assertEquals("Lesson Created", jsonPath.getString("message"));
         assertEquals("OK", jsonPath.getString("httpStatus"));
@@ -127,14 +130,14 @@ public class Api_Mali extends ManagementSchoolBaseUrl {
 
         //3. Yol: Map ile
 
-        Map<String, Object> actDataMap = response.as(HashMap.class);
+        Map<String, Object> actDataMap = response.as(HashMap.class); //de-serializiation
 
         assertTrue( actDataMap.get("object").toString().contains(exDataMap.get("lessonName").toString()));
         assertTrue( actDataMap.get("object").toString().contains(exDataMap.get("creditScore").toString()));
         assertTrue( actDataMap.get("message").toString().contains("Lesson Created"));
 
         //4. yol pojo class ile
-        OuterPojoUS08 actualPojo=response.as(OuterPojoUS08.class);
+        OuterPojoUS08 actualPojo=response.as(OuterPojoUS08.class); //de-serializiation
 
         assertEquals(expectedLessonPojo.getLessonName(), actualPojo.getObject().getLessonName());
         assertEquals(expectedLessonPojo.getCompulsory(), actualPojo.getObject().getCompulsory());
@@ -143,8 +146,8 @@ public class Api_Mali extends ManagementSchoolBaseUrl {
         assertEquals("OK", actualPojo.getHttpStatus());
 
 
-        //5. Yol: pojo class + ObjectMapper ile (Tavsiye edilen) readValue() metodu istediğin class a dönüştürüyor
-        OuterPojoUS08 actualDataObjectMapper= ObjectMapperUtils.convertJsonToJava(response.asString(), OuterPojoUS08.class);
+        //5. Yol: pojo class + ObjectMapper ile (Tavsiye edilen) de-serialization işlemi readValue() metodu ile istediğin class a dönüştürüyor
+        OuterPojoUS08 actualDataObjectMapper= new ObjectMapper().readValue(response.asString(), OuterPojoUS08.class);
         lessonId=actualDataObjectMapper.getObject().getLessonId();
         System.out.println("lessonId: "+lessonId);
         System.out.println("actualData = " + actualDataObjectMapper.getObject().getLessonName());
@@ -153,7 +156,7 @@ public class Api_Mali extends ManagementSchoolBaseUrl {
         assertEquals(expectedLessonPojo.getCreditScore(), actualDataObjectMapper.getObject().getCreditScore());
         assertEquals(expectedLessonPojo.getCompulsory(), actualDataObjectMapper.getObject().getCompulsory());
 
-        //6. Yol: pojo class + Gson ile
+        //6. Yol: pojo class + Gson ile , objectMapper(readValue() den farkı read Value exception atıyon Gson atmıyor)
         OuterPojoUS08 actualDataPojoGson = new Gson().fromJson(response.asString(), OuterPojoUS08.class);
 
         assertEquals(expectedLessonPojo.getLessonName(), actualDataPojoGson.getObject().getLessonName());
