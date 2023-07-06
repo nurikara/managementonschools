@@ -1,6 +1,7 @@
 package stepdef.api;
 
 import com.github.javafaker.Faker;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.restassured.response.Response;
@@ -27,8 +28,9 @@ public class Mali2 {
     Response response;
     static int idPost;
     static int idPut;
-    @Given("Kullanici Post Request ile Teacher olusturur")
-    public void kullaniciPostRequestIleTeacherOlusturur() {
+
+    @Given("User create Teacher by Post Request")
+    public void userCreateTeacherByPostRequest() {
         //set the url https://managementonschools.com/app/teachers/save
 
         spec.pathParams("first","teachers","second", "save");
@@ -110,12 +112,10 @@ public class Mali2 {
 
         response=given(spec).body(expectedMap).post("{first}/{second}");
         response.prettyPrint();
-
     }
 
-    @Then("Post edilen data ile gelen Response dogrulamasi yapilir")
-    public void postEdilenDataIleGelenResponseDogrulamasiYapilir() {
-
+    @Then("Verify the posted datas with response")
+    public void VerifyThePostedDatasWithResponse() {
         //do assertion  HEM POJO HEM DE MAP İLE ASSERTİON YAPILDI
 
         //actual data
@@ -147,11 +147,10 @@ public class Mali2 {
         assertTrue(actualData.get("object").toString().contains(expectedMap.get("username").toString()));
         assertEquals("Teacher saved successfully",actualData.get("message"));
         assertEquals("CREATED",actualData.get("httpStatus"));
-
     }
 
-    @Given("Kullanici Put Request yaparak datanın id bilgisi ile Teacher Günceller")
-    public void kullaniciPutRequestYaparakDatanınIdBilgisiIleTeacherGunceller() {
+    @Given("User update datas with posted teacher id by put request")
+    public void userUpdateDatasWithPostedTeacherIdByPutRequest() {
         //set the url
         US14_Pojo_Outer actulaDataPojo=response.as(US14_Pojo_Outer.class);
 
@@ -236,12 +235,11 @@ public class Mali2 {
 }
          */
 
-
-
     }
 
-    @Then("Put edilen data ile gelen Response dogrulamasi yapilir")
-    public void putEdilenDataIleGelenResponseDogrulamasiYapilir() {
+
+    @Then("Verify the updated datas with response")
+    public void VerifyTheUpdatedDatasWithResponse() {
         //do assertion
         US14_Pojo_Outer actulaDataUpdatePojo=response.as(US14_Pojo_Outer.class);
         System.out.println("actulaDataPojo = " + actulaDataUpdatePojo);
@@ -274,8 +272,5 @@ public class Mali2 {
         assertEquals("OK",actualData.get("httpStatus"));
 
 
-
     }
-
-
 }
