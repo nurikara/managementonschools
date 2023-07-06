@@ -1,7 +1,6 @@
 package stepdef.api;
 
 import com.github.javafaker.Faker;
-import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.restassured.response.Response;
@@ -12,15 +11,13 @@ import utilities.ObjectMapperUtils;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
-import static baseUrl.ManagementSchoolBaseUrl.setUp;
 import static baseUrl.ManagementSchoolBaseUrl.spec;
 import static io.restassured.RestAssured.given;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-public class Mali2 {
+public class Api_Mali2 {
     US14_Pojo expectedTeacherPojo;
     US14_Pojo expectedTeacherUpdatePojo;
     HashMap <String, Object> expectedMap;
