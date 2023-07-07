@@ -1,22 +1,32 @@
 package stepdef.ui;
 
 import com.github.javafaker.Faker;
+import com.google.gson.Gson;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 
 import io.cucumber.java.en.Then;
+import io.restassured.response.Response;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import pages.US08_US09_ViceDeanAddLesson;
+import pojos.us08.LessonPojo;
+import pojos.us08.OuterPojoUS08;
 import utilities.DataBaseUtils;
 import utilities.Driver;
+import utilities.ObjectMapperUtils;
 import utilities.ReusableMethods;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+
+import static baseUrl.ManagementSchoolBaseUrl.spec;
+import static io.restassured.RestAssured.given;
 
 
 public class US08_Steps_Mali {
@@ -24,9 +34,13 @@ public class US08_Steps_Mali {
     WebDriver driver= Driver.getDriver();
 
     Faker faker=new Faker();
+    Map<String, Object> beklenenMap=new HashMap<>();
+    LessonPojo beklenenPojo=new LessonPojo();
+    Response response;
 
     static String name;
     static String creditScore;
+    static String compulsory="true";
     ResultSet resultSet;
 
     @And("Sayfa kapatilir")
@@ -184,7 +198,7 @@ public class US08_Steps_Mali {
 
     @Then("Cagırılan ders {string}, {string}, {string} bilgilerini icerir")
     public void cagırılanDersBilgileriniIcerir(String dersismi, String compulsory, String creditScore) throws SQLException {
-        resultSet.next();
+
         String actualLessonName=resultSet.getString("lesson_name");
         System.out.println("lessonName = " + actualLessonName);
         String actualCompulsory=resultSet.getString("is_compulsory");
@@ -215,7 +229,7 @@ public class US08_Steps_Mali {
     }
 
     @Given("Kayıtlamasi yapilan {string} ve {string} ile ders bilgileri cagırılır")
-    public void kayıtlamasiYapilanVeIleDersBilgileriCagırılır(String ders, String credit) {
+    public void kayıtlamasiYapilanVeIleDersBilgileriCagırılır(String ders, String credit) throws SQLException {
         locate.Lessons.click();
         name=ders;
         locate.lessonName.sendKeys(name);
@@ -230,7 +244,7 @@ public class US08_Steps_Mali {
         String quary="SELECT * FROM lesson WHERE lesson_name='"+ders+"'";
         System.out.println("quary = " + quary);
         resultSet=DataBaseUtils.getResultSet(quary);
-
+        resultSet.next();
 
     }
 
@@ -244,4 +258,84 @@ public class US08_Steps_Mali {
     }
 
 
+    @Given("DataBase Connection saglanir ve kayitlamasi yapilan dersismi ile ders bilgileri cagrilir")
+    public void databaseConnectionSaglanirVeKayitlamasiYapilanDersismiIleDersBilgileriCagrilir() throws SQLException {
+        String quary="SELECT * FROM lesson WHERE lesson_name='"+name+"'";
+        resultSet=DataBaseUtils.getResultSet(quary);//get result set metodunu  utilsden çekiyoruz. burada connection metodları var.
+        resultSet.next(); //next() metodu olmasa pointer tablonun header ını işaret ediyor.
+
+
+    }
+
+    @Then("Ders datalarının dogrulugu test edilir")
+    public void dersDatalarınınDogruluguTestEdilir() throws SQLException {
+
+        String actualLessonName=resultSet.getString("lesson_name");
+        System.out.println("lessonName = " + actualLessonName);
+        String actualCompulsory=resultSet.getString("is_compulsory");
+        System.out.println("actualCompulsory = " + actualCompulsory);
+        String actualCreditScore=resultSet.getString("credit_score");
+        System.out.println("actualCreditScore = " + actualCreditScore);
+
+
+
+        Assert.assertEquals(name,actualLessonName);
+        Assert.assertEquals(compulsory.substring(0,1),actualCompulsory);
+        Assert.assertEquals(creditScore,actualCreditScore);
+
+
+
+    }
+
+    @Given("get request ile olusturulan ders bilgilerini cagirilir")
+    public void getRequestIleOlusturulanDersBilgileriniCagirilir() {
+        //Set the url ==> swagger dan bak ==> https://managementonschools.com/app/lessons/getLessonByName?lessonName=borsa1
+
+        spec.pathParams("first","lessons","second", "getLessonByName").queryParam("lessonName",""+name+"");
+
+        //Get request yapılacağı için expexted data ya gerek yok
+
+        //Send the request and get the response
+
+        response=given(spec).get("{first}/{second}");
+        response.prettyPrint();
+
+        //postman de yapılan manuel teste göre response bu şekilde olmalıdır.
+        /*
+        {
+            "object": {
+            "lessonId": 1022,
+                    "lessonName": "borsa3",
+                    "creditScore": 2,
+                    "compulsory": true
+        },
+            "message": "Lesson successfully found"
+        }
+        */
+    }
+
+    @And("gonderilen data ile gelen response datanin dogrulamasi yapilir")
+    public void gonderilenDataIleGelenResponseDataninDogrulamasiYapilir() {
+        //burada tavsiye edilen ObjectMapperUtils (readValue()metodu) kullanıyoruz.
+        OuterPojoUS08 actualData=ObjectMapperUtils.convertJsonToJava(response.asString(), OuterPojoUS08.class);
+
+        Assert.assertEquals(200,response.statusCode());
+        Assert.assertEquals(name,actualData.getObject().getLessonName());
+        Assert.assertEquals(creditScore,actualData.getObject().getCreditScore());
+        Assert.assertEquals(compulsory,actualData.getObject().getCompulsory());
+        Assert.assertEquals("Lesson successfully found",actualData.getMessage());
+
+        //Aynı assertionlar Gson objesi kullanarakda yapılabilir. Gson için pom a dependency eklendi.
+        OuterPojoUS08 actualDataGson = new Gson().fromJson(response.asString(), OuterPojoUS08.class);
+
+        Assert.assertEquals(200,response.statusCode());
+        Assert.assertEquals(name,actualDataGson.getObject().getLessonName());
+        Assert.assertEquals(creditScore,actualDataGson.getObject().getCreditScore());
+        Assert.assertEquals(compulsory,actualDataGson.getObject().getCompulsory());
+        Assert.assertEquals("Lesson successfully found",actualDataGson.getMessage());
+
+
+
+
+    }
 }
