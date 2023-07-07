@@ -13,6 +13,7 @@ import org.junit.Assert;
 import pojos.us08.LessonPojo;
 import pojos.us08.OuterPojoUS08;
 import pojos.us14.US14_Pojo;
+import stepdef.ui.US08_Steps_Mali;
 import utilities.ObjectMapperUtils;
 
 import java.util.ArrayList;
@@ -28,6 +29,7 @@ import static org.junit.Assert.assertTrue;
 public class Api_Mali extends ManagementSchoolBaseUrl {
 
     LessonPojo expectedLessonPojo;
+
 
     Response response;
     String lessonId;
