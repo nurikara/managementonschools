@@ -1,8 +1,6 @@
 package stepdef.ui;
 
-import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import pages.Login;
@@ -15,11 +13,11 @@ public class LoginStepDef {
     WebDriver driver= Driver.getDriver();
 
     @Given("Kullanici  {string} olarak giriş yapar")
-    public void kullaniciOlarakGirisYapar(String arg0) {
-        driver.get(ConfigReader.getProperty("url"));
+    public void kullaniciOlarakGirisYapar(String urll) {
+        driver.get((String) ConfigReader.getProperty("url"));
         locate.homePageLogin.click();
         ReusableMethods.bekle(1);
-        switch (arg0.toLowerCase()){
+        switch (urll.toLowerCase()){
             case "admin":
                 locate.username.sendKeys(ConfigReader.getProperty("admin"));
                 break;

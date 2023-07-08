@@ -1,12 +1,10 @@
 package stepdef.ui;
 
 import com.github.javafaker.Faker;
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 import org.junit.Assert;
-import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -49,7 +47,7 @@ public class US06_Steps_Nuri {
 
     @Then("Add ViseDean bolumu doldurulurken name kismi bos birakilir")
     public void add_vise_dean_bolumu_doldurulurken_name_kismi_bos_birakilir() throws InterruptedException {
-
+Thread.sleep(2000);
 
         Actions actions = new Actions(Driver.getDriver());
 
@@ -172,11 +170,11 @@ public class US06_Steps_Nuri {
 
         List<WebElement> UserListe = login.ListUserName;
 
-        boolean flag = false;
+        boolean flag = true;
 
         for (WebElement w : UserListe) {
             if (w.getText().equals(Fakename)) {
-                flag = true;
+                flag = false;
                 break;
             }
             Assert.assertTrue(flag);
@@ -401,11 +399,11 @@ public class US06_Steps_Nuri {
         login.addViseDeanPASSWORD.sendKeys("emre4344");
         Thread.sleep(1000);
         login.addViseDeanSubmit.click();
-        Thread.sleep(2000);
-        System.out.println("login.addViseDeanAlert = " + login.addViseDeanAlert);
-        Thread.sleep(2000);
 
-        Assert.assertNotEquals("sa", login.addViseDeanAlert.getText());
+
+        Thread.sleep(1000);
+
+      Assert.assertNotEquals("Vice dean Saved",login.addViseDeanAlert.getText());
 
     }
 

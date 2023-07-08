@@ -1,10 +1,8 @@
-@US02Api @Api
-  Feature: Aday öğrenciler sisteme kayıt olabilmelidir. Api
 
-    Scenario Outline: US01_GuestUser
+@Api_Nuri
+Feature: Admin Guest User  olusturur.
 
-      Given tum gestuserlar icin get request yap
-      Then body sunlari icermeli: "<name>", "<surname>", "<birthplace>", "<phone>", "<gender>", "<Date Of Birth>", "<ssn>","<username>"
-      Examples:
-        | username | name | surname | birthplace | phone        | gender | Date Of Birth | ssn         |
-        | john129  | John | Doe     | Ankara     | 333-555-1234 | 0      | 2023-06-01    | 333-66-0987 |
+ Scenario: TC01_Create_Guest_User
+  Given  send post request for creating guest user
+  Then  send post request for deleting guest user and validations
+

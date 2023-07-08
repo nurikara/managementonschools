@@ -27,8 +27,10 @@ public class Hooks {
 
 
 
+
     @Before  //==> import io.cucumber.java.Before==>import cucumberdan alinmali
     public void setUpApi() {
+
         setUp();
     }
 
@@ -40,9 +42,22 @@ public class Hooks {
             final byte[] failedScreenShot = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
             scenario.attach(failedScreenShot, "image/png", "failed_scnenaio" + scenario.getName());
         }
-      //  Driver.closeDriver();
-    }
-}
+
+
+       // Driver.closeDriver();
+
+    }}
+
+
+
+
+
+
+
+
+
+
+
 
     /*
     Scenario'lar arasındaki bağlantıyı sağlayan glue parametresine koyduğumuz stepDefinition package'ı içerisinde

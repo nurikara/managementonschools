@@ -12,6 +12,7 @@ import pojos.us10_11_12.LessonNamePojo;
 import pojos.us10_11_12.LessonPostPojo;
 import pojos.us10_11_12.ObjectPojo;
 import pojos.us10_11_12.ExpectedDataPojo;
+import utilities.ConfigReader;
 
 
 import java.util.ArrayList;
@@ -22,6 +23,7 @@ import static io.restassured.RestAssured.given;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
+import static utilities.AuthenticationManagementonSchool.generateToken;
 
 public class Api_LessonProgramController extends ManagementSchoolBaseUrl {
 
@@ -66,7 +68,7 @@ public class Api_LessonProgramController extends ManagementSchoolBaseUrl {
 
 
         // Send the request and get the response
-        response = given(spec).body(payload).post("{first}/{second}");
+        response = given(spec).header("Authorization", generateToken((String) ConfigReader.getProperty("viceDean"), (String) ConfigReader.getProperty("psw"))).body(payload).post("{first}/{second}");
         response.prettyPrint();
 
     }
@@ -100,7 +102,7 @@ public class Api_LessonProgramController extends ManagementSchoolBaseUrl {
         objectPojo = new ObjectPojo(lessonId, "10:30:00", "12:30:00", lessonName, "MONDAY");
 
         //Send the request and get the response
-        response = given(spec).get("{first}/{second}/{third}");
+        response = given(spec).header("Authorization", generateToken((String) ConfigReader.getProperty("viceDean"), (String) ConfigReader.getProperty("psw"))).get("{first}/{second}/{third}");
         response.prettyPrint();
     }
 
@@ -128,7 +130,7 @@ public class Api_LessonProgramController extends ManagementSchoolBaseUrl {
         httpStatus = "OK";
 
         //Send The request and get the response
-        response = given(spec).delete("{first}/{second}/{third}");
+        response = given(spec).header("Authorization", generateToken((String) ConfigReader.getProperty("viceDean"), (String) ConfigReader.getProperty("psw"))).delete("{first}/{second}/{third}");
         response.prettyPrint();
      /*
      {
@@ -162,7 +164,7 @@ public class Api_LessonProgramController extends ManagementSchoolBaseUrl {
         //Set the expected Data
 
         //Send the request and get the response
-//        response=given(spec).get("{first}/{second}/{third}");
+//        response=given(spec).header("Authorization", generateToken((String) ConfigReader.getProperty("viceDean"), (String) ConfigReader.getProperty("psw"))).get("{first}/{second}/{third}");
 //        response.prettyPrint();
 
         /*

@@ -1,19 +1,16 @@
 package stepdef.ui;
 
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.Select;
 import pages.Login;
-import pages.US07_DeanMessage;
 import pages.US19_US20_TeacherAddMeetList;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
-
-import java.sql.Time;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -150,8 +147,5 @@ public class US19_Steps_Ismail {
         assertTrue(teacherAddMeetList.DescriptionRequired.isDisplayed());
     }
 
-    @Then("Kullanıcı meet olusturur")
-    public void kullanıcıMeetOlusturur() {
 
-    }
 }

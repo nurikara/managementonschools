@@ -1,6 +1,4 @@
-@erel @tc13
 Feature: Vice Dean, öğrenci oluşturabilme
-
   Scenario: Student number otomatik olarak gelmelidir.
     Given Kullanıcı _"https://managementonschools.com/" sayfasina gider
     When Kullanıcı LOG IN e tıklar
