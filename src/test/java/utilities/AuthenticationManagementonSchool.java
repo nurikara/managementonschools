@@ -10,9 +10,6 @@ import static io.restassured.RestAssured.given;
 public class AuthenticationManagementonSchool {
 
 
-
-
-
     public static String generateToken(String username,String password) {
         Password body = new Password(username,password);
 
