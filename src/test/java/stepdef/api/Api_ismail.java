@@ -1,11 +1,10 @@
 package stepdef.api;
 
-import baseUrl.ManagementSchoolBaseUrl;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
-import pojos.MeetList;
+import pojos.us19.MeetList;
 
 import java.util.ArrayList;
 
@@ -51,7 +50,7 @@ public class Api_ismail {
         //Set the expected data
         ArrayList<Integer> studentId = new ArrayList<>();
         studentId.add(28);
-        String date ="2027-05-21";
+        String date ="2025-06-21";
         String description ="EgitimVadisi";
         String startTime ="22:00";
         String stopTime ="23:00";
@@ -69,14 +68,14 @@ public class Api_ismail {
 
         System.out.println("jsonPath = " + jsonPath.prettyPrint());
 
-       /* assertEquals(payLoad.getDate(), jsonPath.getString("object.date"));
+       assertEquals(payLoad.getDate(), jsonPath.getString("object.date"));
         assertEquals(payLoad.getStartTime(), jsonPath.getString("object.startTime").substring(0, 5));
         assertEquals(payLoad.getStopTime(), jsonPath.getString("object.stopTime").substring(0, 5));
         assertEquals(payLoad.getDescription(), jsonPath.getString("object.description"));
         assertEquals(payLoad.getStudentIds().get(0), jsonPath.getList("object.students.id").get(0));
          Integer id = jsonPath.getInt("object.id");//meetingid
-        System.out.println(id);*/
-    }
+        System.out.println(id);
+
     /*{
   "date": "{{randomdate}}",
   "description": "{{description}}",
@@ -98,4 +97,4 @@ public class Api_ismail {
         "teacherSsn": "888-99-6969",
         "students": []
         */
-}
+}}
