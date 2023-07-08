@@ -14,9 +14,7 @@ import org.openqa.selenium.WebElement;
 import pages.US08_US09_ViceDeanAddLesson;
 import pojos.us08.LessonPojo;
 import pojos.us08.OuterPojoUS08;
-import utilities.DataBaseUtils;
-import utilities.Driver;
-import utilities.ObjectMapperUtils;
+import utilities.*;
 import utilities.ReusableMethods;
 
 import java.sql.ResultSet;
@@ -27,15 +25,16 @@ import java.util.Map;
 
 import static baseUrl.ManagementSchoolBaseUrl.spec;
 import static io.restassured.RestAssured.given;
+import static utilities.AuthenticationManagementonSchool.generateToken;
 
 
 public class US08_Steps_Mali {
     US08_US09_ViceDeanAddLesson locate=new US08_US09_ViceDeanAddLesson();
     WebDriver driver= Driver.getDriver();
+    String msg;
+    String httpSt;
+    static OuterPojoUS08 actualData;
 
-    Faker faker=new Faker();
-    Map<String, Object> beklenenMap=new HashMap<>();
-    LessonPojo beklenenPojo=new LessonPojo();
     Response response;
 
     static String name;
@@ -221,8 +220,8 @@ public class US08_Steps_Mali {
         ReusableMethods.bekle(1);
     }
 
-    @Then("CreditScore input alanı {string} int deger girer")
-    public void creditscoreInputAlanıIntDegerGirer(String arg0) {
+    @Then("CreditScore input alanı {string}  deger girer")
+    public void creditscoreInputAlanıDegerGirer(String arg0) {
         creditScore=arg0;
         locate.creditScore.sendKeys(creditScore);
         ReusableMethods.bekle(1);
@@ -297,7 +296,7 @@ public class US08_Steps_Mali {
 
         //Send the request and get the response
 
-        response=given(spec).get("{first}/{second}");
+        response=given(spec).header("Authorization", generateToken((String) ConfigReader.getProperty("viceDean"), (String) ConfigReader.getProperty("psw"))).get("{first}/{second}");
         response.prettyPrint();
 
         //postman de yapılan manuel teste göre response bu şekilde olmalıdır.
@@ -317,7 +316,8 @@ public class US08_Steps_Mali {
     @And("gonderilen data ile gelen response datanin dogrulamasi yapilir")
     public void gonderilenDataIleGelenResponseDataninDogrulamasiYapilir() {
         //burada tavsiye edilen ObjectMapperUtils (readValue()metodu) kullanıyoruz.
-        OuterPojoUS08 actualData=ObjectMapperUtils.convertJsonToJava(response.asString(), OuterPojoUS08.class);
+        actualData=ObjectMapperUtils.convertJsonToJava(response.asString(), OuterPojoUS08.class);
+        System.out.println("actualData = " + actualData);
 
         Assert.assertEquals(200,response.statusCode());
         Assert.assertEquals(name,actualData.getObject().getLessonName());
@@ -327,7 +327,7 @@ public class US08_Steps_Mali {
 
         //Aynı assertionlar Gson objesi kullanarakda yapılabilir. Gson için pom a dependency eklendi.
         OuterPojoUS08 actualDataGson = new Gson().fromJson(response.asString(), OuterPojoUS08.class);
-
+        System.out.println("actualDataGson = " + actualDataGson);
         Assert.assertEquals(200,response.statusCode());
         Assert.assertEquals(name,actualDataGson.getObject().getLessonName());
         Assert.assertEquals(creditScore,actualDataGson.getObject().getCreditScore());
@@ -335,6 +335,42 @@ public class US08_Steps_Mali {
         Assert.assertEquals("Lesson successfully found",actualDataGson.getMessage());
 
 
+
+    }
+
+    @Given("LessonId ile DelRequest gonderilir")
+    public void lessonidIleDelRequestGonderilir() {
+        //Set the url ==> swagger dan bak ==> https://managementonschools.com/app/lessons/delete/125
+
+        System.out.println("dataMap.get(\"Object.lessonId\") = " + actualData.getObject().getLessonId());
+        spec.pathParams("first","lessons","second", "delete","third",""+actualData.getObject().getLessonId()+"");
+
+        //Del request manuel test POSTMAN bekelenen veri outer pojo, inner pojo kısmı siliniyor.
+        /*
+        {
+    "message": "Lesson Deleted",
+    "httpStatus": "OK"
+        }
+         */
+        msg="Lesson Deleted";
+        httpSt="OK";
+
+        //Send the request and get the response
+
+        response=given(spec).header("Authorization", generateToken((String) ConfigReader.getProperty("viceDean"), (String) ConfigReader.getProperty("psw"))).delete("{first}/{second}/{third}");
+        response.prettyPrint();
+
+        
+    }
+
+    @And("Silinen derse ait datalarin dogrulamasi yapilir")
+    public void silinenDerseAitDatalarinDogrulamasiYapilir() {
+       OuterPojoUS08 delIssue= ObjectMapperUtils.convertJsonToJava(response.asString(), OuterPojoUS08.class);
+
+       Assert.assertEquals(200,response.statusCode());
+       Assert.assertEquals(null,delIssue.getObject());
+       Assert.assertEquals(msg,delIssue.getMessage());
+       Assert.assertEquals(httpSt,delIssue.getHttpStatus());
 
 
     }
