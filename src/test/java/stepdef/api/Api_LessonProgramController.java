@@ -23,7 +23,7 @@ import static io.restassured.RestAssured.given;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-public class Api_Elif extends ManagementSchoolBaseUrl {
+public class Api_LessonProgramController extends ManagementSchoolBaseUrl {
 
     Response response;
     ObjectPojo objectPojo;
@@ -48,17 +48,20 @@ public class Api_Elif extends ManagementSchoolBaseUrl {
 
         //Set the expected Data
         //1.
-        lessonNamePojo = new LessonNamePojo(2, "Java", 10, true);
+        lessonNamePojo = new LessonNamePojo(3, "Java", 10, true);
         ArrayList<LessonNamePojo> lessonName = new ArrayList<>();
         lessonName.add(lessonNamePojo);
         System.out.println("lessonNamePojo = " + lessonNamePojo);
 
+        //2.
         objectPojo = new ObjectPojo(lessonId, "10:30:00", "12:30:00", lessonName, "MONDAY");
 
+        //3.
         List<Integer> lessonIdList = new ArrayList<>();
-        lessonIdList.add(2);
+        lessonIdList.add(3);
         payload = new LessonPostPojo("MONDAY", 1, lessonIdList, "10:30", "12:30");
 
+        //4.
         expectedPojo = new ExpectedDataPojo(objectPojo, "Created Lesson Program", "CREATED");
 
 
@@ -87,7 +90,7 @@ public class Api_Elif extends ManagementSchoolBaseUrl {
     //2-GET
     @Given("send get request to url by id")
     public void sendGetRequestToUrlById() {
-        //Set the url
+        //Set the url -->https://managementonschools.com/app/lessonPrograms/getById/lessonId
         spec.pathParams("first", "lessonPrograms", "second", "getById", "third", lessonId);
 
         //Set the expected data
@@ -104,7 +107,6 @@ public class Api_Elif extends ManagementSchoolBaseUrl {
     @Then("Validate response body")
     public void validateResponseBody() {
         //Do Assertion
-        jsonPath = response.jsonPath();
 
         //Buradaki expected leesonName pojo,response body ise object pojodur.
         assertEquals(200, response.statusCode());
@@ -153,8 +155,10 @@ public class Api_Elif extends ManagementSchoolBaseUrl {
     @Given("send get negative request to url by id")
     public void sendGetNegativeRequestToUrlById() {
         //Set the url
-       // spec.pathParams("first", "lessonPrograms", "second","getById","third", lessonId);
-         //-->https://managementonschools.com/app/lessonPrograms/getById/526
+
+       //  spec.pathParams("first", "lessonPrograms", "second","getById","third", lessonId);
+
+        //-->https://managementonschools.com/app/lessonPrograms/getById/526
         //Set the expected Data
 
         //Send the request and get the response
@@ -175,8 +179,8 @@ public class Api_Elif extends ManagementSchoolBaseUrl {
     @Then("Validate get negative response body")
     public void validateGetNegativeResponseBody() {
         //Do assertion
-//        jsonPath=response.jsonPath();
-//        assertEquals(404,response.statusCode());
+//        jsonPath = response.jsonPath();
+//        assertEquals(404, response.statusCode());
 //        assertEquals("Error: Lesson with lesson id"+lessonId+" not found",jsonPath.getString("message"));
 //        assertEquals("/app/lessonPrograms/getById/"+lessonId+"",jsonPath.getString("path"));
 
