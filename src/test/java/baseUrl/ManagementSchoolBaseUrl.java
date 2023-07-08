@@ -8,14 +8,11 @@ import static utilities.AuthenticationManagementonSchool.generateToken;
 public class ManagementSchoolBaseUrl {
     public static RequestSpecification spec;
 
-
     public static void setUp(){
         spec = new RequestSpecBuilder().
-                addHeader("Authorization",generateToken()).
                 setBaseUri("https://managementonschools.com/app/").
                 setContentType(ContentType.JSON).
                 build();
-
     }
 
 }
