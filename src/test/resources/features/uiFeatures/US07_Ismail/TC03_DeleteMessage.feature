@@ -1,6 +1,7 @@
+@us7
 Feature: US07_Dean_Kullanıcıların_Gönderdiği_Mesajları_Görebilmelidir_Testi
 
-  @us7
+
   Scenario: TC03_Dean mesajları silebilmelidir
     Given Kullanıcı adrese gider
     When Kullanıcı LOG IN e tıklar

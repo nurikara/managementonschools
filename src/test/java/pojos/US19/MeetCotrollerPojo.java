@@ -5,20 +5,19 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.ArrayList;
+import java.time.LocalDate;
 import java.util.List;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Pojo19 {
+public class MeetCotrollerPojo {
     private  String date;
     private String description;
     private  String startTime;
     private String stopTime;
     private List<Integer> studentIds;
-
-
 
 
 }

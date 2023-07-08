@@ -13,6 +13,7 @@ public class AuthenticationManagementonSchool {
     public static String generateToken(String username,String password) {
         Password body = new Password(username,password);
 
+
         Response response = given().
                 body(body).
                 contentType(ContentType.JSON).

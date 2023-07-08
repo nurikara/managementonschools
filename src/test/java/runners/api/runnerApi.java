@@ -18,7 +18,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
 
         glue = {"stepdef","hooks"},
-        tags ="",
+        tags ="@Api_ismail",
         dryRun =false
 
 )
