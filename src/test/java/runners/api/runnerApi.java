@@ -16,13 +16,12 @@ import org.junit.runner.RunWith;
         },
         monochrome = false,//konsolu okunakli hala getirir false olunca kullanılmayacak.
         features = "src/test/resources/features",
-        glue = {"stepdef", "hooks"},
 
+        glue = {"stepdef","hooks"},
+        tags ="",
+        dryRun =false
 
-
-        tags ="@mali",
-        dryRun = false
 )
 
-public class Runner_Api {
+public class runnerApi {
 }

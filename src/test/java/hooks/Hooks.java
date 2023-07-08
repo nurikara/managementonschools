@@ -43,8 +43,21 @@ public class Hooks {
             scenario.attach(failedScreenShot, "image/png", "failed_scnenaio" + scenario.getName());
         }
 
-    }
-}
+
+        Driver.closeDriver();
+
+    }}
+
+
+
+
+
+
+
+
+
+
+
 
     /*
     Scenario'lar arasındaki bağlantıyı sağlayan glue parametresine koyduğumuz stepDefinition package'ı içerisinde
