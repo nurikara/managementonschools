@@ -1,5 +1,5 @@
+@us7
 Feature: US07_Dean_Kullanıcıların_Gönderdiği_Mesajları_Görebilmelidir_Testi
-  @us7
   Scenario:TC02_Dean, mesajları, yazarlarını, e-maillerini, gönderilme tarihi ve  subject bilgilerini görüntüleyebilmelidir
 
     Given Kullanıcı adrese gider

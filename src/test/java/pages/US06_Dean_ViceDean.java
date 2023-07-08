@@ -56,6 +56,9 @@ public class US06_Dean_ViceDean extends Login{
     @FindBy(xpath ="//tbody//tr//td[5]")
     public List<WebElement> ListUserName;
 
+    @FindBy(xpath ="//a[normalize-space()='Vice Dean Management']")
+    public WebElement viceDeanManagement;
+
 
 
 

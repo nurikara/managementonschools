@@ -14,9 +14,7 @@ import org.openqa.selenium.WebElement;
 import pages.US08_US09_ViceDeanAddLesson;
 import pojos.us08.LessonPojo;
 import pojos.us08.OuterPojoUS08;
-import utilities.DataBaseUtils;
-import utilities.Driver;
-import utilities.ObjectMapperUtils;
+import utilities.*;
 import utilities.ReusableMethods;
 
 import java.sql.ResultSet;
@@ -27,6 +25,7 @@ import java.util.Map;
 
 import static baseUrl.ManagementSchoolBaseUrl.spec;
 import static io.restassured.RestAssured.given;
+import static utilities.AuthenticationManagementonSchool.generateToken;
 
 
 public class US08_Steps_Mali {
@@ -297,7 +296,7 @@ public class US08_Steps_Mali {
 
         //Send the request and get the response
 
-        response=given(spec).get("{first}/{second}");
+        response=given(spec).header("Authorization", generateToken((String) ConfigReader.getProperty("viceDean"), (String) ConfigReader.getProperty("psw"))).get("{first}/{second}");
         response.prettyPrint();
 
         //postman de yapılan manuel teste göre response bu şekilde olmalıdır.
@@ -358,7 +357,7 @@ public class US08_Steps_Mali {
 
         //Send the request and get the response
 
-        response=given(spec).delete("{first}/{second}/{third}");
+        response=given(spec).header("Authorization", generateToken((String) ConfigReader.getProperty("viceDean"), (String) ConfigReader.getProperty("psw"))).delete("{first}/{second}/{third}");
         response.prettyPrint();
 
         

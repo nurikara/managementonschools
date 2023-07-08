@@ -1,10 +1,11 @@
-@us06
-Feature:Dean, Vice Dean hesabı oluşturabilmelidir.
 
+@US23
+Feature: US23 Admin, Vice Dean hesabı oluşturabilmelidir.
   Background:
     Given Admin ilgili sitenin anasayfasina gider
-    When Admin kullanici adi ve sifresini kullanarak Dean panaline giris yapar
-    And Add ViseDean yazigi goruntulenir
+    When Admin kullanici adi ve sifresini kullanarak Admin panaline giris yapar
+    And Acilan pencerenin sol ust kosesine gidilerek Menu butonuna tiklanir
+    And Sayganin sol kisminda acilan main menu kisminin altindaki ViseDeanManagement segmesi tiklanir
 
   Scenario: "Name" girilmelidir. Boş bırakılamaz.
     Then Add ViseDean bolumu doldurulurken name kismi bos birakilir
@@ -19,12 +20,9 @@ Feature:Dean, Vice Dean hesabı oluşturabilmelidir.
     And Sayfadan logout yapilarak cikilir
 
 
-
   Scenario: "Cinsiyet" girilmelidir. Boş bırakılamaz.
     Then Add ViseDean bolumu doldurulurken Cinsiyet kismi bos birakilir
     And Sayfadan logout yapilarak cikilir
-
-
 
 
   Scenario: "DogumTarihi" girilmelidir. Boş bırakılamaz.

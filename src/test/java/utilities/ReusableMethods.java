@@ -396,8 +396,11 @@ public class ReusableMethods {
             robot.keyPress(KeyEvent.VK_BACK_SPACE);
             robot.keyRelease(KeyEvent.VK_BACK_SPACE);
         }
-    }
-}
+
+    }}
+
+
+
 
 
 
