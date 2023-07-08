@@ -3,17 +3,14 @@ package stepdef.db.US10_11_12;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import pojos.us10_11_12.LessonNamePojo;
-import pojos.us10_11_12.LessonPostPojo;
 
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static utilities.DataBaseUtils.getResultSet;
 
-public class DB_Elif {
+public class DB_ChooseLesson {
 
     Connection connection;
     Statement statement;
@@ -91,6 +88,8 @@ public class DB_Elif {
     public void tableNınBosOldugunuDogrula() throws SQLException {
         assertFalse(resultSet.next());  //data yoksa true donecek yani test gececek (false->false) varsa fail olacak(false->true) test.
     }
+
+
 
     //Choose Lesson
 

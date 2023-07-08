@@ -1,6 +1,7 @@
 package stepdef.ui;
 
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -146,8 +147,5 @@ public class US19_Steps_Ismail {
         assertTrue(teacherAddMeetList.DescriptionRequired.isDisplayed());
     }
 
-    @Then("Kullanıcı meet olusturur")
-    public void kullanıcıMeetOlusturur() {
 
-    }
 }
