@@ -14,7 +14,7 @@ public class LoginStepDef {
 
     @Given("Kullanici  {string} olarak giriş yapar")
     public void kullaniciOlarakGirisYapar(String urll) {
-        driver.get((String) ConfigReader.getProperty("urll"));
+        driver.get((String) ConfigReader.getProperty("url"));
         locate.homePageLogin.click();
         ReusableMethods.bekle(1);
         switch (urll.toLowerCase()){
