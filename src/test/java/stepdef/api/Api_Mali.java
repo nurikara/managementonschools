@@ -32,7 +32,7 @@ public class Api_Mali extends ManagementSchoolBaseUrl {
 
 
     Response response;
-    String lessonId;
+    Integer lessonId;
     HashMap expectedDataMap;
     HashMap exDataMap;
 
@@ -74,7 +74,7 @@ public class Api_Mali extends ManagementSchoolBaseUrl {
         System.out.println("exDataMap = " + exDataMap);
 
         //3. pojo ile
-        expectedLessonPojo=new LessonPojo(""+arg0+"",""+arg1+"",""+arg2+"","");
+        expectedLessonPojo=new LessonPojo(""+arg0+"",""+arg1+"",""+arg2+"",null);
         System.out.println("expectedLessonPojo : "+expectedLessonPojo);
 
         //Send the request and get the response
@@ -183,7 +183,7 @@ public class Api_Mali extends ManagementSchoolBaseUrl {
         response=given(spec).get("{first}/{second}");
         response.prettyPrint();
         OuterPojoUS08 actualDataObjectMapper= ObjectMapperUtils.convertJsonToJava(response.asString(), OuterPojoUS08.class);
-        String id=actualDataObjectMapper.getObject().getLessonId(); //id yi aldık
+        Integer id=actualDataObjectMapper.getObject().getLessonId(); //id yi aldık
         System.out.println("id = " + id);
 
         //delete request işlemi https://managementonschools.com/app/lessons/delete/632  baseurl

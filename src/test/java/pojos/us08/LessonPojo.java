@@ -15,7 +15,7 @@ public class LessonPojo {
      private String lessonName;
      private String compulsory;
      private String creditScore;
-     private String lessonId;
+     private Integer lessonId;
 
 
 
