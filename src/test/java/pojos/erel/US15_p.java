@@ -1,6 +1,5 @@
 package pojos.erel;
 
-import io.cucumber.core.internal.com.fasterxml.jackson.annotation.JsonIgnore;
 import io.cucumber.core.internal.com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -10,7 +9,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class US15_Post {
+public class US15_p {
 
     private String advisorTeacherId;
 
