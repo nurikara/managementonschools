@@ -9,6 +9,7 @@ import io.cucumber.java.en.Then;
 import io.restassured.response.Response;
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import pages.US08_US09_ViceDeanAddLesson;
@@ -49,8 +50,8 @@ public class US08_Steps_Mali {
 
     @Given("Kullanici Lessons basligini tiklar")
     public void kullaniciLessonsBasliginiTiklar() {
-        ReusableMethods.scroll(locate.Lessons);
-        locate.Lessons.click();
+        ReusableMethods.scroll(locate.lessons);
+        locate.lessons.click();
 
     }
 
@@ -229,7 +230,7 @@ public class US08_Steps_Mali {
 
     @Given("Kayıtlamasi yapilan {string} ve {string} ile ders bilgileri cagırılır")
     public void kayıtlamasiYapilanVeIleDersBilgileriCagırılır(String ders, String credit) throws SQLException {
-        locate.Lessons.click();
+        locate.lessons.click();
         name=ders;
         locate.lessonName.sendKeys(name);
         ReusableMethods.bekle(1);
@@ -372,6 +373,25 @@ public class US08_Steps_Mali {
        Assert.assertEquals(msg,delIssue.getMessage());
        Assert.assertEquals(httpSt,delIssue.getHttpStatus());
 
+
+    }
+
+
+    @And("fill all the inputs with faker {string}_ {string}")
+    public void fillAllTheInputsWithFaker_(String arg0, String arg1) {
+        locate.lessons.click();
+        Faker faker=new Faker();
+        if(arg0.equals("<fake.lessonName>")){
+            arg0=faker.app().name();
+            System.out.println("arg0 = " + arg0);
+            locate.lessonName.sendKeys(arg0);
+        }
+        if(arg1.equals("<fake.creditScore>")){
+            arg1=String.valueOf(faker.number().numberBetween(1,10));
+            System.out.println("arg1 = " + arg1);
+            locate.creditScore.sendKeys(arg1);
+
+        }
 
     }
 }

@@ -90,18 +90,6 @@
             <artifactId>log4j-core</artifactId>
             <version>2.17.1</version>
         </dependency>
-
-
-
-
-
-        <!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
-        <dependency>
-            <groupId>org.postgresql</groupId>
-            <artifactId>postgresql</artifactId>
-            <version>42.5.0</version>
-        </dependency>
-
         <!-- Pojo class olusturmak icin -->
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -127,7 +115,7 @@
                     <forkCount>2</forkCount> <!-- iki ayrı işlemi başlatır ve her biri farklı bir test paketi çalıştırır. Bu, testlerin daha hızlı tamamlanmasını sağlar. Ancak, bu ayarın artırılması, sistemin kaynaklarını tüketebilir ve performans sorunlarına neden olabilir. -->
                     <reuseForks>true</reuseForks> <!--Maven önceki testlerde oluşturulmuş işlemleri yeniden kullanır -->
                     <includes>
-                        <include>**/runners/*Runner*.java</include>
+                        <include>**/runners/api/*runnerApi*.java</include>
                     </includes>
                     <testFailureIgnore>true</testFailureIgnore> <!--testin başarısız olmasına rağmen diğer testlere devam eder ve sonunda tüm testleri çalıştırır. -->
                 </configuration>
