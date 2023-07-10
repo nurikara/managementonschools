@@ -9,7 +9,7 @@ import java.util.List;
 
 public class US08_US09_ViceDeanAddLesson extends Login{
     @FindBy(id = "controlled-tab-example-tab-lessonsList")
-    public WebElement Lessons;
+    public WebElement lessons;
     @FindBy(id = "lessonName")
     public WebElement lessonName;
     @FindBy(id = "compulsory")

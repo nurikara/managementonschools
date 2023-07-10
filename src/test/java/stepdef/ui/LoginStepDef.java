@@ -43,4 +43,33 @@ public class LoginStepDef {
     }
 
 
+
+
+    @Given("user login as {string}")
+    public void userLoginAs(String arg0) {
+        driver.get((String) ConfigReader.getProperty("url"));
+        locate.homePageLogin.click();
+        ReusableMethods.bekle(1);
+        switch (arg0.toLowerCase()){
+            case "admin":
+                locate.username.sendKeys(ConfigReader.getProperty("admin"));
+                break;
+            case "dean":
+                locate.username.sendKeys(ConfigReader.getProperty("dean"));
+                break;
+            case "vicedean":
+                locate.username.sendKeys(ConfigReader.getProperty("viceDean"));
+                break;
+            case "teacher":
+                locate.username.sendKeys(ConfigReader.getProperty("teacher"));
+                break;
+            case "student":
+                locate.username.sendKeys(ConfigReader.getProperty("student"));
+                break;
+
+        }
+        ReusableMethods.bekle(2);
+        locate.password.sendKeys(ConfigReader.getProperty("psw"), Keys.TAB,Keys.ENTER);
+
+    }
 }
