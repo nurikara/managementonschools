@@ -512,18 +512,28 @@ public class Api_Erel extends ManagementSchoolBaseUrl {
     }
 
     @Then("GetAllContact gelen bodyi dogrula")
-    public void getallcontactGelenBodyiDogrula() {
+    public void getallcontactGelenBodyiDogrula(String email) {
         JsonPath jsonPath=response.jsonPath();
- //      Object actName = jsonPath.getList("content.findAll{it.email=='" + email + "'}.name").get(0);
- //       Object actEmail = jsonPath.getList("content.findAll{it.email=='" + email + "'}.email").get(0);
-//        Object actSubject = jsonPath.getList("content.findAll{it.email=='" + email + "'}.subject").get(0);
-//        Object actMessage = jsonPath.getList("content.findAll{it.email=='" + email + "'}.message").get(0);
-//        Object actDate = jsonPath.getList("content.findAll{it.email=='" + email + "'}.date").get(0);
-//        assertEquals(name, actName);
-//        assertEquals(email, actEmail);
-//        assertEquals(subject, actSubject);
-//        assertEquals(message, actMessage);
-//        assertEquals(date, actDate);
+
+
+        Object extName = jsonPath.getList("content.findAll{it.email=='" + email + "'}.name").get(0);
+        Object extEmail = jsonPath.getList("content.findAll{it.email=='" + email + "'}.email").get(0);
+        Object extSubject = jsonPath.getList("content.findAll{it.email=='" + email + "'}.subject").get(0);
+        Object extMessage = jsonPath.getList("content.findAll{it.email=='" + email + "'}.message").get(0);
+        Object extDate = jsonPath.getList("content.findAll{it.email=='" + email + "'}.date").get(0);
+
+        Object actName = jsonPath.getList("content.findAll{it.email=='" + email + "'}.name").get(0);
+        Object actEmail = jsonPath.getList("content.findAll{it.email=='" + email + "'}.email").get(0);
+        Object actSubject = jsonPath.getList("content.findAll{it.email=='" + email + "'}.subject").get(0);
+        Object actMessage = jsonPath.getList("content.findAll{it.email=='" + email + "'}.message").get(0);
+        Object actDate = jsonPath.getList("content.findAll{it.email=='" + email + "'}.date").get(0);
+
+
+        assertEquals(extName, actName);
+        assertEquals(extEmail, actEmail);
+        assertEquals(extSubject, actSubject);
+        assertEquals(extMessage, actMessage);
+        assertEquals(extDate, actDate);
     }
 }
 
