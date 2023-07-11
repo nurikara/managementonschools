@@ -1,5 +1,5 @@
 
-@Api_Nuri
+@ApiUS_02 @Api_Nuri1
 Feature: Admin Guest User  olusturur.
 
  Scenario: TC01_Create_Guest_User

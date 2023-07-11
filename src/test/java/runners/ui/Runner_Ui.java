@@ -17,7 +17,7 @@ import org.junit.runner.RunWith;
         monochrome = false,//konsolu okunakli hala getirir false olunca kullanılmayacak.
         features = "src/test/resources/features",
         glue = {"stepdef", "hooks"},
-        tags ="",    //       ===>> Burasi bos kalacak
+        tags ="@e2e_Nuri",    //       ===>> Burasi bos kalacak
 
         dryRun = false
 
