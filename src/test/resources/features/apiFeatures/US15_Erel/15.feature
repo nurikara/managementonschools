@@ -1,19 +1,22 @@
-@US25Api @Api
+@US15ApiPost @Api
 Feature:  Aday öğrenciler sisteme kayıt olabilmelidir. API
 
   Scenario Outline: US15_StudentManagement
 
-    Given ADMİN student icin post request yap "<advisorTeacherId>", "<birthDay>", "<birthPlace>", "<email>", "<fatherName>", "<gender>", "<motherName>","<name>","<surname>","<phoneNumber>","<ssn>","<username>","<password>"
-    Then ADMİN body i dogrula
+    Given VİCE DEAN student icin post request yap "<advisorTeacherId>", "<birthDay>", "<birthPlace>", "<email>", "<fatherName>", "<gender>", "<motherName>","<name>","<surname>","<phoneNumber>","<ssn>","<username>","<password>"
+    Then VİCE DEAN body i dogrula
     Examples:
       | advisorTeacherId | birthDay | birthPlace | email | fatherName | gender | motherName | name | surname | phoneNumber | ssn | username | password |
       | advisorTeacherId | birthDay | birthPlace | email | fatherName | gender | motherName | name | surname | phoneNumber | ssn | username | password |
 
 
   Scenario: US15_StudentManagement
-    Given ADMİN send get request to url by id_
-    Then ADMİN Validate response body_
+    Given VİCE DEAN send get request to url by id_
+    Then VİCE DEAN Validate response body_
 
   Scenario: US15_StudentManagement
-    Given ADMİN send DEL request to url by id_
-    Then ADMİN Validate DEL response body_
+    Given VİCE DEAN send DEL request to url by id_
+    Then VİCE DEAN Validate DEL response body_
+
+
+

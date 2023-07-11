@@ -42,9 +42,16 @@ public class Driver {
             if (browser.equals("chrome")) {
                 WebDriverManager.chromedriver().setup();
                 driver = new ChromeDriver(new ChromeOptions().addArguments("--remote-allow-origins=*"));
+            } else if ("chrome-headless".equals(browser)) {
+                ChromeOptions options=new ChromeOptions();
+                options.addArguments("--headless");
+                options.addArguments("--remote-allow-origins=*");
+                options.addArguments("--window-size=1920,1080");
+                WebDriverManager.chromedriver().setup();
+                driver = new ChromeDriver(options);
             } else if (browser.equals("edge")) {
-                WebDriverManager.edgedriver().setup();
-                driver = new EdgeDriver(new EdgeOptions().addArguments("--remote-allow-origins=*"));
+                    WebDriverManager.edgedriver().setup();
+                    driver = new EdgeDriver(new EdgeOptions().addArguments("--remote-allow-origins=*"));
             } else {
                 WebDriverManager.chromedriver().setup();
                 driver = new ChromeDriver(new ChromeOptions().addArguments("--remote-allow-origins=*"));

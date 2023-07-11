@@ -1,3 +1,4 @@
+@us19
 Feature: US19_Teacher öğrenciler ile toplantı düzenleyebilmeliGiven Kullanıcı adrese gider
 Scenario: TC04_"Start Time ve Stop Time" başlangıç ve bitiş saatleri girilmeli
   Given Kullanıcı adrese gider

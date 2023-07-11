@@ -14,6 +14,7 @@ import pojos.us08.LessonPojo;
 import pojos.us08.OuterPojoUS08;
 import pojos.us14.US14_Pojo;
 import stepdef.ui.US08_Steps_Mali;
+import utilities.ConfigReader;
 import utilities.ObjectMapperUtils;
 
 import java.util.ArrayList;
@@ -25,6 +26,7 @@ import static io.restassured.RestAssured.given;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
+import static utilities.AuthenticationManagementonSchool.generateToken;
 
 public class Api_Mali extends ManagementSchoolBaseUrl {
 
@@ -32,7 +34,7 @@ public class Api_Mali extends ManagementSchoolBaseUrl {
 
 
     Response response;
-    String lessonId;
+    Integer lessonId;
     HashMap expectedDataMap;
     HashMap exDataMap;
 
@@ -74,14 +76,14 @@ public class Api_Mali extends ManagementSchoolBaseUrl {
         System.out.println("exDataMap = " + exDataMap);
 
         //3. pojo ile
-        expectedLessonPojo=new LessonPojo(""+arg0+"",""+arg1+"",""+arg2+"","");
+        expectedLessonPojo=new LessonPojo(""+arg0+"",""+arg1+"",""+arg2+"",null);
         System.out.println("expectedLessonPojo : "+expectedLessonPojo);
 
         //Send the request and get the response
 
         //response=given(spec).body(expectedDataString).post("{first}/{second}");
         //response=given(spec).body(exDataMap).post("{first}/{second}");
-        response=given(spec).body(expectedLessonPojo).post("{first}/{second}");
+        response=given(spec).header("Authorization", generateToken((String) ConfigReader.getProperty("viceDean"), (String) ConfigReader.getProperty("psw"))).body(expectedLessonPojo).post("{first}/{second}");
         response.prettyPrint();
 
         //3 şekilde de adım PASS oldu
@@ -180,10 +182,10 @@ public class Api_Mali extends ManagementSchoolBaseUrl {
         setUp();
         spec.pathParams("first","lessons","second", "getLessonByName").queryParam("lessonName",""+arg0+"");
         //Send the request and get the response
-        response=given(spec).get("{first}/{second}");
+        response=given(spec).header("Authorization", generateToken((String) ConfigReader.getProperty("viceDean"), (String) ConfigReader.getProperty("psw"))).get("{first}/{second}");
         response.prettyPrint();
         OuterPojoUS08 actualDataObjectMapper= ObjectMapperUtils.convertJsonToJava(response.asString(), OuterPojoUS08.class);
-        String id=actualDataObjectMapper.getObject().getLessonId(); //id yi aldık
+        Integer id=actualDataObjectMapper.getObject().getLessonId(); //id yi aldık
         System.out.println("id = " + id);
 
         //delete request işlemi https://managementonschools.com/app/lessons/delete/632  baseurl
@@ -209,7 +211,7 @@ public class Api_Mali extends ManagementSchoolBaseUrl {
 
         //Send the request and get the response
 
-        response=given(spec).delete("{first}/{second}/{third}");
+        response=given(spec).header("Authorization", generateToken((String) ConfigReader.getProperty("viceDean"), (String) ConfigReader.getProperty("psw"))).delete("{first}/{second}/{third}");
         response.prettyPrint();
     }
 

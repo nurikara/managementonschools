@@ -6,6 +6,7 @@ import io.cucumber.java.en.Then;
 import io.restassured.response.Response;
 import pojos.us14.US14_Pojo;
 import pojos.us14.US14_Pojo_Outer;
+import utilities.ConfigReader;
 import utilities.ObjectMapperUtils;
 
 import java.util.ArrayList;
@@ -16,6 +17,7 @@ import static baseUrl.ManagementSchoolBaseUrl.spec;
 import static io.restassured.RestAssured.given;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
+import static utilities.AuthenticationManagementonSchool.generateToken;
 
 public class Api_Mali2 {
     US14_Pojo expectedTeacherPojo;
@@ -107,7 +109,7 @@ public class Api_Mali2 {
 
 
 
-        response=given(spec).body(expectedMap).post("{first}/{second}");
+        response=given(spec).header("Authorization", generateToken((String) ConfigReader.getProperty("viceDean"), (String) ConfigReader.getProperty("psw"))).body(expectedMap).post("{first}/{second}");
         response.prettyPrint();
     }
 
@@ -209,7 +211,7 @@ public class Api_Mali2 {
 
 
 
-        response=given(spec).body(expectedMap).put("{first}/{second}/{third}");
+        response=given(spec).header("Authorization", generateToken((String) ConfigReader.getProperty("viceDean"), (String) ConfigReader.getProperty("psw"))).body(expectedMap).put("{first}/{second}/{third}");
         response.prettyPrint();
 
         //send the request get the response

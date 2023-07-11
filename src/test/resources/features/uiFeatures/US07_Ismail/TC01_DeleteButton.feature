@@ -1,5 +1,6 @@
-Feature: US07_Dean_Kullanıcıların_Gönderdiği_Mesajları_Görebilmelidir_Testi
 @us7
+Feature: US07_Dean_Kullanıcıların_Gönderdiği_Mesajları_Görebilmelidir_Testi
+
   Scenario:TC01_Dean silme butonunu gorebilmeli
 
     Given Kullanıcı adrese gider

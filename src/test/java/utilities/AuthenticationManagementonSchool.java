@@ -15,6 +15,7 @@ public class AuthenticationManagementonSchool {
      String body2  = "{\n" + "  \"password\": \"12345678\",\n" + "  \"username\": \"AdminB129\"\n" + "}";
         Password body = new Password(username,password);
 
+
         Response response = given().
                 body(body).
                 contentType(ContentType.JSON).
