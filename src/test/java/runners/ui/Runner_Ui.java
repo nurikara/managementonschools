@@ -17,15 +17,11 @@ import org.junit.runner.RunWith;
         monochrome = false,//konsolu okunakli hala getirir false olunca kullanılmayacak.
         features = "src/test/resources/features",
         glue = {"stepdef", "hooks"},
-<<<<<<< HEAD
-        tags ="@e2e_Nuri",    //       ===>> Burasi bos kalacak
-=======
 
-        tags ="",    //       ===>> Burasi bos kalacak
->>>>>>> main
+        tags ="@e2e_Nuri"  //       ===>> Burasi bos kalacak
 
 
-        dryRun = false
+
 )
 
 public class Runner_Ui {
