@@ -12,6 +12,3 @@ Feature: US04_US05 Create Dean By API
   Scenario: TC02_Delete_Dean
     Given send delete request for delete dean
     Then delete the response and validate.
-
-
-
