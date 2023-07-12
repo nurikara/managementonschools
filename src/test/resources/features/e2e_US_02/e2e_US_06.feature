@@ -1,4 +1,4 @@
-@e2e_Nuri
+@e2e_Nuri1
 Feature:Dean, Vice Dean hesabı oluşturabilmelidir.
 
   Scenario:giris yapilir
