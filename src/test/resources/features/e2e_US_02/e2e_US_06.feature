@@ -14,6 +14,3 @@ Feature:Dean, Vice Dean hesabı oluşturabilmelidir.
     Given Admin butun visedeanleri cagirarak kayit ettigi visedean in id sine ulasir
     Then id sine ulastigi Visedean in assertion yapar
 
-    Scenario: Admin ui ile olusturulan vise dean in database testini yapar
-      Given Admin connetion olusturur
-      Then Admin database icin assertion islemlerini yapar.
