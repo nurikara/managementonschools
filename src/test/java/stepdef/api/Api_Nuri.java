@@ -214,7 +214,7 @@ public class Api_Nuri {
     public void adminButunVisedeanleriCagirarakKayitEttigiVisedeanInIdSineUlasir() {
 //https://managementonschools.com/app/vicedean/getAll
         spec.pathParams("pp1", "vicedean", "pp2", "getAll");
-        response = given(spec).header("Authorization", generateToken((String) ConfigReader.getProperty("Erelusername"), (String) ConfigReader.getProperty("Erelpassword"))).get("{pp1}/{pp2}");
+        response = given(spec).header("Authorization", generateToken((String) ConfigReader.getProperty("dean"), (String) ConfigReader.getProperty("psw"))).get("{pp1}/{pp2}");
 
         response.prettyPrint();
         // String jsonPathExpression = "findAll{it.username=='" + UserName + "'}.userId";
