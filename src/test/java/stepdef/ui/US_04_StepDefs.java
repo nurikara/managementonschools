@@ -35,14 +35,14 @@ public class US_04_StepDefs {
 
     @And("Kullanıcı geçerli Admin olarak user name'i girer")
     public void kullanıcı_geçerli_admin_olarak_user_name_i_girer() {
-        adminDean.username.sendKeys(ConfigReader.getProperty("admin"));
+        adminDean.username.sendKeys(ConfigReader.getProperty("admin2"));
         ReusableMethods.bekle(1);
 
     }
 
     @And("Kullanıcı geçerli Admin olarak password'u girer")
     public void kullanıcı_geçerli_admin_olarak_password_u_girer() {
-        adminDean.password.sendKeys(ConfigReader.getProperty("psw"));
+        adminDean.password.sendKeys(ConfigReader.getProperty("psw2"));
         ReusableMethods.bekle(1);
 
     }

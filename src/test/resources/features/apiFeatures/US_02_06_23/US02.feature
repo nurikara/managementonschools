@@ -1,4 +1,6 @@
 
+@Api_Nuri1
+@ApiUS_02 @Api_Nuri1
 @ApiUS_02 @Api_Nuri
 Feature: Admin Guest User  olusturur.
 
