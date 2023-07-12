@@ -22,6 +22,7 @@ import org.junit.runner.RunWith;
 
         tags ="@e2e_Nuri",
 
+        tags ="@e2e_Nuri1",
         dryRun =false
 
 
