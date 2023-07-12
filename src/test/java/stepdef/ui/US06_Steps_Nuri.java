@@ -26,6 +26,8 @@ public class US06_Steps_Nuri {
 
     Actions actions = new Actions(Driver.getDriver());
 
+    public  static String UserName;
+
 
     @When("Admin kullanici adi ve sifresini kullanarak Dean panaline giris yapar")
     public void admin_kullanici_adi_ve_sifresini_kullanarak_dean_panaline_giris_yapar() throws InterruptedException {
@@ -250,7 +252,8 @@ Thread.sleep(2000);
         Thread.sleep(1000);
         login.addViseDeanSSN.sendKeys("123-12-" + Faker.instance().number().digits(4));
         Thread.sleep(1000);
-        login.addViseDeanUSERNAME.sendKeys(Faker.instance().name().username());
+        UserName =Faker.instance().name().username();
+        login.addViseDeanUSERNAME.sendKeys(UserName);
         Thread.sleep(1000);
         login.addViseDeanPASSWORD.sendKeys("Emre4344");
         Thread.sleep(1000);
@@ -258,9 +261,9 @@ Thread.sleep(2000);
         Thread.sleep(1000);
         login.addViseDeanSubmit.click();
         Thread.sleep(1000);
-
-
         assertEquals("Vice dean Saved", login.addViseDeanAlert.getText());
+
+
 
 
     }

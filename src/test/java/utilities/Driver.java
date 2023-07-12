@@ -42,7 +42,7 @@ public class Driver {
             if (browser.equals("chrome")) {
                 WebDriverManager.chromedriver().setup();
                 driver = new ChromeDriver(new ChromeOptions().addArguments("--remote-allow-origins=*"));
-            } else if ("chrome-headless".equals(browser)) {
+            } else if (browser.equals("chrome-headless")) {
                 ChromeOptions options=new ChromeOptions();
                 options.addArguments("--headless");
                 options.addArguments("--remote-allow-origins=*");
