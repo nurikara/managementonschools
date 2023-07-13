@@ -144,6 +144,9 @@
                         <phase>verify</phase>
                         <goals>
                             <goal>generate</goal>
+                                 <plugin-prefix>:<goal>
+                                     
+                                 
                         </goals>
                         <configuration>
                             <projectName>cucumber-framework</projectName>
