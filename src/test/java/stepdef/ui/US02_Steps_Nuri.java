@@ -30,9 +30,9 @@ public class US02_Steps_Nuri {
     public void admin_kullanici_adi_ve_sifresini_kullanarak_admin_panaline_giris_yapar() throws InterruptedException {
 
         login.homePageLogin.click();
-        login.username.sendKeys(ConfigReader.getProperty("admin"));
+        login.username.sendKeys(ConfigReader.getProperty("Erelusername"));
         Thread.sleep(1000);
-        login.password.sendKeys(ConfigReader.getProperty("psw"), Keys.TAB, Keys.ENTER);
+        login.password.sendKeys(ConfigReader.getProperty("Erelpassword"), Keys.TAB, Keys.ENTER);
 
         Thread.sleep(1000);
 

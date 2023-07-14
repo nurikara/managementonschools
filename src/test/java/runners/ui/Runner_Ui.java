@@ -18,10 +18,9 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = {"stepdef", "hooks"},
 
-        tags ="@dort",    //       ===>> Burasi bos kalacak
 
+        tags ="@dort"  //       ===>> Burasi bos kalacak
 
-        dryRun = false
 )
 
 public class Runner_Ui {

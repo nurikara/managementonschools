@@ -1,5 +1,4 @@
-package pojos.us10_11_12;
-
+package pojos.US_04_05;
 
 import io.cucumber.core.internal.com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
@@ -10,15 +9,11 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
-
-public class ExpectedDataPojo {
-
-    private ObjectPojo object;
-
-    private String message;
-
-    private String httpStatus;
+public class DeanRootPojo {
 
 
+        public DeanPojo object;
+        public String message;
+        public String httpStatus;
+    }
 
-}

@@ -1,8 +1,8 @@
-@Api_Nuri1
-Feature: Dean, Vice Dean hesabı oluşturabilmelidir.
+@ApiUS_23 @Api_Nuri
+Feature: Admin, Vice Dean hesabı oluşturabilmelidir.
 
-  Scenario Outline: : Kullanici bazi degerleri eksik yollar
-    Then validate "<birthDay>", "<birthPlace>", "<gender>", "<name>", "<passsword>", "<phoneNumber>", "<ssn>","<surname>","<username>"
+  Scenario Outline: : Admin bazi degerleri eksik yollar
+    Then Admin validate "<birthDay>", "<birthPlace>", "<gender>", "<name>", "<passsword>", "<phoneNumber>", "<ssn>","<surname>","<username>"
     Examples:
       | birthDay | birthPlace | gender | name | passsword | phoneNumber | ssn | surname | username |
       | birthDay | birthPlace | gender |      | passsword | phoneNumber | ssn | surname | username |
