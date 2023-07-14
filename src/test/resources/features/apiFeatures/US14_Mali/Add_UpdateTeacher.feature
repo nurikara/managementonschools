@@ -1,5 +1,5 @@
 Feature: US14 ViceDean Add-Update Teacher API
-  @Api
+  @us14mali
   Scenario: TC01 Teacher Post-Put Request
     Given User create Teacher by Post Request
     Then Verify the posted datas with response
