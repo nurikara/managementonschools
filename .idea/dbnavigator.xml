@@ -13,7 +13,7 @@
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="183584b3-b8c3-44cc-a28a-2263cd6a522b">
-      <console name="managementonschools" type="STANDARD" schema="public" session="Main"><![CDATA[select * from vice_dean]]></console>
+      <console name="managementonschools" type="STANDARD" schema="public" session="Main">select * from vice_dean</console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseEditorStateManager">
@@ -46,13 +46,15 @@
           <database-type value="POSTGRES" />
           <config-type value="BASIC" />
           <database-version value="14.8" />
-          <driver-source value="BUILTIN" />
+          <driver-source value="BUNDLED" />
           <driver-library value="" />
           <driver value="" />
           <url-type value="DATABASE" />
           <host value="managementonschools.com" />
           <port value="5432" />
           <database value="school_management" />
+          <tns-folder value="" />
+          <tns-profile value="" />
           <type value="USER_PASSWORD" />
           <user value="select_user" />
           <deprecated-pwd value="NDN3NWlqZnNv" />

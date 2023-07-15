@@ -1,1 +1,0 @@
-Feature: Update butonu olmadığı için test yok
