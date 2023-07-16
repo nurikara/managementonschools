@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="26.232" tests="3" skipped="0" failures="0" errors="0">
+<testcase classname="Dean, Vice Dean hesabı oluşturabilmelidir." name="giris yapilir" time="8.044">
+<system-out><![CDATA[
+Given Admin ilgili sitenin anasayfasina gider...............................passed
+When Admin kullanici adi ve sifresini kullanarak Dean panaline giris yapar..passed
+And Add ViseDean yazigi goruntulenir........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Dean, Vice Dean hesabı oluşturabilmelidir." name="Admin gerekli bilgileri uygun sekilde girer." time="11.917">
+<system-out><![CDATA[
+Then SSN bolumune uygun sekilde giris yapilir...............................passed
+And Sayfadan logout yapilarak cikilir.......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Dean, Vice Dean hesabı oluşturabilmelidir." name="Admin ui da kayit ettigi visedean Api testini yapar." time="5.851">
+<system-out><![CDATA[
+Given Admin butun visedeanleri cagirarak kayit ettigi visedean in id sine ulasir.passed
+Then id sine ulastigi Visedean in assertion yapar...........................passed
+]]></system-out>
+</testcase>
+</testsuite>

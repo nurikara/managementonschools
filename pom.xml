@@ -7,6 +7,7 @@
     <artifactId>managementonschools</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
@@ -109,6 +110,7 @@
         </dependency>
 
 
+
             <!-- Diğer bağımlılıklar -->
             <dependency>
                 <groupId>org.slf4j</groupId>
@@ -121,27 +123,25 @@
                 <version>1.7.32</version>
             </dependency>
 
+
+     <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin -->
+        <dependency>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>3.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-failsafe-plugin</artifactId>
+            <version>3.1.2</version>
+            <type>maven-plugin</type>
+        </dependency>
+
     </dependencies>
 
     <build>
         <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.0.0</version>
-                <configuration>
-                    <parallel>methods</parallel>
-                    <threadCount>2</threadCount> <!--aynı anda 2 browser çalıştırılacağı anlamına gelir. -->
-                    <perCoreThreadCount>false</perCoreThreadCount>
-                    <forkCount>1</forkCount> <!-- iki ayrı işlemi başlatır ve her biri farklı bir test paketi çalıştırır. Bu, testlerin daha hızlı tamamlanmasını sağlar. Ancak, bu ayarın artırılması, sistemin kaynaklarını tüketebilir ve performans sorunlarına neden olabilir. -->
-                    <reuseForks>true</reuseForks> <!--Maven önceki testlerde oluşturulmuş işlemleri yeniden kullanır -->
-                    <includes>
-                        <include>**/runners/api/*runnerApi.java</include>
-                    </includes>
-                    <testFailureIgnore>true</testFailureIgnore> <!--testin başarısız olmasına rağmen diğer testlere devam eder ve sonunda tüm testleri çalıştırır. -->
-                </configuration>
-            </plugin>
-
+            
             <plugin>
                 <groupId>net.masterthought</groupId>
                 <artifactId>maven-cucumber-reporting</artifactId>
@@ -152,7 +152,7 @@
                         <phase>verify</phase>
                         <goals>
                             <goal>generate</goal>
-                        </goals>
+                                  </goals>
                         <configuration>
                             <projectName>cucumber-framework</projectName>
                             <outputDirectory>${project.build.directory}</outputDirectory>
@@ -172,6 +172,9 @@
         </plugins>
 
     </build>
+
+
+
 
 
 
