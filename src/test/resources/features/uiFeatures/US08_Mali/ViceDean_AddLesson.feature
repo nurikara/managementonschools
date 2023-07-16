@@ -1,7 +1,7 @@
 
 Feature: US08 Vice Dean Add Lesson
 
-  @ilk @iki @uc @dbase
+  @ilk @iki @uc @dort @dbase
   Scenario:   Login
     Given Kullanici  "ViceDean" olarak giriş yapar
 
@@ -11,7 +11,7 @@ Feature: US08 Vice Dean Add Lesson
       Given Kullanici Lessons basligini tiklar
       Then LessonName alanina "frgr" ismi girer
       Then Coppulsory checkbox kutusunu tiklar
-      Then CreditScore input alanı "7" int deger girer
+      Then CreditScore input alanı "7" deger girer
       Then Submit butonunu tiklar
       Then Basarili kayıtlama mesaji goruntulenir
 
@@ -21,10 +21,10 @@ Feature: US08 Vice Dean Add Lesson
         Given Kullanici Lessons basligini tiklar
         Then LessonName alanina space data girer
         Then Coppulsory checkbox kutusunu tiklar
-        Then CreditScore input alanı int deger girer
+        Then CreditScore input alanı "7" deger girer
         Then Submit butonunu tiklar
         Then Basarisiz giris mesaji goruntulenir
-
+      @uc
       Scenario: TC03 Compulsory Checkbox
           Given Kullanici Lessons basligini tiklar
           And Compulsory Checkbox kutusunu isaretler
@@ -32,10 +32,10 @@ Feature: US08 Vice Dean Add Lesson
           And Compulsory Checkbox kutusunu isaretler
           Then checkbox kutusunun isaretin kalkdigini test eder
 
-      @uc
+      @dort
       Scenario Outline: TC04 CreditScore Negative Test
         Given Kullanici Lessons basligini tiklar
-        Then LessonName alanina ders ismi girer
+        Then LessonName alanina "frpgry" ismi girer
         And Compulsory Checkbox kutusunu isaretler
         Then CreditScore input alanına gecersiz "<bir>" deger girer
         Then Submit butonunu tiklar

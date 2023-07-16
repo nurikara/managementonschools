@@ -20,6 +20,8 @@ import static org.junit.Assert.assertTrue;
 import static utilities.AuthenticationManagementonSchool.generateToken;
 
 public class Api_Mali2 {
+
+
     US14_Pojo expectedTeacherPojo;
     US14_Pojo expectedTeacherUpdatePojo;
     HashMap <String, Object> expectedMap;
@@ -58,7 +60,7 @@ public class Api_Mali2 {
         String gender="MALE";
         Boolean isAdviserTeacher=true;
         List<Integer> id=new ArrayList<>();
-        id.add(1);
+        id.add(4);
         String name=faker.name().firstName();
         String password="Ankara123";
         String phone="553-161-"+faker.number().digits(4);
@@ -66,7 +68,7 @@ public class Api_Mali2 {
         String surname=faker.name().lastName();
         String username=faker.name().username();
 
-        expectedTeacherPojo=new US14_Pojo(birthday,birthplace,email,gender,isAdviserTeacher,id,name,password,phone,ssn,surname,username);
+        expectedTeacherPojo=new US14_Pojo(birthday,birthplace,email,gender,isAdviserTeacher,id,name,password,phone,ssn,surname,username,null);
         System.out.println("expectedTeacherPojo = " + expectedTeacherPojo);
 
         //send the request get the response
@@ -106,6 +108,7 @@ public class Api_Mali2 {
         expectedMap.put("ssn",ssn);
         expectedMap.put("surname",surname);
         expectedMap.put("username",username);
+
 
 
 
@@ -182,7 +185,7 @@ public class Api_Mali2 {
         String gender="MALE";
         Boolean isAdviserTeacher=true;
         List<Integer> id1=new ArrayList<>();
-        id1.add(1);
+        id1.add(4);
         String name=faker.name().firstName();
         String password="Ankara123";
         String phone="553-161-"+faker.number().digits(4);
@@ -190,7 +193,7 @@ public class Api_Mali2 {
         String surname=faker.name().lastName();
         String username=faker.name().username();
 
-        expectedTeacherUpdatePojo=new US14_Pojo(birthday,birthplace,email,gender,isAdviserTeacher,id1,name,password,phone,ssn,surname,username);
+        expectedTeacherUpdatePojo=new US14_Pojo(birthday,birthplace,email,gender,isAdviserTeacher,id1,name,password,phone,ssn,surname,username,null);
         System.out.println("expectedTeacherPojo = " + expectedTeacherUpdatePojo);
 
 
@@ -272,4 +275,6 @@ public class Api_Mali2 {
 
 
     }
+
+
 }

@@ -3,9 +3,9 @@ Feature: US08 E2E Test (Positive)
   Scenario: ViceDean Add Lesson UI Test
     Given Kullanici  "ViceDean" olarak giriş yapar
     Then Kullanici Lessons basligini tiklar
-    Then LessonName alanina "lahmacun" ismi girer
+    Then LessonName alanina "Respect" ismi girer
     Then Coppulsory checkbox kutusunu tiklar
-    Then CreditScore input alanı "11"  deger girer
+    Then CreditScore input alanı "11" deger girer
     Then Submit butonunu tiklar
     Then Basarili kayıtlama mesaji goruntulenir
 
