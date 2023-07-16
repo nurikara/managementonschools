@@ -1,6 +1,4 @@
-package runners.db;
-
-
+package runners.e2e;
 
 
 import io.cucumber.junit.Cucumber;
@@ -19,10 +17,23 @@ import org.junit.runner.RunWith;
         monochrome = false,//konsolu okunakli hala getirir false olunca kullanılmayacak.
         features = "src/test/resources/features",
         glue = {"stepdef", "hooks"},
-        tags ="@tc01DBtest",
-        dryRun = false
+
+        tags ="@e2e_us08"  //       ===>> Burasi bos kalacak
+
+
+
 )
 
-public class Runner_Db {
+public class Runner_e2e {
 }
+
+
+
+
+
+
+
+
+
+
 
