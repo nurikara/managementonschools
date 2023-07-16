@@ -4,8 +4,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.example</groupId>
-    <artifactId>SchoolProject</artifactId>
+    <artifactId>managementonschools</artifactId>
     <version>1.0-SNAPSHOT</version>
+
+
 
 
     <properties>
@@ -34,9 +36,6 @@
             <version>7.7.1</version>
             <scope>test</scope>
         </dependency>
-
-
-
 
         <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
         <dependency>
@@ -94,12 +93,7 @@
             <artifactId>postgresql</artifactId>
             <version>42.5.0</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
-        <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-core</artifactId>
-            <version>2.17.1</version>
-        </dependency>
+
 
         <!-- Pojo class olusturmak icin -->
         <dependency>
@@ -108,23 +102,34 @@
             <version>1.18.26</version>
             <scope>provided</scope>
         </dependency>
+
         <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin -->
         <dependency>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-surefire-plugin</artifactId>
             <version>3.0.0</version>
         </dependency>
-        <dependency>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-failsafe-plugin</artifactId>
-            <version>3.1.2</version>
-            <type>maven-plugin</type>
-        </dependency>
+
+
+
+            <!-- Diğer bağımlılıklar -->
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>1.7.32</version>
+            </dependency>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-simple</artifactId>
+                <version>1.7.32</version>
+            </dependency>
+
+
     </dependencies>
 
     <build>
         <plugins>
-            <plugin>
+                  <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0</version>
@@ -140,10 +145,7 @@
                     <testFailureIgnore>true</testFailureIgnore> <!--testin başarısız olmasına rağmen diğer testlere devam eder ve sonunda tüm testleri çalıştırır. -->
                 </configuration>
             </plugin>
-
-
-
-
+            
             <plugin>
                 <groupId>net.masterthought</groupId>
                 <artifactId>maven-cucumber-reporting</artifactId>
@@ -169,8 +171,15 @@
                     </execution>
                 </executions>
             </plugin>
+
+
         </plugins>
 
     </build>
+
+
+
+
+
 
 </project>

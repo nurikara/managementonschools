@@ -5,4 +5,4 @@ Feature: US08 Lesson Create API test
     And verify the response datas with posted
     Examples:
       | lessonName | compulsory | creditScore |
-      | mtf01      | true       | 4           |
+      | mtfjh5     | true       | 4           |

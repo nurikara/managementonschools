@@ -223,6 +223,7 @@ public class US14_Steps_Mali {
         locate.teacherMenagementButton.click();
         ReusableMethods.bekle(2);
         locate.selectLessonInput.click();
+        ReusableMethods.bekle(1);
         locate.selectLessonInput.sendKeys("Java", Keys.TAB);
         ReusableMethods.bekle(1);
         String name1=faker.name().firstName();
