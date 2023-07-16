@@ -140,8 +140,9 @@ public class US08_Steps_Mali {
         System.out.println("msg3 = " + msg);
         if(msg.contains("lesson created")){
           Assert.assertTrue(locate.msgLessonCreated2.getText().contains("error"));
-      }
-
+      } else if (msg.contains("already register")) {
+            Assert.assertTrue(locate.msgLessonCreated2.getText().contains("error"));
+        }
 
     }
 
@@ -221,8 +222,9 @@ public class US08_Steps_Mali {
         ReusableMethods.bekle(1);
     }
 
-    @Then("CreditScore input alanı {string}  deger girer")
-    public void creditscoreInputAlanıDegerGirer(String arg0) {
+
+    @Then("CreditScore input alanı {string} deger girer")
+    public void credit_score_input_alanı_deger_girer(String arg0) {
         creditScore=arg0;
         locate.creditScore.sendKeys(creditScore);
         ReusableMethods.bekle(1);
