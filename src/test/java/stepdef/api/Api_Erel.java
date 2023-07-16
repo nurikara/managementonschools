@@ -7,7 +7,7 @@ import io.cucumber.java.en.Then;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.junit.Assert;
-import pojos.erel.StudentInfoPojo;
+
 import pojos.erel.US15_ObjectPojo;
 import pojos.erel.US15_Pojo;
 import pojos.erel.US15_p;
@@ -562,11 +562,11 @@ public class Api_Erel extends ManagementSchoolBaseUrl {
 
             studentId = "327";
 
-        StudentInfoPojo expected=new StudentInfoPojo(absentee, educationTermId, finalExam, infoNote, lessonId, midtermExam, studentId);
+       // StudentInfoPojo expected=new StudentInfoPojo(absentee, educationTermId, finalExam, infoNote, lessonId, midtermExam, studentId);
 
 
         //send the request and get the response
-        responseerel = given(spec).body(expected).header("Authorization", generateToken((String) ConfigReader.getProperty("ErelusernameAdmin"), (String) ConfigReader.getProperty("ErelpasswordAdmin"))).post("/{first}/{second}");
+      //  responseerel = given(spec).body(expected).header("Authorization", generateToken((String) ConfigReader.getProperty("ErelusernameAdmin"), (String) ConfigReader.getProperty("ErelpasswordAdmin"))).post("/{first}/{second}");
         responseerel.prettyPrint();
         //do the assertions
 

@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1b6fabe4-2551-494b-a5f8-bec58dad5d33" name="Changes" comment="" />
+    <list default="true" id="1b6fabe4-2551-494b-a5f8-bec58dad5d33" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -75,10 +78,27 @@
       <command value="mvn test" />
       <command value="mvn install test" />
       <command value="mvn clean install test" />
-      <command value="mvn -X test" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.Runner_e2e">
+  <component name="RunManager" selected="Cucumber Java.Feature: 15">
+    <configuration name="Feature: 15" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/apiFeatures/US15_Erel/15.feature" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="managementonschools" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
+      <option name="SUGGESTED_NAME" value="Feature: 15" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Feature: e2e_US_06" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/e2e_US_02/e2e_US_06.feature" />
@@ -130,21 +150,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Runner_e2e" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SchoolProject" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="runners.e2e.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="runners.e2e" />
-      <option name="MAIN_CLASS_NAME" value="runners.e2e.Runner_e2e" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="runnerApi [1]" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true" repeat_mode="N Times">
       <module name="SchoolProject" />
       <extension name="coverage">
@@ -161,19 +166,32 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="managementonschools" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="managementonschools" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
+      <item itemvalue="Cucumber Java.Feature: 15" />
       <item itemvalue="Cucumber Java.Feature: e2e_US_06" />
-      <item itemvalue="JUnit.Runner_e2e" />
       <item itemvalue="JUnit.Runner_Db" />
       <item itemvalue="JUnit.Runner_Ui [3]" />
       <item itemvalue="JUnit.runnerApi [1]" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.Runner_e2e" />
-        <item itemvalue="JUnit.Runner_Db" />
+        <item itemvalue="Cucumber Java.Feature: 15" />
         <item itemvalue="JUnit.runnerApi [1]" />
         <item itemvalue="JUnit.Runner_Ui [3]" />
+        <item itemvalue="JUnit.Runner_Db" />
         <item itemvalue="Cucumber Java.Feature: e2e_US_06" />
       </list>
     </recent_temporary>
