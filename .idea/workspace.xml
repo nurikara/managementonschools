@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1b6fabe4-2551-494b-a5f8-bec58dad5d33" name="Changes" comment="" />
+    <list default="true" id="1b6fabe4-2551-494b-a5f8-bec58dad5d33" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/default-cucumber-reports.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/default-cucumber-reports.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/json-reports/cucumber.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/json-reports/cucumber.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/xml-report/cucumber.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/xml-report/cucumber.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -78,7 +84,7 @@
       <command value="mvn -X test" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.Runner_e2e">
+  <component name="RunManager" selected="JUnit.runnerApi [1]">
     <configuration name="Feature: e2e_US_06" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/e2e_US_02/e2e_US_06.feature" />
@@ -170,9 +176,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.runnerApi [1]" />
         <item itemvalue="JUnit.Runner_e2e" />
         <item itemvalue="JUnit.Runner_Db" />
-        <item itemvalue="JUnit.runnerApi [1]" />
         <item itemvalue="JUnit.Runner_Ui [3]" />
         <item itemvalue="Cucumber Java.Feature: e2e_US_06" />
       </list>
