@@ -13,7 +13,7 @@ public class AuthenticationManagementonSchool {
 
     public static String generateToken(String username,String password) {
 
-     String body2  = "{\n" + "  \"password\": \"12345678\",\n" + "  \"username\": \"AdminB129\"\n" + "}";
+
 
         Password  body= new Password(username,password);
 
