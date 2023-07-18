@@ -20,10 +20,9 @@ import org.junit.runner.RunWith;
         glue = {"stepdef","hooks"},
 
 
+         tags ="@ApiUS_06",
 
-         tags ="@e2e_us08",
 
-       
 
         dryRun =false
 

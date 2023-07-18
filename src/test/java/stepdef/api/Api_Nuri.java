@@ -94,7 +94,7 @@ public class Api_Nuri {
         if (birthPlace.equals("")) {
             birthPlace = "";
         } else {
-            birthPlace = "Yozgat";
+            birthPlace = fake.country().capital();
         }
         if (gender.equals("")) {
             gender = "";
