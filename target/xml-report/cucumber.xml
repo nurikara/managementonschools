@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="23.112" tests="4" skipped="0" failures="0" errors="0">
+<testcase classname="US08 E2E Test (Positive)" name="ViceDean Add Lesson UI Test" time="16.897">
+<system-out><![CDATA[
+Given Kullanici  "ViceDean" olarak giriş yapar..............................passed
+Then Kullanici Lessons basligini tiklar.....................................passed
+Then LessonName alanina "Respect" ismi girer................................passed
+Then Coppulsory checkbox kutusunu tiklar....................................passed
+Then CreditScore input alanı "11" deger girer...............................passed
+Then Submit butonunu tiklar.................................................passed
+Then Basarili kayıtlama mesaji goruntulenir.................................passed
+]]></system-out>
+</testcase>
+<testcase classname="US08 E2E Test (Positive)" name="DataBase Test" time="1.297">
+<system-out><![CDATA[
+Given DataBase Connection saglanir ve kayitlamasi yapilan dersismi ile ders bilgileri cagrilir.passed
+Then Ders datalarının dogrulugu test edilir.................................passed
+]]></system-out>
+</testcase>
+<testcase classname="US08 E2E Test (Positive)" name="API Test GetRequest" time="3.607">
+<system-out><![CDATA[
+Given get request ile olusturulan ders bilgilerini cagirilir................passed
+And gonderilen data ile gelen response datanin dogrulamasi yapilir..........passed
+]]></system-out>
+</testcase>
+<testcase classname="US08 E2E Test (Positive)" name="API Test DelRequest" time="0.782">
+<system-out><![CDATA[
+Given LessonId ile DelRequest gonderilir....................................passed
+And Silinen derse ait datalarin dogrulamasi yapilir.........................passed
+]]></system-out>
+</testcase>
+</testsuite>
