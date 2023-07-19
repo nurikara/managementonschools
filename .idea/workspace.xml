@@ -6,6 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="1b6fabe4-2551-494b-a5f8-bec58dad5d33" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/utilities/AuthenticationManagementonSchool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utilities/AuthenticationManagementonSchool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/testng.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/default-cucumber-reports.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/default-cucumber-reports.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/failedRerun.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/failedRerun.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/json-reports/cucumber.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/json-reports/cucumber.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/testng.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/xml-report/cucumber.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/xml-report/cucumber.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,7 +29,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="nuri" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -80,7 +87,7 @@
       <command value="mvn -X test" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.Runner_Db">
+  <component name="RunManager" selected="JUnit.Runner_e2e">
     <configuration name="Feature: e2e_US_06" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/e2e_US_02/e2e_US_06.feature" />
@@ -172,8 +179,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.Runner_Db" />
         <item itemvalue="JUnit.Runner_e2e" />
+        <item itemvalue="JUnit.Runner_Db" />
         <item itemvalue="JUnit.runnerApi [1]" />
         <item itemvalue="JUnit.Runner_Ui [3]" />
         <item itemvalue="Cucumber Java.Feature: e2e_US_06" />
