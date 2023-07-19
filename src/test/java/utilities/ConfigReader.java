@@ -34,8 +34,9 @@ public class ConfigReader {
 //    ConfigReader.getProperty("amazon_url"); -> https://www.amazon.com
 //    ConfigReader.getProperty("username"); -> ali
     public static java.lang.CharSequence getProperty(String key) {//String bir deger dondurmesi icin String bir parametre atariz
-        String value = properties.getProperty(key);
-        return value;
+
+
+        return properties.getProperty(key);
     }
 }
 
