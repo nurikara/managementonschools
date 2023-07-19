@@ -1,5 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <<<<<<< HEAD
+<testsuite name="Cucumber" time="34.764" tests="4" skipped="0" failures="4" errors="0">
+<testcase classname="US08 E2E Test (Positive)" name="ViceDean Add Lesson UI Test" time="18.724">
+<failure type="org.openqa.selenium.ElementClickInterceptedException" message="element click intercepted: Element &lt;button type=&quot;button&quot; id=&quot;controlled-tab-example-tab-lessonsList&quot; role=&quot;tab&quot; data-rr-ui-event-key=&quot;lessonsList&quot; aria-controls=&quot;controlled-tab-example-tabpane-lessonsList&quot; aria-selected=&quot;false&quot; tabindex=&quot;-1&quot; class=&quot;nav-link&quot;&gt;...&lt;/button&gt; is not clickable at point (946, 27). Other element would receive the click: &lt;div class=&quot;grid gap-8 d-flex justify-content-end align-items-center&quot;&gt;...&lt;/div&gt;
+  (Session info: headless chrome=114.0.5735.199)
+Build info: version: '4.9.0', revision: 'd7057100a6'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.16.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4da84b20d1180d48b80acccc11afd813, clickElement {id=314776B8CB7DF0EE31EDFD6149F36B33_element_71}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.199, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\nurik\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55360}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55360/devtoo..., se:cdpVersion: 114.0.5735.199, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (4da84b20d1180d48b80acccc11afd813)] -&gt; id: controlled-tab-example-tab-lessonsList]
+Session ID: 4da84b20d1180d48b80acccc11afd813">
+<![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <button type="button" id="controlled-tab-example-tab-lessonsList" role="tab" data-rr-ui-event-key="lessonsList" aria-controls="controlled-tab-example-tabpane-lessonsList" aria-selected="false" tabindex="-1" class="nav-link">...</button> is not clickable at point (946, 27). Other element would receive the click: <div class="grid gap-8 d-flex justify-content-end align-items-center">...</div>
+  (Session info: headless chrome=114.0.5735.199)
+Build info: version: '4.9.0', revision: 'd7057100a6'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.16.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4da84b20d1180d48b80acccc11afd813, clickElement {id=314776B8CB7DF0EE31EDFD6149F36B33_element_71}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.199, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\nurik\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55360}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55360/devtoo..., se:cdpVersion: 114.0.5735.199, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (4da84b20d1180d48b80acccc11afd813)] -> id: controlled-tab-example-tab-lessonsList]
+Session ID: 4da84b20d1180d48b80acccc11afd813
+=======
+<<<<<<< HEAD
+<testsuite name="Cucumber" time="9.276" tests="8" skipped="0" failures="0" errors="0">
+<testcase classname="Dean, Vice Dean hesabı oluşturabilmelidir." name=": Kullanici bazi degerleri eksik yollar - Example #1.1" time="4.137">
+=======
+<<<<<<< HEAD
 <testsuite name="Cucumber" time="23.112" tests="4" skipped="0" failures="0" errors="0">
 <testcase classname="US08 E2E Test (Positive)" name="ViceDean Add Lesson UI Test" time="16.897">
 <system-out><![CDATA[
@@ -49,6 +75,7 @@ Command: [f0c31338ef964b2a1128f4cba8857bd1, clickElement {id=73BB763B998FE411899
 Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.199, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\nurik\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55365}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55365/devtoo..., se:cdpVersion: 114.0.5735.199, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
 Element: [[ChromeDriver: chrome on WINDOWS (f0c31338ef964b2a1128f4cba8857bd1)] -> id: controlled-tab-example-tab-lessonsList]
 Session ID: f0c31338ef964b2a1128f4cba8857bd1
+>>>>>>> main
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -72,23 +99,27 @@ Session ID: f0c31338ef964b2a1128f4cba8857bd1
 	at ✽.Kullanici Lessons basligini tiklar(file:///E:/IdeaProjects/SchoolProject/src/test/resources/features/e2e/US08_E2E_Mali.feature:5)
 ]]>
 </failure>
+<<<<<<< HEAD
+=======
+>>>>>>> 1fe6e0fc053852e20cea5012da4897fa5dd3b445
+>>>>>>> main
 <system-out><![CDATA[
 Given Kullanici  "ViceDean" olarak giriş yapar..............................passed
 Then Kullanici Lessons basligini tiklar.....................................failed
-Then LessonName alanina "lahmacun" ismi girer...............................skipped
+Then LessonName alanina "Respect" ismi girer................................skipped
 Then Coppulsory checkbox kutusunu tiklar....................................skipped
-Then CreditScore input alanı "11"  deger girer..............................skipped
+Then CreditScore input alanı "11" deger girer...............................skipped
 Then Submit butonunu tiklar.................................................skipped
 Then Basarili kayıtlama mesaji goruntulenir.................................skipped
 ]]></system-out>
 </testcase>
-<testcase classname="US08 E2E Test (Positive)" name="DataBase Test" time="3.086">
+<testcase classname="US08 E2E Test (Positive)" name="DataBase Test" time="2.918">
 <failure type="org.postgresql.util.PSQLException" message="ResultSet doğru konumlanmamıştır, next işlemi çağırmanız gerekir.">
 <![CDATA[org.postgresql.util.PSQLException: ResultSet doğru konumlanmamıştır, next işlemi çağırmanız gerekir.
 	at org.postgresql.jdbc.PgResultSet.getRawValue(PgResultSet.java:3149)
 	at org.postgresql.jdbc.PgResultSet.getString(PgResultSet.java:2225)
 	at org.postgresql.jdbc.PgResultSet.getString(PgResultSet.java:2815)
-	at stepdef.ui.US08_Steps_Mali.dersDatalarınınDogruluguTestEdilir(US08_Steps_Mali.java:273)
+	at stepdef.ui.US08_Steps_Mali.dersDatalarınınDogruluguTestEdilir(US08_Steps_Mali.java:275)
 	at ✽.Ders datalarının dogrulugu test edilir(file:///E:/IdeaProjects/SchoolProject/src/test/resources/features/e2e/US08_E2E_Mali.feature:15)
 ]]>
 </failure>
@@ -97,7 +128,7 @@ Given DataBase Connection saglanir ve kayitlamasi yapilan dersismi ile ders bilg
 Then Ders datalarının dogrulugu test edilir.................................failed
 ]]></system-out>
 </testcase>
-<testcase classname="US08 E2E Test (Positive)" name="API Test GetRequest" time="5.156">
+<testcase classname="US08 E2E Test (Positive)" name="API Test GetRequest" time="9.036">
 <failure type="io.restassured.internal.http.HttpResponseException" message="status code: 404">
 <![CDATA[io.restassured.internal.http.HttpResponseException: status code: 404
 	at io.restassured.internal.http.HTTPBuilder.defaultFailureHandler(HTTPBuilder.java:635)
@@ -207,7 +238,7 @@ Then Ders datalarının dogrulugu test edilir.................................fa
 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
 	at io.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy:172)
 	at io.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy)
-	at stepdef.ui.US08_Steps_Mali.getRequestIleOlusturulanDersBilgileriniCagirilir(US08_Steps_Mali.java:300)
+	at stepdef.ui.US08_Steps_Mali.getRequestIleOlusturulanDersBilgileriniCagirilir(US08_Steps_Mali.java:302)
 	at ✽.get request ile olusturulan ders bilgilerini cagirilir(file:///E:/IdeaProjects/SchoolProject/src/test/resources/features/e2e/US08_E2E_Mali.feature:20)
 ]]>
 </failure>
@@ -216,16 +247,45 @@ Given get request ile olusturulan ders bilgilerini cagirilir................fail
 And gonderilen data ile gelen response datanin dogrulamasi yapilir..........skipped
 ]]></system-out>
 </testcase>
-<testcase classname="US08 E2E Test (Positive)" name="API Test DelRequest" time="0.025">
+<testcase classname="US08 E2E Test (Positive)" name="API Test DelRequest" time="2.45">
 <failure type="java.lang.NullPointerException">
 <![CDATA[java.lang.NullPointerException
-	at stepdef.ui.US08_Steps_Mali.lessonidIleDelRequestGonderilir(US08_Steps_Mali.java:346)
+	at stepdef.ui.US08_Steps_Mali.lessonidIleDelRequestGonderilir(US08_Steps_Mali.java:348)
 	at ✽.LessonId ile DelRequest gonderilir(file:///E:/IdeaProjects/SchoolProject/src/test/resources/features/e2e/US08_E2E_Mali.feature:24)
 ]]>
 </failure>
 <system-out><![CDATA[
+<<<<<<< HEAD
 Given LessonId ile DelRequest gonderilir....................................failed
 And Silinen derse ait datalarin dogrulamasi yapilir.........................skipped
+=======
+<<<<<<< HEAD
+Then validate "birthDay", "birthPlace", "", "name", "passsword", "phoneNumber", "ssn","surname","username".passed
+]]></system-out>
+</testcase>
+<testcase classname="Dean, Vice Dean hesabı oluşturabilmelidir." name=": Kullanici bazi degerleri eksik yollar - Example #1.5" time="0.653">
+<system-out><![CDATA[
+Then validate "", "birthPlace", "gender", "name", "passsword", "", "ssn","surname","username".passed
+]]></system-out>
+</testcase>
+<testcase classname="Dean, Vice Dean hesabı oluşturabilmelidir." name=": Kullanici bazi degerleri eksik yollar - Example #1.6" time="0.663">
+<system-out><![CDATA[
+Then validate "birthDay", "birthPlace", "gender", "name", "passsword", "phoneNumber", "","surname","username".passed
+]]></system-out>
+</testcase>
+<testcase classname="Dean, Vice Dean hesabı oluşturabilmelidir." name=": Kullanici bazi degerleri eksik yollar - Example #1.7" time="0.637">
+<system-out><![CDATA[
+Then validate "birthDay", "birthPlace", "gender", "name", "passsword", "phoneNumber", "ssn","surname","".passed
+]]></system-out>
+</testcase>
+<testcase classname="Dean, Vice Dean hesabı oluşturabilmelidir." name=": Kullanici bazi degerleri eksik yollar - Example #1.8" time="0.695">
+<system-out><![CDATA[
+Then validate "birthDay", "birthPlace", "gender", "name", "", "phoneNumber", "ssn","surname","username".passed
+=======
+Given LessonId ile DelRequest gonderilir....................................failed
+And Silinen derse ait datalarin dogrulamasi yapilir.........................skipped
+>>>>>>> main
+>>>>>>> 1fe6e0fc053852e20cea5012da4897fa5dd3b445
 >>>>>>> main
 ]]></system-out>
 </testcase>
