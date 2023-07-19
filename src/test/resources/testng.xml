@@ -1,7 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< HEAD
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd"><suite name="All Test Suite"><test verbose="2" preserve-order="true" name="E:/IdeaProjects/SchoolProject/src/test/java/runners/e2e/Runner_e2e.java"><classes/></test></suite>
-=======
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true"
@@ -9,4 +6,3 @@
         <classes/>
     </test>
 </suite>
->>>>>>> main
