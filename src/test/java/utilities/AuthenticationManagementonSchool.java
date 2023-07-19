@@ -14,7 +14,12 @@ public class AuthenticationManagementonSchool {
     public static String generateToken(String username,String password) {
 
 
+<<<<<<< HEAD
         Password body = new Password(username,password);
+=======
+
+        Password  body= new Password(username,password);
+>>>>>>> main
 
 
         Response response = given().
