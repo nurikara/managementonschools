@@ -4,15 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-<<<<<<< HEAD
     <list default="true" id="1b6fabe4-2551-494b-a5f8-bec58dad5d33" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestOutput/failed_scenario.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/TestOutput/screenshot/screenshot_09_04_20_11072023.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/SchoolProject-1.0-SNAPSHOT.jar" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/cucumber-html-reports/css/bootstrap.min.css" afterDir="false" />
@@ -41,9 +38,6 @@
       <change afterPath="$PROJECT_DIR$/target/cucumber-html-reports/overview-tags.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/cucumber-html-reports/report-feature_1903033536.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/cucumber-html-reports/report-tag_3771378667.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/default-cucumber-reports.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/failedRerun.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/json-reports/cucumber.json" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
@@ -81,12 +75,8 @@
       <change afterPath="$PROJECT_DIR$/target/surefire-reports/testng-reports2.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/surefire-reports/testng-results.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/surefire-reports/testng.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/baseUrl/ManagementSchoolBaseUrl.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/test-classes/features/apiFeatures/US07_Ismail/us07_Dean_Kullanıcı_MesajlariAPI.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/apiFeatures/US08_Mali/ViceDeanAddLesson_API.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/apiFeatures/US09_Mali/ViceDean_DeleteLesson_API.feature" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/test-classes/features/apiFeatures/US10-11-12_LessonProgramController/TC01_LessonProgramController.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/apiFeatures/US14_Mali/Add_UpdateTeacher.feature" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/test-classes/features/apiFeatures/US15_Erel/15.feature" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/test-classes/features/apiFeatures/US16_Erel/US16_GetAllContact.feature" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/test-classes/features/apiFeatures/US25_Erel/US25.CreateStudentByAdmin.feature" afterDir="false" />
@@ -98,7 +88,6 @@
       <change afterPath="$PROJECT_DIR$/target/test-classes/features/apiFeatures/us19_MeetController/US19_meetController.feature" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/test-classes/features/dbFeatures/US08_Mali/US08_DataBase_Mali.feature" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/test-classes/features/dbFeatures/US08_Mali/US09_DataBase_Mali.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/dbFeatures/US08_Mali/US14_DataBase_Mali.feature" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/test-classes/features/dbFeatures/US15_US16_US25_Erel/US15_ViceStudentManagement.feature" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/test-classes/features/dbFeatures/US15_US16_US25_Erel/US16_MessageManagement.feature" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/test-classes/features/dbFeatures/US15_US16_US25_Erel/US25_AdminStudentManagement.feature" afterDir="false" />
@@ -107,7 +96,6 @@
       <change afterPath="$PROJECT_DIR$/target/test-classes/features/dbFeatures/Us02_nuri/Us_02_db.feature" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/test-classes/features/dbFeatures/us10_11_12_elif/TC01_ChooseLesson.feature" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/test-classes/features/dbFeatures/us10_11_12_elif/US01_Register.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/e2e/US08_E2E_Mali.feature" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/test-classes/features/e2e_US_02/e2e_US_06.feature" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US01_Mehmet/US01_BirthPlace.feature" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US01_Mehmet/US01_Cinsiyet.feature" afterDir="false" />
@@ -132,7 +120,6 @@
       <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US07_Ismail/TC02_DeanMessageInfo.feature" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US07_Ismail/TC03_DeleteMessage.feature" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US08_Mali/HowToUseFakerInExample.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US08_Mali/ViceDean_AddLesson.feature" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US09_Mali/ViceDean_LessonListUpdate.feature" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US10-11-12_Elif/TC01PositiveSenaryo.feature" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US10-11-12_Elif/TC02NegatifSenaryo.feature" afterDir="false" />
@@ -198,94 +185,20 @@
       <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US25_Erel/TC12_Mothername.feature" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US25_Erel/TC13_StudentNumber.feature" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US25_Erel/TC14_Password.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/hooks/Hooks.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/pages/Login.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/pages/US01_AdayOgRegister.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/pages/US02_AdminUserList.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/pages/US03_Contact.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/pages/US04_US05_Admin_Dean.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/pages/US06_Dean_ViceDean.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/pages/US07_DeanMessage.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/pages/US08_US09_ViceDeanAddLesson.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/pages/US10_US11_US12_ViceDeanLessonProgram.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/pages/US13_US14_ViceDeanTeacher.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/pages/US15_ViceDeanStudent.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/pages/US16_ViceDeanContact.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/pages/US17_US18_TeacherStudentInfo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/pages/US19_US20_TeacherAddMeetList.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/pages/US21_Student.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/pages/US22_US23_US24_Add.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/pages/US25_AdminCreate.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/pojos/Password.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/pojos/US15/StudentManagement.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/pojos/US19/MeetCotrollerPojo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/pojos/US_02/US_02.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/pojos/US_04_05/DeanPojo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/pojos/US_04_05/DeanRootPojo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/pojos/erel/US15_Get.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/pojos/erel/US15_ObjectPojo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/pojos/erel/US15_Pojo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/pojos/erel/US15_p.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/pojos/us08/LessonPojo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/pojos/us08/OuterPojoUS08.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/pojos/us10_11_12/ExpectedDataPojo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/pojos/us10_11_12/LessonNamePojo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/pojos/us10_11_12/LessonPostPojo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/pojos/us10_11_12/ObjectPojo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/pojos/us14/US14_Pojo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/pojos/us14/US14_Pojo_Outer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/runners/api/runnerApi.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/runners/db/Runner_Db.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/runners/ui/Runner_Ui.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/stepdef/api/Api_Erel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/stepdef/api/Api_LessonProgramController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/stepdef/api/Api_Mali.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/stepdef/api/Api_Mali2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/stepdef/api/Api_MeetCotroller.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/stepdef/api/Api_Milhan.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/stepdef/api/Api_Nuri.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/stepdef/db/US10_11_12/DB_ChooseLesson.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/stepdef/db/US15_16_25_db_Erel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/stepdef/db/US18_US22/US18_db.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/stepdef/db/US18_US22/US22_db.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/stepdef/ui/ElifStepDefs.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/stepdef/ui/LoginStepDef.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/stepdef/ui/ReusableMethods.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/stepdef/ui/US01_Steps_Mehmet.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/stepdef/ui/US02_Steps_Nuri.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/stepdef/ui/US03_Steps_Mehmet.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/stepdef/ui/US06_Steps_Nuri.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/stepdef/ui/US07_Steps_Ismail.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/stepdef/ui/US08_Steps_Mali.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/stepdef/ui/US13_Steps_Zeynep.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/stepdef/ui/US14_Steps_Mali.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/stepdef/ui/US16_Steps_Erel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/stepdef/ui/US17_Steps_Zeynep.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/stepdef/ui/US18_Steps_Tunahan.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/stepdef/ui/US20_Steps_Burak.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/stepdef/ui/US21_Steps_Burak.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/stepdef/ui/US22_Steps_Tunahan.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/stepdef/ui/US23_Step_Nuri.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/stepdef/ui/US24_Step_Zeynep.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/stepdef/ui/US25_Steps_Erel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/stepdef/ui/US_04_StepDefs.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/stepdef/ui/US_05_StepDefs.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/utilities/AuthenticationManagementonSchool.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/utilities/ConfigReader.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/utilities/DataBaseUtils.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/utilities/Driver.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/utilities/ExcelUtils.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/utilities/ObjectMapperUtils.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/utilities/ReusableMethods.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/xml-report/cucumber.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Configuration.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Configuration.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/runners/api/runnerApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runners/api/runnerApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/runners/e2e/Runner_e2e.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runners/e2e/Runner_e2e.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/default-cucumber-reports.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/default-cucumber-reports.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/failedRerun.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/failedRerun.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/json-reports/cucumber.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/json-reports/cucumber.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/runners/api/runnerApi.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/runners/api/runnerApi.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/runners/db/Runner_Db.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/runners/db/Runner_Db.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/runners/e2e/Runner_e2e.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/runners/e2e/Runner_e2e.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/runners/ui/Runner_Ui.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/runners/ui/Runner_Ui.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/xml-report/cucumber.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/xml-report/cucumber.xml" afterDir="false" />
     </list>
-=======
-    <list default="true" id="1b6fabe4-2551-494b-a5f8-bec58dad5d33" name="Changes" comment="" />
->>>>>>> main
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -368,7 +281,7 @@
       <command value="mvn -X test" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.Runner_e2e">
+  <component name="RunManager" selected="JUnit.runnerApi [1]">
     <configuration name="Feature: e2e_US_06" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/e2e_US_02/e2e_US_06.feature" />
@@ -460,10 +373,10 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.Runner_e2e" />
-        <item itemvalue="JUnit.Runner_Db" />
         <item itemvalue="JUnit.runnerApi [1]" />
         <item itemvalue="JUnit.Runner_Ui [3]" />
+        <item itemvalue="JUnit.Runner_e2e" />
+        <item itemvalue="JUnit.Runner_Db" />
         <item itemvalue="Cucumber Java.Feature: e2e_US_06" />
       </list>
     </recent_temporary>
@@ -494,17 +407,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/.." />
     </ignored-roots>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/runners/api/runnerApi.java</url>
-          <line>16</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
