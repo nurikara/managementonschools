@@ -1,6 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <testsuite name="Cucumber" time="23.905" tests="8" skipped="0" failures="0" errors="0">
 <testcase classname="Dean, Vice Dean hesabı oluşturabilmelidir." name=": Kullanici bazi degerleri eksik yollar - Example #1.1" time="6.638">
+=======
+<<<<<<< HEAD
+<testsuite name="Cucumber" time="34.764" tests="4" skipped="0" failures="4" errors="0">
+<testcase classname="US08 E2E Test (Positive)" name="ViceDean Add Lesson UI Test" time="18.724">
+<failure type="org.openqa.selenium.ElementClickInterceptedException" message="element click intercepted: Element &lt;button type=&quot;button&quot; id=&quot;controlled-tab-example-tab-lessonsList&quot; role=&quot;tab&quot; data-rr-ui-event-key=&quot;lessonsList&quot; aria-controls=&quot;controlled-tab-example-tabpane-lessonsList&quot; aria-selected=&quot;false&quot; tabindex=&quot;-1&quot; class=&quot;nav-link&quot;&gt;...&lt;/button&gt; is not clickable at point (946, 27). Other element would receive the click: &lt;div class=&quot;grid gap-8 d-flex justify-content-end align-items-center&quot;&gt;...&lt;/div&gt;
+  (Session info: headless chrome=114.0.5735.199)
+Build info: version: '4.9.0', revision: 'd7057100a6'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.16.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4da84b20d1180d48b80acccc11afd813, clickElement {id=314776B8CB7DF0EE31EDFD6149F36B33_element_71}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.199, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\nurik\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55360}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55360/devtoo..., se:cdpVersion: 114.0.5735.199, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (4da84b20d1180d48b80acccc11afd813)] -&gt; id: controlled-tab-example-tab-lessonsList]
+Session ID: 4da84b20d1180d48b80acccc11afd813">
+<![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <button type="button" id="controlled-tab-example-tab-lessonsList" role="tab" data-rr-ui-event-key="lessonsList" aria-controls="controlled-tab-example-tabpane-lessonsList" aria-selected="false" tabindex="-1" class="nav-link">...</button> is not clickable at point (946, 27). Other element would receive the click: <div class="grid gap-8 d-flex justify-content-end align-items-center">...</div>
+  (Session info: headless chrome=114.0.5735.199)
+Build info: version: '4.9.0', revision: 'd7057100a6'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.16.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4da84b20d1180d48b80acccc11afd813, clickElement {id=314776B8CB7DF0EE31EDFD6149F36B33_element_71}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.199, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\nurik\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55360}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55360/devtoo..., se:cdpVersion: 114.0.5735.199, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (4da84b20d1180d48b80acccc11afd813)] -> id: controlled-tab-example-tab-lessonsList]
+Session ID: 4da84b20d1180d48b80acccc11afd813
+=======
+<<<<<<< HEAD
+<testsuite name="Cucumber" time="9.276" tests="8" skipped="0" failures="0" errors="0">
+<testcase classname="Dean, Vice Dean hesabı oluşturabilmelidir." name=": Kullanici bazi degerleri eksik yollar - Example #1.1" time="4.137">
+=======
+<<<<<<< HEAD
+<testsuite name="Cucumber" time="23.112" tests="4" skipped="0" failures="0" errors="0">
+<testcase classname="US08 E2E Test (Positive)" name="ViceDean Add Lesson UI Test" time="16.897">
+>>>>>>> main
 <system-out><![CDATA[
 Then validate "birthDay", "birthPlace", "gender", "", "passsword", "phoneNumber", "ssn","surname","username".passed
 ]]></system-out>
@@ -17,19 +49,211 @@ Then validate "birthDay", "", "gender", "name", "passsword", "phoneNumber", "ssn
 </testcase>
 <testcase classname="Dean, Vice Dean hesabı oluşturabilmelidir." name=": Kullanici bazi degerleri eksik yollar - Example #1.4" time="2.181">
 <system-out><![CDATA[
+<<<<<<< HEAD
 Then validate "birthDay", "birthPlace", "", "name", "passsword", "phoneNumber", "ssn","surname","username".passed
 ]]></system-out>
 </testcase>
 <testcase classname="Dean, Vice Dean hesabı oluşturabilmelidir." name=": Kullanici bazi degerleri eksik yollar - Example #1.5" time="2.19">
+=======
+Given LessonId ile DelRequest gonderilir....................................passed
+And Silinen derse ait datalarin dogrulamasi yapilir.........................passed
+=======
+<testsuite name="Cucumber" time="22.26" tests="4" skipped="0" failures="4" errors="0">
+<testcase classname="US08 E2E Test (Positive)" name="ViceDean Add Lesson UI Test" time="13.044">
+<failure type="org.openqa.selenium.ElementClickInterceptedException" message="element click intercepted: Element is not clickable at point (631, -132)
+  (Session info: chrome=114.0.5735.199)
+Build info: version: '4.9.0', revision: 'd7057100a6'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.16.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f0c31338ef964b2a1128f4cba8857bd1, clickElement {id=73BB763B998FE4118992AA0918278495_element_49}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.199, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\nurik\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55365}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55365/devtoo..., se:cdpVersion: 114.0.5735.199, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (f0c31338ef964b2a1128f4cba8857bd1)] -&gt; id: controlled-tab-example-tab-lessonsList]
+Session ID: f0c31338ef964b2a1128f4cba8857bd1">
+<![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element is not clickable at point (631, -132)
+  (Session info: chrome=114.0.5735.199)
+Build info: version: '4.9.0', revision: 'd7057100a6'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.16.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f0c31338ef964b2a1128f4cba8857bd1, clickElement {id=73BB763B998FE4118992AA0918278495_element_49}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.199, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\nurik\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55365}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55365/devtoo..., se:cdpVersion: 114.0.5735.199, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (f0c31338ef964b2a1128f4cba8857bd1)] -> id: controlled-tab-example-tab-lessonsList]
+Session ID: f0c31338ef964b2a1128f4cba8857bd1
+>>>>>>> main
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+	at com.sun.proxy.$Proxy27.click(Unknown Source)
+	at stepdef.ui.US08_Steps_Mali.kullaniciLessonsBasliginiTiklar(US08_Steps_Mali.java:54)
+	at ✽.Kullanici Lessons basligini tiklar(file:///E:/IdeaProjects/SchoolProject/src/test/resources/features/e2e/US08_E2E_Mali.feature:5)
+]]>
+</failure>
+<<<<<<< HEAD
+=======
+>>>>>>> 1fe6e0fc053852e20cea5012da4897fa5dd3b445
+>>>>>>> main
+<system-out><![CDATA[
+Given Kullanici  "ViceDean" olarak giriş yapar..............................passed
+Then Kullanici Lessons basligini tiklar.....................................failed
+Then LessonName alanina "Respect" ismi girer................................skipped
+Then Coppulsory checkbox kutusunu tiklar....................................skipped
+Then CreditScore input alanı "11" deger girer...............................skipped
+Then Submit butonunu tiklar.................................................skipped
+Then Basarili kayıtlama mesaji goruntulenir.................................skipped
+]]></system-out>
+</testcase>
+<testcase classname="US08 E2E Test (Positive)" name="DataBase Test" time="2.918">
+<failure type="org.postgresql.util.PSQLException" message="ResultSet doğru konumlanmamıştır, next işlemi çağırmanız gerekir.">
+<![CDATA[org.postgresql.util.PSQLException: ResultSet doğru konumlanmamıştır, next işlemi çağırmanız gerekir.
+	at org.postgresql.jdbc.PgResultSet.getRawValue(PgResultSet.java:3149)
+	at org.postgresql.jdbc.PgResultSet.getString(PgResultSet.java:2225)
+	at org.postgresql.jdbc.PgResultSet.getString(PgResultSet.java:2815)
+	at stepdef.ui.US08_Steps_Mali.dersDatalarınınDogruluguTestEdilir(US08_Steps_Mali.java:275)
+	at ✽.Ders datalarının dogrulugu test edilir(file:///E:/IdeaProjects/SchoolProject/src/test/resources/features/e2e/US08_E2E_Mali.feature:15)
+]]>
+</failure>
+>>>>>>> main
 <system-out><![CDATA[
 Then validate "", "birthPlace", "gender", "name", "passsword", "", "ssn","surname","username".passed
 ]]></system-out>
 </testcase>
+<<<<<<< HEAD
 <testcase classname="Dean, Vice Dean hesabı oluşturabilmelidir." name=": Kullanici bazi degerleri eksik yollar - Example #1.6" time="2.19">
+=======
+<testcase classname="US08 E2E Test (Positive)" name="API Test GetRequest" time="9.036">
+<failure type="io.restassured.internal.http.HttpResponseException" message="status code: 404">
+<![CDATA[io.restassured.internal.http.HttpResponseException: status code: 404
+	at io.restassured.internal.http.HTTPBuilder.defaultFailureHandler(HTTPBuilder.java:635)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1348)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1103)
+	at groovy.lang.MetaClassImpl.invokeMethodClosure(MetaClassImpl.java:1022)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1222)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1103)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1009)
+	at groovy.lang.Closure.call(Closure.java:418)
+	at groovy.lang.Closure.call(Closure.java:434)
+	at io.restassured.internal.RestAssuredHttpBuilder.doRequest(RestAssuredHttpBuilder.java:150)
+	at io.restassured.internal.http.HTTPBuilder.doRequest(HTTPBuilder.java:496)
+	at io.restassured.internal.http.HTTPBuilder.request(HTTPBuilder.java:453)
+	at io.restassured.internal.http.HTTPBuilder$request$3.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:166)
+	at io.restassured.internal.RequestSpecificationImpl.sendHttpRequest(RequestSpecificationImpl.groovy:1480)
+	at io.restassured.internal.RequestSpecificationImpl.this$2$sendHttpRequest(RequestSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1348)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1103)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1009)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:792)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
+	at io.restassured.internal.RequestSpecificationImpl.sendRequest(RequestSpecificationImpl.groovy:1229)
+	at io.restassured.internal.RequestSpecificationImpl.this$2$sendRequest(RequestSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1348)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1103)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1009)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:792)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:166)
+	at io.restassured.internal.filter.SendRequestFilter.filter(SendRequestFilter.groovy:30)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at io.restassured.filter.Filter$filter$0.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.time.TimingFilter.filter(TimingFilter.java:56)
+	at io.restassured.filter.Filter$filter$0.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.FilterContext$next.call(Unknown Source)
+	at io.restassured.internal.filter.CsrfFilter.filter(CsrfFilter.groovy:70)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.FilterContext$next.call(Unknown Source)
+	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1704)
+	at io.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1348)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1103)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1009)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:792)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
+	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1710)
+	at io.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1348)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1103)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1009)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:792)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
+	at io.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy:172)
+	at io.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy)
+	at stepdef.ui.US08_Steps_Mali.getRequestIleOlusturulanDersBilgileriniCagirilir(US08_Steps_Mali.java:302)
+	at ✽.get request ile olusturulan ders bilgilerini cagirilir(file:///E:/IdeaProjects/SchoolProject/src/test/resources/features/e2e/US08_E2E_Mali.feature:20)
+]]>
+</failure>
+>>>>>>> main
 <system-out><![CDATA[
 Then validate "birthDay", "birthPlace", "gender", "name", "passsword", "phoneNumber", "","surname","username".passed
 ]]></system-out>
 </testcase>
+<<<<<<< HEAD
 <testcase classname="Dean, Vice Dean hesabı oluşturabilmelidir." name=": Kullanici bazi degerleri eksik yollar - Example #1.7" time="2.565">
 <system-out><![CDATA[
 Then validate "birthDay", "birthPlace", "gender", "name", "passsword", "phoneNumber", "ssn","surname","".passed
@@ -38,6 +262,48 @@ Then validate "birthDay", "birthPlace", "gender", "name", "passsword", "phoneNum
 <testcase classname="Dean, Vice Dean hesabı oluşturabilmelidir." name=": Kullanici bazi degerleri eksik yollar - Example #1.8" time="3.108">
 <system-out><![CDATA[
 Then validate "birthDay", "birthPlace", "gender", "name", "", "phoneNumber", "ssn","surname","username".passed
+=======
+<testcase classname="US08 E2E Test (Positive)" name="API Test DelRequest" time="2.45">
+<failure type="java.lang.NullPointerException">
+<![CDATA[java.lang.NullPointerException
+	at stepdef.ui.US08_Steps_Mali.lessonidIleDelRequestGonderilir(US08_Steps_Mali.java:348)
+	at ✽.LessonId ile DelRequest gonderilir(file:///E:/IdeaProjects/SchoolProject/src/test/resources/features/e2e/US08_E2E_Mali.feature:24)
+]]>
+</failure>
+<system-out><![CDATA[
+<<<<<<< HEAD
+Given LessonId ile DelRequest gonderilir....................................failed
+And Silinen derse ait datalarin dogrulamasi yapilir.........................skipped
+=======
+<<<<<<< HEAD
+Then validate "birthDay", "birthPlace", "", "name", "passsword", "phoneNumber", "ssn","surname","username".passed
+]]></system-out>
+</testcase>
+<testcase classname="Dean, Vice Dean hesabı oluşturabilmelidir." name=": Kullanici bazi degerleri eksik yollar - Example #1.5" time="0.653">
+<system-out><![CDATA[
+Then validate "", "birthPlace", "gender", "name", "passsword", "", "ssn","surname","username".passed
+]]></system-out>
+</testcase>
+<testcase classname="Dean, Vice Dean hesabı oluşturabilmelidir." name=": Kullanici bazi degerleri eksik yollar - Example #1.6" time="0.663">
+<system-out><![CDATA[
+Then validate "birthDay", "birthPlace", "gender", "name", "passsword", "phoneNumber", "","surname","username".passed
+]]></system-out>
+</testcase>
+<testcase classname="Dean, Vice Dean hesabı oluşturabilmelidir." name=": Kullanici bazi degerleri eksik yollar - Example #1.7" time="0.637">
+<system-out><![CDATA[
+Then validate "birthDay", "birthPlace", "gender", "name", "passsword", "phoneNumber", "ssn","surname","".passed
+]]></system-out>
+</testcase>
+<testcase classname="Dean, Vice Dean hesabı oluşturabilmelidir." name=": Kullanici bazi degerleri eksik yollar - Example #1.8" time="0.695">
+<system-out><![CDATA[
+Then validate "birthDay", "birthPlace", "gender", "name", "", "phoneNumber", "ssn","surname","username".passed
+=======
+Given LessonId ile DelRequest gonderilir....................................failed
+And Silinen derse ait datalarin dogrulamasi yapilir.........................skipped
+>>>>>>> main
+>>>>>>> 1fe6e0fc053852e20cea5012da4897fa5dd3b445
+>>>>>>> main
+>>>>>>> main
 ]]></system-out>
 </testcase>
 </testsuite>
