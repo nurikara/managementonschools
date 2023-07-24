@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="30.952" tests="4" skipped="0" failures="0" errors="0">
-<testcase classname="US08 E2E Test (Positive)" name="ViceDean Add Lesson UI Test" time="24.107">
+<testsuite name="Cucumber" time="19.903" tests="4" skipped="0" failures="0" errors="0">
+<testcase classname="US08 E2E Test (Positive)" name="ViceDean Add Lesson UI Test" time="13.11">
 <system-out><![CDATA[
 Given Kullanici  "ViceDean" olarak giriş yapar..............................passed
 Then Kullanici Lessons basligini tiklar.....................................passed
@@ -11,19 +11,19 @@ Then Submit butonunu tiklar.................................................pass
 Then Basarili kayıtlama mesaji goruntulenir.................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="US08 E2E Test (Positive)" name="DataBase Test" time="1.834">
+<testcase classname="US08 E2E Test (Positive)" name="DataBase Test" time="1.907">
 <system-out><![CDATA[
 Given DataBase Connection saglanir ve kayitlamasi yapilan dersismi ile ders bilgileri cagrilir.passed
 Then Ders datalarının dogrulugu test edilir.................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="US08 E2E Test (Positive)" name="API Test GetRequest" time="3.163">
+<testcase classname="US08 E2E Test (Positive)" name="API Test GetRequest" time="3.184">
 <system-out><![CDATA[
 Given get request ile olusturulan ders bilgilerini cagirilir................passed
 And gonderilen data ile gelen response datanin dogrulamasi yapilir..........passed
 ]]></system-out>
 </testcase>
-<testcase classname="US08 E2E Test (Positive)" name="API Test DelRequest" time="1.476">
+<testcase classname="US08 E2E Test (Positive)" name="API Test DelRequest" time="1.333">
 <system-out><![CDATA[
 Given LessonId ile DelRequest gonderilir....................................passed
 And Silinen derse ait datalarin dogrulamasi yapilir.........................passed

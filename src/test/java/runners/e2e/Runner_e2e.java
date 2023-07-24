@@ -15,7 +15,7 @@ senaryoyu çalıştırabiliriz
 //Seneryoların nerede ve nasıl çalışacağı, hangi raporu kullanacağıyla alakalı seçenekleri ayarlarız
 @CucumberOptions(plugin = {"pretty",
         "html:src/test/resources/features/htmlReport/cucumberHooks.html",
-        "json:target/json-reports/cucumber.json",
+        "json:target/json-report/cucumber.json",
         "junit:src/test/resources/features/htmlReport/cucumber.xml",
         "rerun:TestOutput/failed_scenario.txt"},
 
