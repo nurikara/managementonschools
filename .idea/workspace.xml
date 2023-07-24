@@ -4,7 +4,6 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-<<<<<<< HEAD
     <list default="true" id="1b6fabe4-2551-494b-a5f8-bec58dad5d33" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
@@ -192,19 +191,14 @@
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/runners/e2e/Runner_e2e.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runners/e2e/Runner_e2e.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/default-cucumber-reports.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/default-cucumber-reports.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/failedRerun.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/failedRerun.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/json-reports/cucumber.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/json-reports/cucumber.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/runners/api/runnerApi.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/runners/api/runnerApi.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/runners/db/Runner_Db.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/runners/db/Runner_Db.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/runners/e2e/Runner_e2e.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/runners/e2e/Runner_e2e.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/runners/ui/Runner_Ui.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/runners/ui/Runner_Ui.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/testng.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/utilities/AuthenticationManagementonSchool.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/utilities/AuthenticationManagementonSchool.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/xml-report/cucumber.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/xml-report/cucumber.xml" afterDir="false" />
     </list>
-=======
-
-    <list default="true" id="1b6fabe4-2551-494b-a5f8-bec58dad5d33" name="Changes" comment="">
-
->>>>>>> main
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
