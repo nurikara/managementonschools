@@ -11,7 +11,7 @@ import org.junit.runner.RunWith;
                 "pretty",//konsolu renkli yazdirir
                 //"html:target/default-cucumber-reports.html",//en ıyısı bu, en okunabiliri
                 "json:target/json-reports/cucumber.json",
-                "html:src/test/resources/features/htmlReport/cucumberHooks.html",
+                "html:target/htmlReport/cucumberHooks.html",
                 "junit:target/xml-report/cucumber.xml",
                 "rerun:target/failedRerun.txt"
 
