@@ -4,16 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-<<<<<<< HEAD
-    <list default="true" id="1b6fabe4-2551-494b-a5f8-bec58dad5d33" name="Changes" comment="">
+    <list default="true" id="b8514a21-2b45-404a-b279-ad3da758b85f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/stepdef/ui/US15_Steps_Erel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_17_07_2023_18_38_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_17_07_2023_18_38__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/US15_ViceDeanStudent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/US15_ViceDeanStudent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepdef/ui/US16_Steps_Erel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepdef/ui/US16_Steps_Erel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/apiFeatures/US15_Erel/sefa.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/emailable-report.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/emailable-report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/old/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/testng-results.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/testng-results.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/runners/e2e/Runner_e2e.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/runners/e2e/Runner_e2e.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/testng.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/utilities/AuthenticationManagementonSchool.class" beforeDir="false" />
     </list>
-=======
-
-    <list default="true" id="1b6fabe4-2551-494b-a5f8-bec58dad5d33" name="Changes" comment="">
-
->>>>>>> origin/main
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -52,19 +60,22 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Git.Branch.Popup.ShowAllRemotes&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/IdeaProjects/SchoolProject&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.48390806&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;consents&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Git.Branch.Popup.ShowAllRemotes": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/MONSTER/IdeaProjects/managementonschools/src/test/java/stepdef/ui",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.48390806",
+    "settings.editor.selected.configurable": "consents"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\MONSTER\IdeaProjects\managementonschools\src\test\java\stepdef\ui" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\IdeaProjects\SchoolProject\src\test\resources" />
       <recent name="E:\IdeaProjects\SchoolProject\src\test\resources\features\uiFeatures\US06_Nuri" />
@@ -73,6 +84,7 @@
       <recent name="C:\Users\Lenovo\IdeaProjects\SchoolProject\src\test\resources\features\apiFeatures\US08_Mali" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="pages" />
       <recent name="runners.Api" />
       <recent name="runners.Db" />
     </key>
@@ -86,7 +98,7 @@
       <command value="mvn clean install test" />
     </option>
   </component>
-  <component name="RunManager" selected="Cucumber Java.Feature: 15">
+  <component name="RunManager" selected="Cucumber Java.Feature: TC01_ManagementSchool">
     <configuration name="Feature: 15" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/apiFeatures/US15_Erel/15.feature" />
@@ -105,15 +117,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Feature: e2e_US_06" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Feature: TC01_ManagementSchool" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/e2e_US_02/e2e_US_06.feature" />
-      <option name="GLUE" value="stepdef.api stepdef.ui hooks" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/uiFeatures/US15_Erel/US15Negatif/TC01_ManagementSchool.feature" />
+      <option name="GLUE" value="hooks" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
-      <module name="SchoolProject" />
+      <module name="managementonschools" />
       <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
-      <shortenClasspath name="NONE" />
-      <option name="SUGGESTED_NAME" value="Feature: e2e_US_06" />
+      <option name="SUGGESTED_NAME" value="Feature: TC01_ManagementSchool" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -125,80 +136,77 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Runner_Db" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SchoolProject" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="runners.db.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="runners.db" />
-      <option name="MAIN_CLASS_NAME" value="runners.db.Runner_Db" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Runner_Ui [3]" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true" repeat_count="3" repeat_mode="N Times">
-      <module name="SchoolProject" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="runners.ui.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="runners.ui" />
-      <option name="MAIN_CLASS_NAME" value="runners.ui.Runner_Ui" />
-      <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="runnerApi [1]" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true" repeat_mode="N Times">
-      <module name="SchoolProject" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="runners.api.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="runners.api" />
-      <option name="MAIN_CLASS_NAME" value="runners.api.runnerApi" />
-      <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
+    <configuration name="Feature: US16_GetAllContact" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/apiFeatures/US16_Erel/US16_GetAllContact.feature" />
+      <option name="GLUE" value="stepdef.api hooks" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="managementonschools" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
+      <option name="SUGGESTED_NAME" value="Feature: US16_GetAllContact" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+    <configuration name="Feature: US25.CreateStudentByAdmin" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/apiFeatures/US25_Erel/US25.CreateStudentByAdmin.feature" />
+      <option name="GLUE" value="stepdef.api hooks" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="managementonschools" />
-      <option name="filePath" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
+      <option name="SUGGESTED_NAME" value="Feature: US25.CreateStudentByAdmin" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Feature: sefa" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/apiFeatures/US15_Erel/sefa.feature" />
+      <option name="GLUE" value="stepdef.api hooks" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="managementonschools" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
+      <option name="SUGGESTED_NAME" value="Feature: sefa" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
+      <item itemvalue="Cucumber Java.Feature: TC01_ManagementSchool" />
+      <item itemvalue="Cucumber Java.Feature: US16_GetAllContact" />
+      <item itemvalue="Cucumber Java.Feature: US25.CreateStudentByAdmin" />
+      <item itemvalue="Cucumber Java.Feature: sefa" />
       <item itemvalue="Cucumber Java.Feature: 15" />
-      <item itemvalue="Cucumber Java.Feature: e2e_US_06" />
-      <item itemvalue="JUnit.Runner_Db" />
-      <item itemvalue="JUnit.Runner_Ui [3]" />
-      <item itemvalue="JUnit.runnerApi [1]" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Cucumber Java.Feature: TC01_ManagementSchool" />
+        <item itemvalue="Cucumber Java.Feature: US25.CreateStudentByAdmin" />
+        <item itemvalue="Cucumber Java.Feature: US16_GetAllContact" />
+        <item itemvalue="Cucumber Java.Feature: sefa" />
         <item itemvalue="Cucumber Java.Feature: 15" />
-        <item itemvalue="JUnit.runnerApi [1]" />
-        <item itemvalue="JUnit.Runner_Ui [3]" />
-        <item itemvalue="JUnit.Runner_Db" />
-        <item itemvalue="Cucumber Java.Feature: e2e_US_06" />
       </list>
     </recent_temporary>
   </component>
