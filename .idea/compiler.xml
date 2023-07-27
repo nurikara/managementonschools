@@ -7,8 +7,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="SchoolProject" />
+        <module name="managementonschools" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="SchoolProject" target="11" />
+    </bytecodeTargetLevel>
   </component>
 </project>

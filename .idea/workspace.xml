@@ -4,207 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-<<<<<<< HEAD
-    <list default="true" id="1b6fabe4-2551-494b-a5f8-bec58dad5d33" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestOutput/screenshot/screenshot_09_04_20_11072023.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/SchoolProject-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/cucumber-html-reports/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/cucumber-html-reports/css/cucumber.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/cucumber-html-reports/css/font-awesome.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/cucumber-html-reports/fonts/FontAwesome.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/cucumber-html-reports/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/cucumber-html-reports/fonts/fontawesome-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/cucumber-html-reports/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/cucumber-html-reports/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/cucumber-html-reports/fonts/fontawesome-webfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/cucumber-html-reports/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/cucumber-html-reports/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/cucumber-html-reports/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/cucumber-html-reports/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/cucumber-html-reports/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/cucumber-html-reports/images/favicon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/cucumber-html-reports/js/Chart.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/cucumber-html-reports/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/cucumber-html-reports/js/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/cucumber-html-reports/js/jquery.tablesorter.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/cucumber-html-reports/js/moment.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/cucumber-html-reports/overview-failures.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/cucumber-html-reports/overview-features.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/cucumber-html-reports/overview-steps.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/cucumber-html-reports/overview-tags.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/cucumber-html-reports/report-feature_1903033536.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/cucumber-html-reports/report-tag_3771378667.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/surefire-reports/2023-07-15T17-30-26_349.dumpstream" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/surefire-reports/2023-07-15T18-20-06_428.dumpstream" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/surefire-reports/Surefire suite/Surefire test.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/surefire-reports/Surefire suite/Surefire test.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-runners.api.runnerApi.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/surefire-reports/bullet_point.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/surefire-reports/collapseall.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/surefire-reports/emailable-report.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/surefire-reports/failed.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/surefire-reports/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/surefire-reports/jquery-3.6.0.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/surefire-reports/navigator-bullet.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/surefire-reports/old/Surefire suite/Surefire test.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/surefire-reports/old/Surefire suite/classes.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/surefire-reports/old/Surefire suite/groups.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/surefire-reports/old/Surefire suite/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/surefire-reports/old/Surefire suite/main.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/surefire-reports/old/Surefire suite/methods-alphabetical.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/surefire-reports/old/Surefire suite/methods-not-run.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/surefire-reports/old/Surefire suite/methods.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/surefire-reports/old/Surefire suite/reporter-output.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/surefire-reports/old/Surefire suite/testng.xml.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/surefire-reports/old/Surefire suite/toc.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/surefire-reports/old/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/surefire-reports/passed.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/surefire-reports/runners.api.runnerApi.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/surefire-reports/skipped.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/surefire-reports/testng-reports.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/surefire-reports/testng-reports.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/surefire-reports/testng-reports1.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/surefire-reports/testng-reports2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/surefire-reports/testng-results.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/surefire-reports/testng.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/apiFeatures/US07_Ismail/us07_Dean_Kullanıcı_MesajlariAPI.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/apiFeatures/US10-11-12_LessonProgramController/TC01_LessonProgramController.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/apiFeatures/US15_Erel/15.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/apiFeatures/US16_Erel/US16_GetAllContact.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/apiFeatures/US25_Erel/US25.CreateStudentByAdmin.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/apiFeatures/US_02_06_23/US02.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/apiFeatures/US_02_06_23/US06.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/apiFeatures/US_02_06_23/US23.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/apiFeatures/US_04_Milhan/US_04_05_Api_Positive.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/apiFeatures/US_04_Milhan/US_04_Api_Negative.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/apiFeatures/us19_MeetController/US19_meetController.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/dbFeatures/US08_Mali/US08_DataBase_Mali.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/dbFeatures/US08_Mali/US09_DataBase_Mali.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/dbFeatures/US15_US16_US25_Erel/US15_ViceStudentManagement.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/dbFeatures/US15_US16_US25_Erel/US16_MessageManagement.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/dbFeatures/US15_US16_US25_Erel/US25_AdminStudentManagement.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/dbFeatures/US18_Tunahan/US18_dataBase.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/dbFeatures/US_04_05_Milhan/US_04_05_DB.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/dbFeatures/Us02_nuri/Us_02_db.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/dbFeatures/us10_11_12_elif/TC01_ChooseLesson.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/dbFeatures/us10_11_12_elif/US01_Register.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/e2e_US_02/e2e_US_06.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US01_Mehmet/US01_BirthPlace.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US01_Mehmet/US01_Cinsiyet.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US01_Mehmet/US01_DateOfBirth.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US01_Mehmet/US01_Name.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US01_Mehmet/US01_Password.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US01_Mehmet/US01_PhoneNumber.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US01_Mehmet/US01_Ssn.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US01_Mehmet/US01_Surname.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US01_Mehmet/US01_Username.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US02_Nuri/us02.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US03_Mehmet/US03_Email.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US03_Mehmet/US03_Message.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US03_Mehmet/US03_Name.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US03_Mehmet/US03_Subject.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US04_Milhan/Negative/US04_TC03-11 Add Dean Alanı Testi.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US04_Milhan/Positive/US04_TC01-02_SiteyeGirisVeKayıt.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US05_Milhan/US05_TC01-02-03.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US06_Nuri/us06_Negative.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US06_Nuri/us06_Positive.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US07_Ismail/TC01_DeleteButton.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US07_Ismail/TC02_DeanMessageInfo.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US07_Ismail/TC03_DeleteMessage.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US08_Mali/HowToUseFakerInExample.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US09_Mali/ViceDean_LessonListUpdate.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US10-11-12_Elif/TC01PositiveSenaryo.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US10-11-12_Elif/TC02NegatifSenaryo.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US10-11-12_Elif/TC03LessonUpdate.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US10-11-12_Elif/TC04AppointTeacher.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US13-17-24_Zeynep/US-13 Vice_Dean_Teacher_oluşturabilmelidir.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US13-17-24_Zeynep/US-17_TC01_Teacher_ders_öğrenci_dönem_seçmelidir.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US13-17-24_Zeynep/US-24_Admin_Teacher_Olusturabilmelidir.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US14_Mali/ViceDean_TeacherUpdate.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US15_Erel/US15Negatif/TC01_ManagementSchool.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US15_Erel/US15Negatif/TC02_Name.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US15_Erel/US15Negatif/TC03_Surname.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US15_Erel/US15Negatif/TC04_BirthPlace.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US15_Erel/US15Negatif/TC05_Email.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US15_Erel/US15Negatif/TC06_PhoneNumber.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US15_Erel/US15Negatif/TC07_Gender.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US15_Erel/US15Negatif/TC08_DateOfBirth.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US15_Erel/US15Negatif/TC09_ssn.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US15_Erel/US15Negatif/TC10_Username.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US15_Erel/US15Negatif/TC11_Fathername.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US15_Erel/US15Negatif/TC12_Mothername.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US15_Erel/US15Negatif/TC13_StudentNumber.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US15_Erel/US15Negatif/TC14_Password.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US16_Erel/TC01_DeleteMessageButton.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US16_Erel/TC02_IsDisableInfo.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US16_Erel/TC03_DeleteMessage.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US18_Tunahan/US18-TC01_Teacher_StudentInfoList_Bilgilerini_Görebilmeli.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US18_Tunahan/US18_TC02_TeacherOgrenciNotBilgisiniGuncellemeli.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US18_Tunahan/US18_TC03_TeacherOgrenciNotBilgisiniSilebilmeli.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US19_Ismail/TC01_ChooseStudents.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US19_Ismail/TC02_DateOfMeet.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US19_Ismail/TC03_PastDate.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US19_Ismail/TC04_StartTimeStopTime.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US19_Ismail/TC05_DescriptionGirilebilmeli.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US19_Ismail/TC06_DescriptionGirilebilmeliPozitif.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US20_Burak/US20.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US21_Burak/US21.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US22_Tunahan/Negative/US22_AdminEklemeNegativeTest1.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US22_Tunahan/Negative/US22_AdminEklemeNegativeTest10.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US22_Tunahan/Negative/US22_AdminEklemeNegativeTest11.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US22_Tunahan/Negative/US22_AdminEklemeNegativeTest12.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US22_Tunahan/Negative/US22_AdminEklemeNegativeTest2.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US22_Tunahan/Negative/US22_AdminEklemeNegativeTest3.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US22_Tunahan/Negative/US22_AdminEklemeNegativeTest4.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US22_Tunahan/Negative/US22_AdminEklemeNegativeTest5.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US22_Tunahan/Negative/US22_AdminEklemeNegativeTest6.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US22_Tunahan/Negative/US22_AdminEklemeNegativeTest7.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US22_Tunahan/Negative/US22_AdminEklemeNegativeTest8.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US22_Tunahan/Negative/US22_AdminEklemeNegativeTest9.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US22_Tunahan/Pozitive/US22_AdminEklemePozitiveTest.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US23_Nuri/US23.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US25_Erel/TC01_SelectTeacher.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US25_Erel/TC02_Name.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US25_Erel/TC03_Surname.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US25_Erel/TC04_BirthPlace.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US25_Erel/TC05_Email.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US25_Erel/TC06_PhoneNumber.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US25_Erel/TC07_Gender.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US25_Erel/TC08_DateOfBirth.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US25_Erel/TC09_ssn.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US25_Erel/TC10_Username.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US25_Erel/TC11_Fathername.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US25_Erel/TC12_Mothername.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US25_Erel/TC13_StudentNumber.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/features/uiFeatures/US25_Erel/TC14_Password.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="b8514a21-2b45-404a-b279-ad3da758b85f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/stepdef/ui/US15_Steps_Erel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_17_07_2023_18_38_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_17_07_2023_18_38__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Configuration.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Configuration.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/runners/e2e/Runner_e2e.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runners/e2e/Runner_e2e.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/default-cucumber-reports.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/default-cucumber-reports.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/failedRerun.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/failedRerun.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/json-reports/cucumber.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/json-reports/cucumber.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/runners/api/runnerApi.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/runners/api/runnerApi.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/runners/db/Runner_Db.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/runners/db/Runner_Db.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/US15_ViceDeanStudent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/US15_ViceDeanStudent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepdef/ui/US16_Steps_Erel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepdef/ui/US16_Steps_Erel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/apiFeatures/US15_Erel/sefa.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/emailable-report.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/emailable-report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/old/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/testng-results.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/testng-results.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/runners/e2e/Runner_e2e.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/runners/e2e/Runner_e2e.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/runners/ui/Runner_Ui.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/runners/ui/Runner_Ui.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/xml-report/cucumber.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/xml-report/cucumber.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/testng.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/utilities/AuthenticationManagementonSchool.class" beforeDir="false" />
     </list>
-=======
-
-    <list default="true" id="1b6fabe4-2551-494b-a5f8-bec58dad5d33" name="Changes" comment="">
-
->>>>>>> main
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -226,15 +43,6 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/pom.xml" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/src/test/java/pojos/us14/US14_Pojo.java" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/src/test/java/runners/api/runnerApi.java" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/src/test/java/stepdef/api/Api_Mali2.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/test/java/stepdef/ui/US08_Steps_Mali.java" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/src/test/resources/features/apiFeatures/US08_Mali/ViceDeanAddLesson_API.feature" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/src/test/resources/features/e2e/US08_E2E_Mali.feature" root0="SKIP_INSPECTION" />
-  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -252,19 +60,22 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Git.Branch.Popup.ShowAllRemotes&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/IdeaProjects/SchoolProject&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.48390806&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;consents&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Git.Branch.Popup.ShowAllRemotes": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/MONSTER/IdeaProjects/managementonschools/src/test/java/stepdef/ui",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.48390806",
+    "settings.editor.selected.configurable": "consents"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\MONSTER\IdeaProjects\managementonschools\src\test\java\stepdef\ui" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\IdeaProjects\SchoolProject\src\test\resources" />
       <recent name="E:\IdeaProjects\SchoolProject\src\test\resources\features\uiFeatures\US06_Nuri" />
@@ -273,6 +84,7 @@
       <recent name="C:\Users\Lenovo\IdeaProjects\SchoolProject\src\test\resources\features\apiFeatures\US08_Mali" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="pages" />
       <recent name="runners.Api" />
       <recent name="runners.Db" />
     </key>
@@ -284,19 +96,16 @@
       <command value="mvn test" />
       <command value="mvn install test" />
       <command value="mvn clean install test" />
-      <command value="mvn -X test" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.runnerApi [1]">
-    <configuration name="Feature: e2e_US_06" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Cucumber Java.Feature: TC01_ManagementSchool">
+    <configuration name="Feature: 15" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/e2e_US_02/e2e_US_06.feature" />
-      <option name="GLUE" value="stepdef.api stepdef.ui hooks" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/apiFeatures/US15_Erel/15.feature" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
-      <module name="SchoolProject" />
+      <module name="managementonschools" />
       <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
-      <shortenClasspath name="NONE" />
-      <option name="SUGGESTED_NAME" value="Feature: e2e_US_06" />
+      <option name="SUGGESTED_NAME" value="Feature: 15" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -308,82 +117,96 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Runner_Db" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SchoolProject" />
+    <configuration name="Feature: TC01_ManagementSchool" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/uiFeatures/US15_Erel/US15Negatif/TC01_ManagementSchool.feature" />
+      <option name="GLUE" value="hooks" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="managementonschools" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
+      <option name="SUGGESTED_NAME" value="Feature: TC01_ManagementSchool" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="runners.db.*" />
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="runners.db" />
-      <option name="MAIN_CLASS_NAME" value="runners.db.Runner_Db" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Runner_Ui [3]" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true" repeat_count="3" repeat_mode="N Times">
-      <module name="SchoolProject" />
+    <configuration name="Feature: US16_GetAllContact" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/apiFeatures/US16_Erel/US16_GetAllContact.feature" />
+      <option name="GLUE" value="stepdef.api hooks" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="managementonschools" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
+      <option name="SUGGESTED_NAME" value="Feature: US16_GetAllContact" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="runners.ui.*" />
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="runners.ui" />
-      <option name="MAIN_CLASS_NAME" value="runners.ui.Runner_Ui" />
-      <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Runner_e2e" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SchoolProject" />
+    <configuration name="Feature: US25.CreateStudentByAdmin" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/apiFeatures/US25_Erel/US25.CreateStudentByAdmin.feature" />
+      <option name="GLUE" value="stepdef.api hooks" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="managementonschools" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
+      <option name="SUGGESTED_NAME" value="Feature: US25.CreateStudentByAdmin" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="runners.e2e.*" />
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="runners.e2e" />
-      <option name="MAIN_CLASS_NAME" value="runners.e2e.Runner_e2e" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="runnerApi [1]" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true" repeat_mode="N Times">
-      <module name="SchoolProject" />
+    <configuration name="Feature: sefa" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/apiFeatures/US15_Erel/sefa.feature" />
+      <option name="GLUE" value="stepdef.api hooks" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="managementonschools" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
+      <option name="SUGGESTED_NAME" value="Feature: sefa" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="runners.api.*" />
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="runners.api" />
-      <option name="MAIN_CLASS_NAME" value="runners.api.runnerApi" />
-      <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Cucumber Java.Feature: e2e_US_06" />
-      <item itemvalue="JUnit.Runner_e2e" />
-      <item itemvalue="JUnit.Runner_Db" />
-      <item itemvalue="JUnit.Runner_Ui [3]" />
-      <item itemvalue="JUnit.runnerApi [1]" />
+      <item itemvalue="Cucumber Java.Feature: TC01_ManagementSchool" />
+      <item itemvalue="Cucumber Java.Feature: US16_GetAllContact" />
+      <item itemvalue="Cucumber Java.Feature: US25.CreateStudentByAdmin" />
+      <item itemvalue="Cucumber Java.Feature: sefa" />
+      <item itemvalue="Cucumber Java.Feature: 15" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.runnerApi [1]" />
-        <item itemvalue="JUnit.Runner_Ui [3]" />
-        <item itemvalue="JUnit.Runner_e2e" />
-        <item itemvalue="JUnit.Runner_Db" />
-        <item itemvalue="Cucumber Java.Feature: e2e_US_06" />
+        <item itemvalue="Cucumber Java.Feature: TC01_ManagementSchool" />
+        <item itemvalue="Cucumber Java.Feature: US25.CreateStudentByAdmin" />
+        <item itemvalue="Cucumber Java.Feature: US16_GetAllContact" />
+        <item itemvalue="Cucumber Java.Feature: sefa" />
+        <item itemvalue="Cucumber Java.Feature: 15" />
       </list>
     </recent_temporary>
   </component>
@@ -413,6 +236,17 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/.." />
     </ignored-roots>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/runners/api/runnerApi.java</url>
+          <line>16</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

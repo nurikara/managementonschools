@@ -7,6 +7,7 @@ import io.cucumber.java.en.Then;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.junit.Assert;
+
 import pojos.erel.US15_ObjectPojo;
 import pojos.erel.US15_Pojo;
 import pojos.erel.US15_p;
@@ -534,6 +535,46 @@ public class Api_Erel extends ManagementSchoolBaseUrl {
         assertEquals(extSubject, actSubject);
         assertEquals(extMessage, actMessage);
         assertEquals(extDate, actDate);
+    }
+
+    @Given("student info icin post request yap {string},{string},{string},{string},{string},{string},{string}")
+    public void studentInfoIcinPostRequestYap(String absentee, String educationTermId, String finalExam, String infoNote, String lessonId, String midtermExam, String studentId) {
+
+        //set the url
+        //https://managementonschools.com/app/studentInfo/save
+        spec.pathParams("first", "studentInfo", "second", "save");
+
+        //set the expected data
+
+
+            absentee = "1";
+
+            educationTermId = "1";
+
+            finalExam = "80";
+
+            infoNote = "BASARILIDIR";
+
+
+            lessonId = "1";
+
+            midtermExam = "80";
+
+            studentId = "327";
+
+       // StudentInfoPojo expected=new StudentInfoPojo(absentee, educationTermId, finalExam, infoNote, lessonId, midtermExam, studentId);
+
+
+        //send the request and get the response
+      //  responseerel = given(spec).body(expected).header("Authorization", generateToken((String) ConfigReader.getProperty("ErelusernameAdmin"), (String) ConfigReader.getProperty("ErelpasswordAdmin"))).post("/{first}/{second}");
+        responseerel.prettyPrint();
+        //do the assertions
+
+    }
+
+    @Then("student info bodyi dogrula")
+    public void studentInfoBodyiDogrula() {
+
     }
 }
 

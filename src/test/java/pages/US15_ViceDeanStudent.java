@@ -2,13 +2,12 @@ package pages;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
-import utilities.Driver;
 
-public class US15_ViceDeanStudent extends Login{
+
+public class US15_ViceDeanStudent extends Login {
     @FindBy(xpath = "(//*[@class='nav-link'])[10]")
     public WebElement studentmanagement;
-    @FindBy(xpath = "//*[@id='advisorTeacherId']")
+    @FindBy(xpath = "//*[@class='form-select']")
     public WebElement teacherselectddm;
     @FindBy(id = "name")
     public WebElement name;
@@ -32,9 +31,9 @@ public class US15_ViceDeanStudent extends Login{
     public WebElement motherName;
     @FindBy(id = "password")
     public WebElement smpassword;
-    @FindBy(xpath = "(//*[@class='form-check-input'])[2]")
+    @FindBy(xpath = "//*[@value='MALE']")
     public WebElement male;
-    @FindBy(xpath = "(//*[@class='form-check-input'])[1]")
+    @FindBy(xpath = "//*[@value='FEMALE']")
     public WebElement female;
     @FindBy(xpath = "//*[@class='fw-semibold btn btn-primary btn-lg']")
     public WebElement submit;
